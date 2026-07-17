@@ -252,8 +252,8 @@ section { padding: 96px 0; position: relative; }
   z-index: 1;
   width: 100%;
   max-width: 433px;
-  border-radius: 24px;
-  box-shadow: 0 24px 48px rgba(49, 35, 8, 0.12);
+  clip-path: polygon(18% 0%, 42% 9%, 58% 0%, 82% 10%, 100% 3%, 100% 100%, 0% 100%, 0% 16%);
+  filter: drop-shadow(0 20px 32px rgba(49, 35, 8, 0.16));
 }
 
 .about-text h2 { margin-top: 0; }
