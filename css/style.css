@@ -261,10 +261,6 @@ section { padding: 96px 0; position: relative; }
 
 .project-card > * { min-width: 0; }
 
-.project-card:not(:last-child) {
-  border-bottom: 1px solid var(--line);
-}
-
 .project-card.reverse .project-media { order: 2; }
 .project-card.reverse .project-info { order: 1; }
 
