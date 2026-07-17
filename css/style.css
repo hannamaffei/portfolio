@@ -215,32 +215,13 @@ section { padding: 96px 0; position: relative; }
   position: relative;
 }
 
-.decor-about-1 {
-  position: absolute;
-  left: -60px;
-  top: -140px;
-  width: 300px;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.decor-about-2 {
-  position: absolute;
-  left: -160px;
-  top: -40px;
-  width: 420px;
-  z-index: 0;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
 .about-photo {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: 433px;
-  clip-path: polygon(18% 0%, 42% 9%, 58% 0%, 82% 10%, 100% 3%, 100% 100%, 0% 100%, 0% 16%);
-  filter: drop-shadow(0 20px 32px rgba(49, 35, 8, 0.16));
+  border-radius: 24px;
+  box-shadow: 0 24px 48px rgba(49, 35, 8, 0.12);
 }
 
 .about-text h2 { margin-top: 0; }
@@ -531,7 +512,6 @@ a.project-media:hover {
   }
 
   .about-photo { max-width: 320px; margin: 0 auto; }
-  .decor-about-1, .decor-about-2 { display: none; }
 
   .contact-grid { text-align: left; }
 
