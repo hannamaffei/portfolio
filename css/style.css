@@ -59,6 +59,12 @@ a { color: inherit; text-decoration: none; }
   font-size: 18px;
 }
 
+.brand-sep {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
 .nav-links {
   position: absolute;
   left: 50%;
@@ -408,8 +414,6 @@ a.project-media:hover {
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 80px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
 }
 
 .project-nav a { font-size: 15px; }
