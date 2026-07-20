@@ -566,6 +566,35 @@ a.project-media:hover {
 
 .project-gallery img { width: 100%; display: block; }
 
+.screens-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 64px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.screens-row figure {
+  margin: 0;
+  flex: 1 1 220px;
+  max-width: 280px;
+}
+
+.screens-row img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.screens-row figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
 .project-nav {
   display: flex;
   justify-content: space-between;
