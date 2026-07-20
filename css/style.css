@@ -236,8 +236,8 @@ section { padding: 96px 0; position: relative; }
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   max-width: 640px;
+  border-top: 1px solid var(--line);
 }
 
 .education-item {
@@ -246,12 +246,14 @@ section { padding: 96px 0; position: relative; }
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  padding: 18px 24px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .education-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 16px;
   font-weight: 500;
   margin: 0;
@@ -262,9 +264,8 @@ section { padding: 96px 0; position: relative; }
   color: var(--ink-soft);
 }
 
-.education-item.featured {
-  border-color: var(--accent);
-  background: var(--accent-soft);
+.education-item .logo-google {
+  flex-shrink: 0;
 }
 
 /* Processo */
