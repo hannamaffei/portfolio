@@ -232,6 +232,41 @@ section { padding: 96px 0; position: relative; }
 
 .about-text p + p { margin-top: 20px; }
 
+/* Educação */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.education-item h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.education-item .status {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.education-item.featured {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
 /* Processo */
 .process-grid {
   display: grid;
