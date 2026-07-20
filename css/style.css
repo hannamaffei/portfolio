@@ -463,6 +463,70 @@ a.project-media:hover {
 .project-body p { color: var(--ink-soft); }
 .project-body p + p { margin-top: 20px; }
 
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tag-pill {
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 16px;
+  margin: 24px 0 40px;
+  max-width: 900px;
+}
+
+.token-swatch {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.token-swatch .color { height: 64px; }
+
+.token-swatch .label {
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.token-swatch .hex {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  margin: 24px 0 40px;
+  max-width: 900px;
+}
+
+.stat-item .number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.stat-item .label {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
 .project-list {
   margin: 12px 0 0;
   padding: 0;

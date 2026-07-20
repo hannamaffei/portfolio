@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars Delivery — Hanna Maffei</title>
+  <meta name="description" content="Case de UX/Product Design: Mars Delivery, projeto pessoal de front-end assistido por IA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Hanna Maffei <span class="brand-sep">| Portfólio</span></a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre mim</a></li>
+        <li><a href="experiencias.html" aria-current="page">Experiências</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap" style="padding-top:48px;">
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a class="breadcrumb-back" href="experiencias.html">← Voltar</a>
+        <span class="breadcrumb-trail">
+          <a href="index.html">Home</a><span>›</span>
+          <a href="experiencias.html">Experiências</a><span>›</span>
+          <span class="current">Mars Delivery</span>
+        </span>
+      </nav>
+
+      <section class="project-hero">
+        <div class="project-hero-grid">
+          <div class="project-info">
+            <span class="project-client">Projeto pessoal</span>
+            <h1>Mars Delivery</h1>
+            <div class="project-body">
+              <p>O primeiro app de delivery para colonizadores de Marte. Um estudo de front-end assistido por IA, desenvolvido com Claude Code em Next.js, TypeScript e Tailwind CSS, aplicando conceitos de UX/UI design em um cenário marciano fictício.</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag-pill">Next.js 16</span>
+              <span class="tag-pill">Tailwind CSS</span>
+              <span class="tag-pill">Figma</span>
+              <span class="tag-pill">WCAG AA</span>
+              <span class="tag-pill">Dark Theme</span>
+            </div>
+          </div>
+          <div class="project-hero-media">
+            <img src="assets/img/mars-capa.jpg" alt="Telas do app Mars Delivery mostrando o pedido a caminho e a home do app" />
+          </div>
+        </div>
+
+        <div class="project-body" style="margin-top:64px;">
+          <p><strong>Sobre o projeto:</strong> um estudo funcional de front-end assistido por IA. Mars Delivery foi construído com Claude Code, do design ao código — 12 rotas, TypeScript, Tailwind v4 e Shadcn, com design e UX assistidos por Claude e o Figma MCP Plugin, resultando em 18 interfaces funcionais.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/mars-sobre.jpg" alt="Resumo do projeto: frontend Next.js 16, design e UX assistidos por IA, 18 interfaces funcionais" />
+        </div>
+
+        <div class="project-body" style="margin-top:48px;">
+          <p><strong>Marte tem fome. E não tem iFood.</strong> Apps de delivery são projetados para ruas, CEPs e motoboys. Em Marte, nenhuma dessas convenções existe, e cada decisão de UX precisou ser construída do zero: o endereço não é uma rua (Domo e Setor), nem todo entregador alcança todo lugar, e o checkout precisa ler o cardápio de cada restaurante antes de sugerir qualquer adição.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/mars-problema.jpg" alt="Três problemas e soluções de UX para o contexto marciano" />
+        </div>
+
+        <div class="project-body" style="margin-top:48px;">
+          <p><strong>Um universo do zero:</strong> a moeda, o tempo, o endereço e os entregadores foram todos inventados com lógica própria — desde os créditos marcianos ("cr.") até o SOL como unidade de tempo, cada decisão criativa teve consequência direta na UX.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/mars-universo.jpg" alt="Universo criativo do app: moeda, tempo, endereço e entregadores marcianos" />
+        </div>
+
+        <div class="project-body" style="margin-top:48px;">
+          <p><strong>Interfaces:</strong> 18 telas projetadas, do cardápio até a entrega — home, restaurantes, pedido, sacola, acompanhamento, entrega e histórico.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/mars-interfaces-1.jpg" alt="Telas de Home e Restaurantes do Mars Delivery" />
+        </div>
+        <div class="project-gallery" style="margin-top:24px;">
+          <img src="assets/img/mars-interfaces-2.jpg" alt="Telas de Pedido, Sacola e Acompanhamento do Mars Delivery" />
+        </div>
+        <div class="project-gallery" style="margin-top:24px;">
+          <img src="assets/img/mars-interfaces-3.jpg" alt="Telas de Entrega e Histórico do Mars Delivery" />
+        </div>
+
+        <div class="project-body" style="margin-top:48px;">
+          <p><strong>Feature em destaque — UpsellSheet:</strong> quando o usuário acessa a sacola sem bebida ou sobremesa, um bottom sheet desliza com um contador visual que drena como barra de progresso em 8 segundos. Aparece só quando faz sentido para o restaurante, e funciona por teclado, leitor de tela ou ESC.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/mars-feature.jpg" alt="UpsellSheet: bottom sheet sugerindo bebida antes do checkout" />
+        </div>
+
+        <div class="project-body" style="margin-top:48px;">
+          <p><strong>Design system — tokens visuais</strong></p>
+        </div>
+        <div class="token-grid">
+          <div class="token-swatch">
+            <div class="color" style="background:#F4A200;"></div>
+            <div class="label">Primary<span class="hex">#F4A200</span></div>
+          </div>
+          <div class="token-swatch">
+            <div class="color" style="background:#0C0C0E;"></div>
+            <div class="label">Background<span class="hex">#0C0C0E</span></div>
+          </div>
+          <div class="token-swatch">
+            <div class="color" style="background:#1A1A1F;"></div>
+            <div class="label">Card<span class="hex">#1A1A1F</span></div>
+          </div>
+          <div class="token-swatch">
+            <div class="color" style="background:#F2F0EB;"></div>
+            <div class="label">Foreground<span class="hex">#F2F0EB</span></div>
+          </div>
+          <div class="token-swatch">
+            <div class="color" style="background:#8A8680;"></div>
+            <div class="label">Muted<span class="hex">#8A8680</span></div>
+          </div>
+          <div class="token-swatch">
+            <div class="color" style="background:#3D1A0A;"></div>
+            <div class="label">Secondary<span class="hex">#3D1A0A</span></div>
+          </div>
+          <div class="token-swatch">
+            <div class="color" style="background:#E54444;"></div>
+            <div class="label">Destructive<span class="hex">#E54444</span></div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <p><strong>Acessibilidade e resultados:</strong> testado com Playwright e axe-core em navegação por teclado, contraste, ARIA e labels — 27 testes, 0 falhas.</p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="number">12</div>
+            <div class="label">Telas testadas com Playwright + axe-core</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">4.5:1</div>
+            <div class="label">Taxa mínima de contraste de cor mantida</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">44px</div>
+            <div class="label">Touch targets em todos os elementos interativos</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">0</div>
+            <div class="label">Violações críticas de acessibilidade encontradas</div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <p><strong>Princípios que guiaram as decisões — Leis de UX</strong></p>
+        </div>
+        <div class="module-list">
+          <div class="module-item">
+            <h3>Lei de Hick</h3>
+            <p>Menos opções, decisão mais rápida. Cardápio agrupado por categorias e checkout com etapas lineares, sem ramificações.</p>
+          </div>
+          <div class="module-item">
+            <h3>Lei de Jakob</h3>
+            <p>Padrões conhecidos reduzem aprendizado. Navegação inferior com ícones universais e cards no padrão de apps de delivery.</p>
+          </div>
+          <div class="module-item">
+            <h3>Limiar de Doherty</h3>
+            <p>Feedback em menos de 400ms. Skeleton screens, loading states e confirmação imediata ao adicionar itens na sacola.</p>
+          </div>
+          <div class="module-item">
+            <h3>Lei de Fitts</h3>
+            <p>Alvos maiores são mais fáceis de tocar. Botões primários ocupam toda a largura, com áreas de toque mínimas de 44×44px.</p>
+          </div>
+        </div>
+
+        <div class="project-body" style="margin-top:16px;">
+          <p><strong>Gestalt em ação</strong></p>
+        </div>
+        <div class="module-list">
+          <div class="module-item">
+            <h3>Proximidade</h3>
+            <p>Cards agrupam nome, avaliação e tempo — informações relacionadas ficam adjacentes.</p>
+          </div>
+          <div class="module-item">
+            <h3>Semelhança</h3>
+            <p>Chips de categoria têm o mesmo formato; itens do pedido usam o mesmo padrão de card.</p>
+          </div>
+          <div class="module-item">
+            <h3>Figura-Fundo</h3>
+            <p>Background escuro destaca os cards, e o CTA âmbar mantém contraste 4.5:1 (WCAG AA).</p>
+          </div>
+          <div class="module-item">
+            <h3>Continuidade</h3>
+            <p>Checkout linear — sacola, entrega, pagamento, confirmação — com steps visuais reforçando o progresso.</p>
+          </div>
+        </div>
+
+        <div class="project-body" style="margin-top:16px;">
+          <p><strong>Próximas versões:</strong> o Mars Delivery é um projeto vivo e segue em construção.</p>
+        </div>
+        <div class="module-list">
+          <div class="module-item">
+            <h3>Assinatura</h3>
+            <p>Mensalidade com frete grátis e prioridade de entrega.</p>
+          </div>
+          <div class="module-item">
+            <h3>Fidelidade</h3>
+            <p>Descontos progressivos para colonizadores que pedem com frequência.</p>
+          </div>
+          <div class="module-item">
+            <h3>Contexto ambiental</h3>
+            <p>Durante tempestades de areia, o app restringiria automaticamente os tipos de entrega disponíveis.</p>
+          </div>
+          <div class="module-item">
+            <h3>Personalização</h3>
+            <p>Salvar um entregador preferido por restaurante, por exemplo.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="project-nav">
+        <a href="experiencia-datalife.html">← Projeto anterior</a>
+        <a href="experiencias.html">Voltar para Experiências</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Hanna Maffei</span>
+      <a href="mailto:hannaangstmaffei@gmail.com">hannaangstmaffei@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
