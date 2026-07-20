@@ -236,8 +236,8 @@ section { padding: 96px 0; position: relative; }
 .education-list {
   display: flex;
   flex-direction: column;
+  gap: 20px;
   max-width: 640px;
-  border-top: 1px solid var(--line);
 }
 
 .education-item {
@@ -246,8 +246,6 @@ section { padding: 96px 0; position: relative; }
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .education-item h3 {
@@ -464,6 +462,36 @@ a.project-media:hover {
 
 .project-body p { color: var(--ink-soft); }
 .project-body p + p { margin-top: 20px; }
+
+.project-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 32px;
+}
+
+.project-list li {
+  color: var(--ink-soft);
+  padding: 6px 0 6px 18px;
+  position: relative;
+  break-inside: avoid;
+}
+
+.project-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .project-list { columns: 1; }
+}
 
 .project-gallery {
   margin-top: 64px;
