@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DoseCerta — Hanna Maffei</title>
+  <title>DoseCerta | Hanna Maffei</title>
   <meta name="description" content="Case de UX/Product Design: DoseCerta, app de lembrete de medicamentos." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,11 +60,37 @@
         </div>
 
         <div class="project-body" style="margin-top:64px;">
-          <p><strong>Regras pensadas para o dia a dia real:</strong> cada remédio pode ter frequência diária, semanal, mensal ou "conforme necessário" — com intervalo mínimo entre doses e limite máximo por dia para remédios de uso livre, como analgésicos. O app também acompanha o estoque de cada remédio e avisa quando está acabando, antes que falte.</p>
+          <p><strong>Por que esse problema importa:</strong> esquecer uma dose parece um detalhe pequeno, mas pra quem trata uma condição crônica isso pode significar o tratamento não funcionar direito, ou até uma reação por tomar de novo sem lembrar que já tinha tomado. Pensei o DoseCerta pra ficar entre esses dois erros: nunca deixar a pessoa se perder tanto na dose esquecida quanto na dose repetida.</p>
         </div>
 
         <div class="project-body" style="margin-top:32px;">
-          <p><strong>Histórico com exportação:</strong> todas as doses tomadas e perdidas ficam registradas por dia, com busca por nome e filtro por período — inclusive com exportação em CSV, útil para levar numa consulta médica.</p>
+          <p><strong>Regras pensadas para o dia a dia real:</strong> cada remédio pode ter frequência diária, semanal, mensal ou "conforme necessário", com intervalo mínimo entre doses e limite máximo por dia para remédios de uso livre, como analgésicos. O app também acompanha o estoque de cada remédio e avisa quando está acabando, antes que falte de verdade.</p>
+        </div>
+
+        <div class="project-body" style="margin-top:48px;">
+          <p><strong>Decisões de UI e UX</strong></p>
+        </div>
+        <div class="module-list">
+          <div class="module-item">
+            <h3>Três abas, três tarefas diferentes</h3>
+            <p>Hoje mostra só o que precisa de ação agora, Remédios é onde a pessoa gerencia o que toma, e Histórico é pra olhar pra trás. Separar por tarefa em vez de por tipo de dado deixa a tela inicial simples mesmo com vários remédios cadastrados.</p>
+          </div>
+          <div class="module-item">
+            <h3>Status nunca depende só de cor</h3>
+            <p>Cada dose tem um selo com texto (Tomado, Pendente, Atrasado) além da cor. Pensei em quem tem dificuldade pra distinguir cores, ou só está com pressa e não quer decifrar um código visual.</p>
+          </div>
+          <div class="module-item">
+            <h3>Regras que evitam erro, não só que organizam</h3>
+            <p>Remédios de uso livre, como analgésicos, têm intervalo mínimo entre doses e limite diário configuráveis. A ideia foi impedir que o próprio app sugerisse uma dose perigosa, não só lembrar de tomar.</p>
+          </div>
+          <div class="module-item">
+            <h3>Notificação que já é conhecida</h3>
+            <p>O lembrete de dose imita o visual de uma notificação de tela bloqueada, com opção de adiar ou confirmar direto ali. Ninguém precisa aprender um padrão novo pra usar.</p>
+          </div>
+        </div>
+
+        <div class="project-body" style="margin-top:16px;">
+          <p><strong>Histórico com exportação:</strong> todas as doses tomadas e perdidas ficam registradas por dia, com busca por nome e filtro por período, e dá pra exportar tudo em CSV, útil para levar numa consulta médica.</p>
         </div>
 
         <div class="screens-row">
@@ -83,7 +109,7 @@
         </div>
 
         <div class="project-body" style="margin-top:64px;">
-          <p><strong>Próximos passos:</strong> o app web está no ar, mas para publicar nas lojas (App Store e Google Play) o projeto está sendo reconstruído em React Native (Expo), o que também vai permitir notificações confiáveis com o app fechado — essencial para lembrete de remédio no horário certo.</p>
+          <p><strong>Próximos passos:</strong> o app web está no ar, mas para publicar nas lojas (App Store e Google Play) o projeto está sendo reconstruído em React Native (Expo), o que também vai permitir notificações confiáveis com o app fechado, essencial para lembrete de remédio no horário certo.</p>
         </div>
       </section>
 

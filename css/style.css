@@ -457,7 +457,7 @@ a.project-media:hover {
 }
 
 .project-body {
-  max-width: 760px;
+  max-width: none;
 }
 
 .project-body p { color: var(--ink-soft); }
