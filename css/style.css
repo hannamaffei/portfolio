@@ -126,6 +126,13 @@ a { color: inherit; text-decoration: none; }
 
 .site-footer a:hover { color: var(--ink); }
 
+/* Fundo pontilhado estilo grid do FigJam, reaproveitado onde fizer sentido dar profundidade */
+.dotted-bg {
+  background-color: var(--bg);
+  background-image: radial-gradient(rgba(49, 35, 8, 0.16) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 /* ===== Hero (Home) ===== */
 .hero {
   position: relative;
@@ -138,9 +145,6 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
   gap: 8px;
   padding: 40px 24px 80px;
-  background-color: var(--bg);
-  background-image: radial-gradient(rgba(49, 35, 8, 0.16) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 .hero-content { position: relative; z-index: 1; }
@@ -275,11 +279,23 @@ section { padding: 96px 0; position: relative; }
   flex-shrink: 0;
 }
 
-/* Processo */
+/* Processo — diagrama do Duplo Diamante acima dos 4 passos */
+.dd-diagram {
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.dd-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .process-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px 64px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg) var(--space-sm);
 }
 
 .process-item h3 {

@@ -71,18 +71,29 @@
         <h2 class="section-title">IA no meu processo</h2>
         <p class="section-lead">Uso IA como parte do processo, não como substituta dele. Ela entra pra acelerar etapas como geração de variações visuais, prototipagem em alta fidelidade e até para codar interfaces reais, mas o design final, a validação com usuários e o alinhamento com o negócio são sempre decisões humanas, não da ferramenta.</p>
 
-        <div class="module-list">
-          <div class="module-item">
-            <h3>Prototipagem em alta fidelidade</h3>
-            <p>No aplicativo de investimentos, usei IA pra gerar variações de interface rapidamente, testando direções antes de levar pra validação e aprovação com a liderança.</p>
+        <div class="finding-carousel">
+          <div class="finding-track" role="list">
+            <article class="finding-card" role="listitem">
+              <h3>Prototipagem em alta fidelidade</h3>
+              <p>No aplicativo de investimentos, usei IA pra gerar variações de interface rapidamente, testando direções antes de levar pra validação e aprovação com a liderança.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <h3>Design e código com IA generativa</h3>
+              <p>No Mars Delivery, conduzi um projeto inteiro com Claude Code, unindo design e front-end funcional, usando o Figma MCP Plugin pra manter design e código sincronizados.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <h3>Critério humano em cada decisão</h3>
+              <p>IA amplia quantas alternativas eu consigo explorar num tempo menor, mas o que resolve o problema real do usuário é sempre um julgamento humano, não da ferramenta.</p>
+            </article>
           </div>
-          <div class="module-item">
-            <h3>Do design ao código com IA generativa</h3>
-            <p>No Mars Delivery, conduzi um projeto inteiro com Claude Code, do design ao front-end funcional, usando o Figma MCP Plugin pra manter design e código sincronizados.</p>
-          </div>
-          <div class="module-item">
-            <h3>Critério humano em cada decisão</h3>
-            <p>IA amplia quantas alternativas eu consigo explorar num tempo menor, mas o que resolve o problema real do usuário é sempre um julgamento humano, não da ferramenta.</p>
+          <div class="finding-controls">
+            <button type="button" class="finding-prev" aria-label="Item anterior">←</button>
+            <div class="finding-dots" aria-label="Navegar entre itens">
+              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para item 1"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para item 2"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para item 3"></button>
+            </div>
+            <button type="button" class="finding-next" aria-label="Próximo item">→</button>
           </div>
         </div>
       </section>
@@ -91,18 +102,28 @@
         <h2 class="section-title">Como eu trabalho</h2>
         <p class="section-lead">Cada projeto começa pelo entendimento do problema no contexto real de uso. Antes de pensar em solução, procuro entender fluxos, pessoas envolvidas e regras de negócio para estruturar caminhos que façam sentido na prática.</p>
 
+        <div class="dd-diagram" aria-hidden="true">
+          <svg viewBox="0 0 800 160">
+            <polygon points="0,80 200,14 400,80 200,146" fill="none" stroke="var(--line)" stroke-width="2" />
+            <polygon points="400,80 600,14 800,80 600,146" fill="none" stroke="var(--line)" stroke-width="2" />
+            <circle cx="0" cy="80" r="5" fill="var(--accent)" />
+            <circle cx="400" cy="80" r="5" fill="var(--accent)" />
+            <circle cx="800" cy="80" r="5" fill="var(--accent)" />
+          </svg>
+        </div>
+
         <div class="process-grid">
           <div class="process-item">
             <h3>Descoberta</h3>
             <p>Busco entender o problema antes de assumir qualquer solução. Envolve pesquisas, conversas com usuários e stakeholders, análise de contexto e mapeamento dos fluxos existentes.</p>
           </div>
           <div class="process-item">
-            <h3>Desenvolvimento</h3>
-            <p>Exploro soluções e começo a dar forma às ideias. Criação de wireframes, protótipos e validações com usuários e times.</p>
-          </div>
-          <div class="process-item">
             <h3>Definição</h3>
             <p>Organizo o que foi levantado para chegar a um problema claro. Estruturo jornadas, fluxos e regras de negócio, alinhando escopo e prioridades.</p>
+          </div>
+          <div class="process-item">
+            <h3>Desenvolvimento</h3>
+            <p>Exploro soluções e começo a dar forma às ideias. Criação de wireframes, protótipos e validações com usuários e times.</p>
           </div>
           <div class="process-item">
             <h3>Entrega</h3>
