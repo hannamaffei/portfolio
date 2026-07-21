@@ -3,129 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DoseCerta | Hanna Maffei</title>
-  <meta name="description" content="Case de UX/Product Design: DoseCerta, app de lembrete de medicamentos." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta http-equiv="refresh" content="0; url=experiencia-pessoal.html#dosecerta" />
+  <link rel="canonical" href="experiencia-pessoal.html#dosecerta" />
+  <title>Projetos Pessoais | Hanna Maffei</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html">Hanna Maffei <span class="brand-sep">| Portfólio</span></a>
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre mim</a></li>
-        <li><a href="experiencias.html" aria-current="page">Experiências</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrap" style="padding-top:48px;">
-
-      <nav class="breadcrumb" aria-label="breadcrumb">
-        <a class="breadcrumb-back" href="experiencias.html">← Voltar</a>
-        <span class="breadcrumb-trail">
-          <a href="index.html">Home</a><span>›</span>
-          <a href="experiencias.html">Experiências</a><span>›</span>
-          <span class="current">DoseCerta</span>
-        </span>
-      </nav>
-
-      <section class="project-hero">
-        <div class="project-hero-grid">
-          <div class="project-info">
-            <span class="project-client">Projeto pessoal</span>
-            <h1>DoseCerta</h1>
-            <div class="project-body">
-              <p>Um app para ajudar pessoas a não esquecerem de tomar seus remédios no horário certo. Organiza doses diárias, semanais, mensais ou "conforme necessário", avisa quando o estoque está acabando e mantém um histórico completo de doses tomadas e perdidas.</p>
-              <p>Atuei sozinha do design ao código: defini o fluxo de cadastro de remédios, as regras de negócio (intervalo mínimo entre doses, limite diário, alerta de estoque baixo) e construí a interface em React, com os componentes documentados no Storybook.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag-pill">React</span>
-              <span class="tag-pill">Vite</span>
-              <span class="tag-pill">Tailwind CSS</span>
-              <span class="tag-pill">Shadcn/ui</span>
-              <span class="tag-pill">Storybook</span>
-            </div>
-          </div>
-          <div class="project-hero-media">
-            <img src="assets/img/dosecerta-hoje.jpg" alt="Tela Hoje do DoseCerta, com o resumo de doses tomadas, pendentes e atrasadas" />
-          </div>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Por que esse problema importa:</strong> esquecer uma dose parece um detalhe pequeno, mas pra quem trata uma condição crônica isso pode significar o tratamento não funcionar direito, ou até uma reação por tomar de novo sem lembrar que já tinha tomado. Pensei o DoseCerta pra ficar entre esses dois erros: nunca deixar a pessoa se perder tanto na dose esquecida quanto na dose repetida.</p>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Regras pensadas para o dia a dia real:</strong> cada remédio pode ter frequência diária, semanal, mensal ou "conforme necessário", com intervalo mínimo entre doses e limite máximo por dia para remédios de uso livre, como analgésicos. O app também acompanha o estoque de cada remédio e avisa quando está acabando, antes que falte de verdade.</p>
-        </div>
-
-        <p class="project-subhead">Decisões de UI e UX</p>
-        <div class="module-list">
-          <div class="module-item">
-            <h3>Três abas, três tarefas diferentes</h3>
-            <p>Hoje mostra só o que precisa de ação agora, Remédios é onde a pessoa gerencia o que toma, e Histórico é pra olhar pra trás. Separar por tarefa em vez de por tipo de dado deixa a tela inicial simples mesmo com vários remédios cadastrados.</p>
-          </div>
-          <div class="module-item">
-            <h3>Status nunca depende só de cor</h3>
-            <p>Cada dose tem um selo com texto (Tomado, Pendente, Atrasado) além da cor. Pensei em quem tem dificuldade pra distinguir cores, ou só está com pressa e não quer decifrar um código visual.</p>
-          </div>
-          <div class="module-item">
-            <h3>Regras que evitam erro, não só que organizam</h3>
-            <p>Remédios de uso livre, como analgésicos, têm intervalo mínimo entre doses e limite diário configuráveis. A ideia foi impedir que o próprio app sugerisse uma dose perigosa, não só lembrar de tomar.</p>
-          </div>
-          <div class="module-item">
-            <h3>Notificação que já é conhecida</h3>
-            <p>O lembrete de dose imita o visual de uma notificação de tela bloqueada, com opção de adiar ou confirmar direto ali. Ninguém precisa aprender um padrão novo pra usar.</p>
-          </div>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Histórico com exportação:</strong> todas as doses tomadas e perdidas ficam registradas por dia, com busca por nome e filtro por período, e dá pra exportar tudo em CSV, útil para levar numa consulta médica.</p>
-        </div>
-
-        <div class="screens-row">
-          <figure>
-            <img src="assets/img/dosecerta-remedios.jpg" alt="Tela de listagem de remédios cadastrados, com indicador de estoque baixo" />
-            <figcaption>Remédios cadastrados</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/dosecerta-historico.jpg" alt="Tela de histórico de doses, agrupado por dia, com exportação em CSV" />
-            <figcaption>Histórico</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/dosecerta-novo-remedio.jpg" alt="Formulário de cadastro de um novo remédio, com opções de frequência" />
-            <figcaption>Cadastro de remédio</figcaption>
-          </figure>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Próximos passos:</strong> o app web está no ar, mas para publicar nas lojas (App Store e Google Play) o projeto está sendo reconstruído em React Native (Expo), o que também vai permitir notificações confiáveis com o app fechado, essencial para lembrete de remédio no horário certo.</p>
-        </div>
-      </section>
-
-      <div class="project-nav">
-        <a href="experiencia-marsdelivery.html">← Projeto anterior</a>
-        <a href="experiencias.html">Voltar para Experiências</a>
-      </div>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© 2026 Hanna Maffei</span>
-      <a href="mailto:hannaangstmaffei@gmail.com">hannaangstmaffei@gmail.com</a>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  <div class="wrap" style="padding-top:96px; text-align:center;">
+    <p>Esse case agora faz parte de <a href="experiencia-pessoal.html#dosecerta">Projetos Pessoais</a>.</p>
+  </div>
 </body>
 </html>
