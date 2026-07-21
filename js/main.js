@@ -41,4 +41,49 @@ document.addEventListener("DOMContentLoaded", function () {
       if (targetIndex > -1) activate(targetIndex, false);
     }
   });
+
+  document.querySelectorAll(".finding-carousel").forEach(function (carousel) {
+    var track = carousel.querySelector(".finding-track");
+    var cards = Array.prototype.slice.call(track.children);
+    var dots = Array.prototype.slice.call(carousel.querySelectorAll(".finding-dots .dot"));
+    var prevBtn = carousel.querySelector(".finding-prev");
+    var nextBtn = carousel.querySelector(".finding-next");
+
+    function setActive(index) {
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === index);
+        dot.setAttribute("aria-pressed", i === index ? "true" : "false");
+      });
+    }
+
+    function scrollToCard(index) {
+      index = Math.max(0, Math.min(cards.length - 1, index));
+      if (!cards[index]) return;
+      track.scrollTo({ left: cards[index].offsetLeft - track.offsetLeft, behavior: "smooth" });
+    }
+
+    function activeIndex() {
+      var i = dots.findIndex(function (dot) { return dot.classList.contains("active"); });
+      return i > -1 ? i : 0;
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () { scrollToCard(i); });
+    });
+
+    if (prevBtn) prevBtn.addEventListener("click", function () { scrollToCard(activeIndex() - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { scrollToCard(activeIndex() + 1); });
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) setActive(cards.indexOf(entry.target));
+          });
+        },
+        { root: track, threshold: 0.6 }
+      );
+      cards.forEach(function (card) { observer.observe(card); });
+    }
+  });
 });

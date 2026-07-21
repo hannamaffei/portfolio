@@ -473,6 +473,7 @@ a.project-media:hover {
 }
 
 .project-hero-grid + .project-body { margin-top: 0; }
+.project-subhead + .project-body { margin-top: var(--space-sm); }
 
 .project-body p { color: var(--ink-soft); }
 .project-body p + p { margin-top: 20px; }
@@ -535,6 +536,105 @@ a.project-media:hover {
 .tab-panel > .role-section:first-child { margin-top: 0; }
 
 .subproject-nav + .tab-panel { margin-top: 0; }
+
+/* ===== Carrossel de achados (testes de usabilidade) ===== */
+.finding-carousel { margin-top: var(--space-sm); }
+
+.finding-track {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-xs);
+  scrollbar-width: none;
+}
+
+.finding-track::-webkit-scrollbar { display: none; }
+
+.finding-card {
+  flex: 0 0 min(380px, 88%);
+  scroll-snap-align: start;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.finding-index {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-sm);
+}
+
+.finding-index::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+.finding-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 var(--space-xs);
+}
+
+.finding-card p { color: var(--ink-soft); margin: 0; }
+.finding-card p + p { margin-top: var(--space-xs); }
+.finding-decision strong { color: var(--ink); }
+
+.finding-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.finding-prev,
+.finding-next {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.finding-prev:hover,
+.finding-next:hover { background: var(--ink); color: var(--bg); }
+
+.finding-dots { display: flex; align-items: center; gap: 8px; }
+
+.finding-dots .dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: var(--line);
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.finding-dots .dot.active {
+  width: 20px;
+  background: var(--accent);
+}
 
 .role-section-client {
   display: block;

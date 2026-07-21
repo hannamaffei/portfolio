@@ -135,22 +135,43 @@
           </div>
         </div>
 
-        <div class="module-list" style="margin-top:32px;">
-          <div class="module-item">
-            <h3>Dois avisos, um só componente</h3>
-            <p>O aviso de cotas incompletas usava o mesmo padrão visual do aviso de dados faltando, e passava despercebido pelo cliente. Decisão: diferenciar visualmente os dois estados.</p>
+        <p class="project-subhead" style="margin-top:var(--space-lg);">Achado → decisão</p>
+        <div class="finding-carousel">
+          <div class="finding-track" role="list">
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Achado 01</span>
+              <h3>Dois avisos, um só componente</h3>
+              <p>O aviso de cotas incompletas usava o mesmo padrão visual do aviso de dados faltando, e passava despercebido pelo cliente.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> diferenciar visualmente os dois estados.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Achado 02</span>
+              <h3>Campo de telefone confundia DDI com DDD</h3>
+              <p>Sem separação clara entre os dois códigos, os clientes erravam o preenchimento.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> campo dividido em seletor de DDI + DDD digitável.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Achado 03</span>
+              <h3>Termos marcados sem necessidade</h3>
+              <p>Por falta de sinalização sobre o que era obrigatório (FACTA opcional, LGPD e Termo de adesão obrigatórios), os clientes marcavam os três como se fossem iguais.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> revisão da sinalização de obrigatoriedade.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Achado 04</span>
+              <h3>Cadastro parcial sem caminho claro de retomada</h3>
+              <p>Os clientes tentavam voltar pelo mesmo link recebido por e-mail, sem saber que os dados ficavam salvos.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> aviso de saída explicando o prazo de retenção dos dados e um caminho de acesso via login.</p>
+            </article>
           </div>
-          <div class="module-item">
-            <h3>Campo de telefone confundia DDI com DDD</h3>
-            <p>Sem separação clara entre os dois códigos, os clientes erravam o preenchimento. Decisão: campo dividido em seletor de DDI + DDD digitável.</p>
-          </div>
-          <div class="module-item">
-            <h3>Termos marcados sem necessidade</h3>
-            <p>Por falta de sinalização sobre o que era obrigatório (FACTA opcional, LGPD e Termo de adesão obrigatórios), os clientes marcavam os três como se fossem iguais. Decisão: revisão da sinalização de obrigatoriedade.</p>
-          </div>
-          <div class="module-item">
-            <h3>Cadastro parcial sem caminho claro de retomada</h3>
-            <p>Os clientes tentavam voltar pelo mesmo link recebido por e-mail, sem saber que os dados ficavam salvos. Decisão: aviso de saída explicando o prazo de retenção dos dados e um caminho de acesso via login.</p>
+          <div class="finding-controls">
+            <button type="button" class="finding-prev" aria-label="Achado anterior">←</button>
+            <div class="finding-dots" aria-label="Navegar entre achados">
+              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para achado 1"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para achado 2"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para achado 3"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para achado 4"></button>
+            </div>
+            <button type="button" class="finding-next" aria-label="Próximo achado">→</button>
           </div>
         </div>
 
