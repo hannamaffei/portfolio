@@ -51,14 +51,14 @@
           </div>
         </div>
 
-        <nav class="subproject-nav" aria-label="Sub-projetos">
-          <a href="#mars-delivery">Mars Delivery</a>
-          <span>·</span>
-          <a href="#dosecerta">DoseCerta</a>
-        </nav>
+        <div class="subproject-nav" role="tablist" aria-label="Sub-projetos">
+          <button type="button" class="active" role="tab" aria-selected="true" aria-controls="mars-delivery" id="tab-mars-delivery">Mars Delivery</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="dosecerta" id="tab-dosecerta" tabindex="-1">DoseCerta</button>
+        </div>
 
         <!-- ===== Mars Delivery ===== -->
-        <h2 class="role-section" id="mars-delivery">Mars Delivery</h2>
+        <div class="tab-panel active" id="mars-delivery" role="tabpanel" aria-labelledby="tab-mars-delivery">
+        <h2 class="role-section">Mars Delivery</h2>
 
         <div class="project-body">
           <p>O primeiro app de delivery para colonizadores de Marte. Um estudo de front-end assistido por IA, desenvolvido com Claude Code em Next.js, TypeScript e Tailwind CSS, aplicando conceitos de UX/UI design em um cenário marciano fictício.</p>
@@ -228,8 +228,11 @@
           </div>
         </div>
 
+        </div>
+
         <!-- ===== DoseCerta ===== -->
-        <h2 class="role-section" id="dosecerta">DoseCerta</h2>
+        <div class="tab-panel" id="dosecerta" role="tabpanel" aria-labelledby="tab-dosecerta">
+        <h2 class="role-section">DoseCerta</h2>
 
         <div class="project-body">
           <p>Um app para ajudar pessoas a não esquecerem de tomar seus remédios no horário certo. Organiza doses diárias, semanais, mensais ou "conforme necessário", avisa quando o estoque está acabando e mantém um histórico completo de doses tomadas e perdidas.</p>
@@ -296,6 +299,7 @@
 
         <div class="project-body">
           <p><strong>Próximos passos:</strong> o app web está no ar, mas para publicar nas lojas (App Store e Google Play) o projeto está sendo reconstruído em React Native (Expo), o que também vai permitir notificações confiáveis com o app fechado, essencial para lembrete de remédio no horário certo.</p>
+        </div>
         </div>
       </section>
 

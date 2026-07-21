@@ -44,7 +44,6 @@
             <h1>Product Designer</h1>
             <div class="project-body">
               <p>A corretora concentrava as principais interações do cliente numa plataforma digital: onboarding PF e PJ, gestão de documentos, acompanhamento de operações de câmbio, solicitações de cartão pré-pago e câmbio turismo, além de um painel administrativo interno.</p>
-              <p class="confidential-note">*Por questões de confidencialidade, entre em <a href="contato.html">contato</a> para saber detalhes dos projetos.</p>
             </div>
           </div>
           <div class="project-hero-media">
@@ -59,9 +58,6 @@
             <li>Implementação de MFA no login</li>
             <li>Gestão de arquivos no painel do cliente (upload e organização)</li>
             <li>Painel de operações de câmbio</li>
-            <li>Solicitação de cartão pré-pago (câmbio turismo)</li>
-            <li>Solicitação de dinheiro em espécie (câmbio turismo)</li>
-            <li>Remessa de câmbio no painel do cliente</li>
             <li>Painel administrativo interno</li>
             <li>Padronização de e-mails transacionais</li>
             <li>Manutenção de Design System</li>
@@ -69,16 +65,15 @@
           </ul>
         </div>
 
-        <nav class="subproject-nav" aria-label="Sub-projetos">
-          <a href="#onboarding">Onboarding (PF e PJ)</a>
-          <span>·</span>
-          <a href="#painel">Painel Interno e Operações</a>
-          <span>·</span>
-          <a href="#investimentos">Aplicativo de Investimentos</a>
-        </nav>
+        <div class="subproject-nav" role="tablist" aria-label="Sub-projetos">
+          <button type="button" class="active" role="tab" aria-selected="true" aria-controls="onboarding" id="tab-onboarding">Onboarding (PF e PJ)</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="painel" id="tab-painel" tabindex="-1">Painel Interno e Operações</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="investimentos" id="tab-investimentos" tabindex="-1">Aplicativo de Investimentos</button>
+        </div>
 
         <!-- ===== Onboarding (PF e PJ) ===== -->
-        <h2 class="role-section" id="onboarding">Onboarding (PF e PJ)</h2>
+        <div class="tab-panel active" id="onboarding" role="tabpanel" aria-labelledby="tab-onboarding">
+        <h2 class="role-section">Onboarding (PF e PJ)</h2>
 
         <div class="project-body">
           <p><strong>Por que esse produto importa:</strong> um sistema de câmbio digital lida com decisões financeiras e documentos sensíveis do cliente, um contexto em que confusão gera perda de confiança na hora. As decisões de fluxo e interface precisavam equilibrar clareza para quem usa com as regras de compliance da corretora, sem transformar isso num processo burocrático demais para o cliente terminar.</p>
@@ -159,8 +154,11 @@
           </div>
         </div>
 
+        </div>
+
         <!-- ===== Painel Interno e Operações ===== -->
-        <h2 class="role-section" id="painel">Painel Interno e Operações</h2>
+        <div class="tab-panel" id="painel" role="tabpanel" aria-labelledby="tab-painel">
+        <h2 class="role-section">Painel Interno e Operações</h2>
 
         <div class="project-body">
           <p>Câmbio, cartão pré-pago, câmbio turismo e remessa têm regras de negócio próprias, mas precisavam conviver num único painel do cliente, sem cada operação parecer um produto diferente.</p>
@@ -182,8 +180,11 @@
           <img src="assets/img/galeria-cambio-testes.jpg" alt="Testes de usabilidade e manutenção do design system" />
         </div>
 
+        </div>
+
         <!-- ===== Aplicativo de Investimentos ===== -->
-        <h2 class="role-section" id="investimentos">
+        <div class="tab-panel" id="investimentos" role="tabpanel" aria-labelledby="tab-investimentos">
+        <h2 class="role-section">
           Aplicativo de Investimentos <span class="tag-ia">✦ IA</span>
         </h2>
 
@@ -227,6 +228,7 @@
         <p class="project-subhead">Pesquisa e exploração de interface</p>
         <div class="project-gallery">
           <img src="assets/img/galeria-investimentos.jpg" alt="Pesquisa de mercado, exploração de alternativas de interface e wireframes do aplicativo" />
+        </div>
         </div>
       </section>
 

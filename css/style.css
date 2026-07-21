@@ -477,35 +477,55 @@ a.project-media:hover {
 
 .project-hero-grid + .project-subhead { margin-top: 0; }
 
-/* ===== Páginas de papel (múltiplos sub-projetos numa página) ===== */
+/* ===== Páginas de papel (múltiplos sub-projetos numa página, com troca de conteúdo via tabs) ===== */
 .subproject-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 14px;
+  gap: 8px 32px;
   align-items: center;
-  font-size: 14px;
-  color: var(--ink-soft);
-  margin: 40px 0 0;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
+  margin: 0 0 56px;
+  border-bottom: 1px solid var(--line);
 }
 
-.subproject-nav a { color: var(--ink-soft); }
-.subproject-nav a:hover { color: var(--ink); text-decoration: underline; }
-.subproject-nav span { color: var(--line); }
+.subproject-nav button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 0 0 14px;
+  margin-bottom: -1px;
+}
+
+.subproject-nav button:hover { color: var(--ink); }
+
+.subproject-nav button.active {
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom-color: var(--accent);
+}
+
+.project-hero-grid + .subproject-nav,
+.project-body + .subproject-nav {
+  margin-top: 40px;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
 
 .role-section {
   font-size: 22px;
   font-weight: 600;
   color: var(--ink);
   margin: 88px 0 8px;
-  scroll-margin-top: 32px;
 }
 
-.project-hero-grid + .role-section,
-.subproject-nav + .role-section {
-  margin-top: 56px;
-}
+.tab-panel > .role-section:first-child { margin-top: 0; }
+
+.subproject-nav + .tab-panel { margin-top: 40px; }
 
 .role-section-client {
   display: block;
