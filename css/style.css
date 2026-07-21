@@ -8,6 +8,15 @@
   --line: #d9d9d9;
   --max-width: 1120px;
   --gap: 24px;
+
+  /* Escala de espaçamento — usar sempre uma dessas em vez de valor solto.
+     Regra: quanto mais perto na escala, mais "juntos" os elementos parecem
+     (Gestalt, Proximidade). Pular direto pra --space-xl sinaliza troca de assunto. */
+  --space-xs: 8px;   /* ícone + texto, elementos quase colados */
+  --space-sm: 16px;  /* itens dentro do mesmo grupo (bullets, linhas de lista) */
+  --space-md: 24px;  /* elemento de controle (ex: tabs) e o conteúdo que ele controla */
+  --space-lg: 48px;  /* transição visível entre blocos relacionados */
+  --space-xl: 88px;  /* separação forte, mudança de seção/assunto */
 }
 
 * { box-sizing: border-box; }
@@ -481,9 +490,9 @@ a.project-media:hover {
 .subproject-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 32px;
+  gap: var(--space-xs) 32px;
   align-items: center;
-  margin: 0 0 56px;
+  margin: 0 0 var(--space-md);
   border-bottom: 1px solid var(--line);
 }
 
@@ -510,7 +519,7 @@ a.project-media:hover {
 
 .project-hero-grid + .subproject-nav,
 .project-body + .subproject-nav {
-  margin-top: 40px;
+  margin-top: var(--space-xl);
 }
 
 .tab-panel { display: none; }
@@ -520,12 +529,12 @@ a.project-media:hover {
   font-size: 22px;
   font-weight: 600;
   color: var(--ink);
-  margin: 88px 0 8px;
+  margin: var(--space-xl) 0 var(--space-xs);
 }
 
 .tab-panel > .role-section:first-child { margin-top: 0; }
 
-.subproject-nav + .tab-panel { margin-top: 40px; }
+.subproject-nav + .tab-panel { margin-top: 0; }
 
 .role-section-client {
   display: block;
