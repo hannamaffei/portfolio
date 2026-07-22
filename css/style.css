@@ -478,6 +478,18 @@ a.project-media:hover {
   justify-content: center;
 }
 
+.project-hero-media.portrait {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-lg) 0;
+}
+
+.project-hero-media.portrait img {
+  width: auto;
+  max-width: 320px;
+  border-radius: 12px;
+}
+
 .project-hero-media img { width: 100%; display: block; }
 
 .project-hero-media .hero-cover { display: none; }
