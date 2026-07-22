@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=6" />
 </head>
 <body>
 
@@ -47,7 +47,12 @@
             </div>
           </div>
           <div class="project-hero-media">
-            <img src="assets/img/mars-capa.jpg" alt="Telas do app Mars Delivery mostrando o pedido a caminho e a home do app" />
+            <img class="hero-cover active" data-cover="mars-delivery" src="assets/img/mars-capa.jpg" alt="Telas do app Mars Delivery mostrando o pedido a caminho e a home do app" />
+            <div class="hero-cover stack" data-cover="dosecerta" data-frame="none">
+              <img class="stack-img stack-side stack-left" src="assets/img/dosecerta-remedios.jpg" alt="Tela Remédios do DoseCerta" />
+              <img class="stack-img stack-side stack-right" src="assets/img/dosecerta-historico.jpg" alt="Tela Histórico do DoseCerta" />
+              <img class="stack-img stack-front" src="assets/img/dosecerta-hoje.jpg" alt="Tela Hoje do DoseCerta, com o resumo de doses tomadas, pendentes e atrasadas" />
+            </div>
           </div>
         </div>
 
@@ -246,7 +251,7 @@
           <span class="tag-pill">Storybook</span>
         </div>
 
-        <div class="project-hero-media" style="margin-top:32px;">
+        <div class="project-hero-media" style="margin-top:32px; max-width:280px; margin-left:auto; margin-right:auto;">
           <img src="assets/img/dosecerta-hoje.jpg" alt="Tela Hoje do DoseCerta, com o resumo de doses tomadas, pendentes e atrasadas" />
         </div>
 
@@ -318,6 +323,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

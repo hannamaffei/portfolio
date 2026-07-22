@@ -472,12 +472,49 @@ a.project-media:hover {
   background: none;
   box-shadow: none;
   border-radius: 0;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .project-hero-media img { width: 100%; display: block; }
+
+.project-hero-media .hero-cover { display: none; }
+.project-hero-media .hero-cover.active { display: block; }
+
+.hero-cover.stack {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cover.stack.active { display: flex; }
+
+.stack .stack-img {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+.stack .stack-side {
+  position: absolute;
+  width: 44%;
+  top: 6%;
+  z-index: 1;
+}
+
+.stack .stack-left { left: 0; }
+.stack .stack-right { right: 0; }
+
+.stack .stack-front {
+  position: relative;
+  width: 50%;
+  z-index: 2;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
+}
 
 @media (max-width: 860px) {
   .project-hero-grid { grid-template-columns: 1fr; }

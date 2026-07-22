@@ -14,6 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var panels = tabs.map(function (tab) {
       return document.getElementById(tab.getAttribute("aria-controls"));
     });
+    var heroSection = nav.closest(".project-hero");
+    var covers = heroSection ? Array.prototype.slice.call(heroSection.querySelectorAll(".hero-cover")) : [];
+    var mediaBox = heroSection ? heroSection.querySelector(".project-hero-media") : null;
+    var coverFor = tabs.map(function (tab) {
+      var id = tab.getAttribute("aria-controls");
+      return covers.filter(function (cover) { return cover.getAttribute("data-cover") === id; })[0] || null;
+    });
 
     function activate(index, moveFocus) {
       tabs.forEach(function (tab, i) {
@@ -22,8 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         tab.setAttribute("aria-selected", selected ? "true" : "false");
         tab.tabIndex = selected ? 0 : -1;
         if (panels[i]) panels[i].classList.toggle("active", selected);
+        if (coverFor[i]) coverFor[i].classList.toggle("active", selected);
         if (selected && moveFocus) tab.focus();
       });
+      var activeCover = coverFor[index];
+      if (activeCover && mediaBox) {
+        mediaBox.classList.toggle("no-frame", activeCover.getAttribute("data-frame") === "none");
+      }
     }
 
     tabs.forEach(function (tab, i) {
