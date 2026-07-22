@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=6" />
+  <link rel="stylesheet" href="css/style.css?v=7" />
 </head>
 <body>
 
@@ -92,30 +92,93 @@
         </div>
 
         <p class="project-subhead">Discovery e wireflows</p>
-        <div class="project-gallery">
-          <img src="assets/img/galeria-cambio-discovery.jpg" alt="Pesquisa de discovery e wireflows do onboarding" />
+        <div class="project-body">
+          <p>Antes de desenhar qualquer tela, mapeei como corretoras e fintechs referências resolviam onboarding e cotação, documentei as funcionalidades e regras de negócio levantadas com o time e alinhei prioridades em reuniões de discovery.</p>
+        </div>
+        <div class="screens-grid cols-3">
+          <figure>
+            <div class="frame"><img src="assets/img/discovery-benchmarking-cambio.jpg" alt="Board de benchmarking de dados, cotação de câmbio e Confidence câmbio no FigJam" /></div>
+            <figcaption>Benchmarking e mapeamento de referências</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/discovery-funcionalidades-regras.jpg" alt="Board de funcionalidades e regras de negócio levantadas no FigJam" /></div>
+            <figcaption>Funcionalidades e regras de negócio</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/discovery-benchmarking-checkout.jpg" alt="Board de benchmarking de telas de checkout com sucesso" /></div>
+            <figcaption>Benchmarking de checkout</figcaption>
+          </figure>
         </div>
 
         <p class="project-subhead">Telas de alta fidelidade</p>
-        <div class="project-gallery">
-          <img src="assets/img/galeria-cambio-telas.jpg" alt="Telas de alta fidelidade do onboarding" />
+        <div class="project-body">
+          <p>As telas finais do onboarding PJ, já com as decisões de fluxo e conteúdo validadas no discovery.</p>
+        </div>
+        <div class="screens-grid">
+          <figure>
+            <div class="frame"><img src="assets/img/onboarding-novo-acesso.jpg" alt="Tela de acesso do onboarding redesenhado, com seleção entre Pessoa Física e Pessoa Jurídica" /></div>
+            <figcaption>Acesso (PF/PJ)</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/onboarding-novo-dados-empresa.jpg" alt="Formulário de dados principais da empresa no onboarding redesenhado" /></div>
+            <figcaption>Dados da empresa</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/onboarding-novo-socios.jpg" alt="Tela de revisão dos sócios da empresa no onboarding redesenhado" /></div>
+            <figcaption>Revisão de sócios</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/onboarding-novo-boasvindas.jpg" alt="Modal de boas-vindas ao painel de clientes ao final do onboarding" /></div>
+            <figcaption>Boas-vindas ao painel</figcaption>
+          </figure>
         </div>
 
-        <p class="project-subhead">Meu papel no teste</p>
+        <p class="project-subhead">Antes e depois</p>
         <div class="project-body">
-          <p>Conduzi esse teste de usabilidade: planejei o roteiro de tarefas, moderei as três entrevistas, registrei os achados em tempo real e apresentei os resultados priorizados para o time do projeto.</p>
+          <p>Nos dois pontos onde a mudança foi mais visível, arraste o controle pra comparar o fluxo antigo com o redesenhado.</p>
+        </div>
+
+        <div class="compare-slider">
+          <div class="compare-slider-frame">
+            <img class="compare-slider-img" src="assets/img/onboarding-antigo-geral.jpg" alt="Formulário de dados gerais da empresa no onboarding antigo, com layout de dois blocos sem hierarquia clara" />
+            <div class="compare-slider-after-wrap">
+              <img class="compare-slider-img" src="assets/img/onboarding-novo-dados-empresa.jpg" alt="Formulário de dados da empresa no onboarding redesenhado, com etapas agrupadas por tema" />
+            </div>
+            <span class="compare-slider-tag compare-slider-tag-before">Antes</span>
+            <span class="compare-slider-tag compare-slider-tag-after">Depois</span>
+            <div class="compare-slider-handle" role="slider" tabindex="0" aria-label="Arraste para comparar o formulário de dados da empresa antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="compare-slider-handle-grip">↔</span>
+            </div>
+          </div>
+        </div>
+        <p class="compare-caption">Dados da empresa</p>
+
+        <div class="compare-slider" style="margin-top:var(--space-lg);">
+          <div class="compare-slider-frame">
+            <img class="compare-slider-img" src="assets/img/onboarding-antigo-representantes.jpg" alt="Tela de cadastro de sócios e procuradores no onboarding antigo" />
+            <div class="compare-slider-after-wrap">
+              <img class="compare-slider-img" src="assets/img/onboarding-novo-socios.jpg" alt="Tela de revisão de sócios no onboarding redesenhado, com cotas e status de cada sócio visíveis num único card" />
+            </div>
+            <span class="compare-slider-tag compare-slider-tag-before">Antes</span>
+            <span class="compare-slider-tag compare-slider-tag-after">Depois</span>
+            <div class="compare-slider-handle" role="slider" tabindex="0" aria-label="Arraste para comparar a tela de sócios e representantes antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="compare-slider-handle-grip">↔</span>
+            </div>
+          </div>
+        </div>
+        <p class="compare-caption">Sócios e representantes</p>
+
+        <p class="project-subhead">Teste de usabilidade: condução e insights</p>
+        <div class="project-body">
+          <p>Conduzi esse teste de usabilidade: planejei o roteiro de tarefas, moderei as três entrevistas, registrei os insights em tempo real e apresentei os resultados priorizados para o time do projeto.</p>
         </div>
         <ul class="project-list">
           <li>Planejamento do roteiro e das tarefas</li>
           <li>Moderação das entrevistas</li>
           <li>Síntese dos comportamentos e pontos de melhoria</li>
-          <li>Apresentação e priorização dos achados com o time</li>
+          <li>Apresentação e priorização dos insights com o time</li>
         </ul>
 
-        <p class="project-subhead">Testes de usabilidade: números e decisões</p>
-        <div class="project-body">
-          <p>Teste moderado com protótipo de alta fidelidade no Figma, com clientes reais executando as tarefas do onboarding PJ (agosto/2024).</p>
-        </div>
         <div class="stat-grid">
           <div class="stat-item">
             <div class="number">3</div>
@@ -131,47 +194,47 @@
           </div>
           <div class="stat-item">
             <div class="number">7</div>
-            <div class="label">Comportamentos de uso mapeados</div>
+            <div class="label">Comportamentos mapeados</div>
           </div>
         </div>
 
-        <p class="project-subhead" style="margin-top:var(--space-lg);">Achado → decisão</p>
+        <p class="project-subhead" style="margin-top:var(--space-lg);">Insight → decisão</p>
         <div class="finding-carousel">
           <div class="finding-track" role="list">
             <article class="finding-card" role="listitem">
-              <span class="finding-index">Achado 01</span>
+              <span class="finding-index">Insight 01</span>
               <h3>Dois avisos, um só componente</h3>
               <p>O aviso de cotas incompletas usava o mesmo padrão visual do aviso de dados faltando, e passava despercebido pelo cliente.</p>
               <p class="finding-decision"><strong>Decisão:</strong> diferenciar visualmente os dois estados.</p>
             </article>
             <article class="finding-card" role="listitem">
-              <span class="finding-index">Achado 02</span>
+              <span class="finding-index">Insight 02</span>
               <h3>Campo de telefone confundia DDI com DDD</h3>
               <p>Sem separação clara entre os dois códigos, os clientes erravam o preenchimento.</p>
               <p class="finding-decision"><strong>Decisão:</strong> campo dividido em seletor de DDI + DDD digitável.</p>
             </article>
             <article class="finding-card" role="listitem">
-              <span class="finding-index">Achado 03</span>
+              <span class="finding-index">Insight 03</span>
               <h3>Termos marcados sem necessidade</h3>
               <p>Por falta de sinalização sobre o que era obrigatório (FACTA opcional, LGPD e Termo de adesão obrigatórios), os clientes marcavam os três como se fossem iguais.</p>
               <p class="finding-decision"><strong>Decisão:</strong> revisão da sinalização de obrigatoriedade.</p>
             </article>
             <article class="finding-card" role="listitem">
-              <span class="finding-index">Achado 04</span>
+              <span class="finding-index">Insight 04</span>
               <h3>Cadastro parcial sem caminho claro de retomada</h3>
               <p>Os clientes tentavam voltar pelo mesmo link recebido por e-mail, sem saber que os dados ficavam salvos.</p>
               <p class="finding-decision"><strong>Decisão:</strong> aviso de saída explicando o prazo de retenção dos dados e um caminho de acesso via login.</p>
             </article>
           </div>
           <div class="finding-controls">
-            <button type="button" class="finding-prev" aria-label="Achado anterior">←</button>
-            <div class="finding-dots" aria-label="Navegar entre achados">
-              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para achado 1"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para achado 2"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para achado 3"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para achado 4"></button>
+            <button type="button" class="finding-prev" aria-label="Insight anterior">←</button>
+            <div class="finding-dots" aria-label="Navegar entre insights">
+              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para insight 1"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 2"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 3"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 4"></button>
             </div>
-            <button type="button" class="finding-next" aria-label="Próximo achado">→</button>
+            <button type="button" class="finding-next" aria-label="Próximo insight">→</button>
           </div>
         </div>
 
@@ -268,6 +331,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>

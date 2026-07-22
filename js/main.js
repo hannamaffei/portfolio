@@ -98,4 +98,41 @@ document.addEventListener("DOMContentLoaded", function () {
       cards.forEach(function (card) { observer.observe(card); });
     }
   });
+
+  document.querySelectorAll(".compare-slider-frame").forEach(function (frame) {
+    var afterWrap = frame.querySelector(".compare-slider-after-wrap");
+    var handle = frame.querySelector(".compare-slider-handle");
+    var dragging = false;
+
+    function setPosition(percent) {
+      percent = Math.max(0, Math.min(100, percent));
+      afterWrap.style.clipPath = "inset(0 0 0 " + percent + "%)";
+      handle.style.left = percent + "%";
+      handle.setAttribute("aria-valuenow", Math.round(percent));
+    }
+
+    function positionFromClientX(clientX) {
+      var rect = frame.getBoundingClientRect();
+      setPosition(((clientX - rect.left) / rect.width) * 100);
+    }
+
+    frame.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      frame.setPointerCapture(e.pointerId);
+      positionFromClientX(e.clientX);
+    });
+    frame.addEventListener("pointermove", function (e) {
+      if (dragging) positionFromClientX(e.clientX);
+    });
+    frame.addEventListener("pointerup", function () { dragging = false; });
+    frame.addEventListener("pointercancel", function () { dragging = false; });
+
+    handle.addEventListener("keydown", function (e) {
+      var current = parseFloat(handle.style.left) || 50;
+      if (e.key === "ArrowLeft") { setPosition(current - 5); e.preventDefault(); }
+      if (e.key === "ArrowRight") { setPosition(current + 5); e.preventDefault(); }
+      if (e.key === "Home") { setPosition(0); e.preventDefault(); }
+      if (e.key === "End") { setPosition(100); e.preventDefault(); }
+    });
+  });
 });
