@@ -479,6 +479,10 @@ a.project-media:hover {
 }
 
 .project-hero-media.portrait {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
   display: flex;
   justify-content: center;
   padding: var(--space-lg) 0;
