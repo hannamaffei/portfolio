@@ -445,8 +445,8 @@ a.project-media:hover {
   grid-template-columns: 1fr 1.2fr;
   gap: 56px;
   align-items: start;
-  margin-top: 24px;
-  margin-bottom: 64px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .project-hero-grid > * { min-width: 0; }
@@ -485,7 +485,7 @@ a.project-media:hover {
 
 .project-body {
   max-width: none;
-  margin-top: 56px;
+  margin-top: var(--space-lg);
 }
 
 .project-hero-grid + .project-body { margin-top: 0; }
@@ -498,7 +498,7 @@ a.project-media:hover {
   font-size: 19px;
   font-weight: 600;
   color: var(--ink);
-  margin: 56px 0 16px;
+  margin: var(--space-lg) 0 var(--space-sm);
 }
 
 .project-hero-grid + .project-subhead { margin-top: 0; }
@@ -665,8 +665,8 @@ a.project-media:hover {
 .tag-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
 }
 
 .tag-pill {
@@ -680,8 +680,8 @@ a.project-media:hover {
 .token-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
   max-width: 900px;
 }
 
@@ -709,8 +709,8 @@ a.project-media:hover {
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 24px;
-  margin-top: 16px;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
   max-width: 900px;
 }
 
@@ -757,7 +757,7 @@ a.project-media:hover {
 }
 
 .project-gallery {
-  margin-top: 16px;
+  margin-top: var(--space-sm);
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -767,8 +767,8 @@ a.project-media:hover {
 
 .screens-row {
   display: flex;
-  gap: 24px;
-  margin-top: 16px;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -799,15 +799,15 @@ a.project-media:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 80px;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
 }
 
 .project-nav a { font-size: 15px; }
 .project-nav a:hover { text-decoration: underline; }
 
 .module-list {
-  margin-top: 16px;
+  margin-top: var(--space-sm);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
