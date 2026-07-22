@@ -539,7 +539,8 @@ a.project-media:hover {
 }
 
 .project-hero-grid + .project-subhead { margin-top: 0; }
-.screens-grid + .project-subhead { margin-top: var(--space-xl); }
+.screens-grid + .project-subhead,
+.finding-carousel + .project-subhead { margin-top: var(--space-xl); }
 
 /* ===== Páginas de papel (múltiplos sub-projetos numa página, com troca de conteúdo via tabs) ===== */
 .subproject-nav {
