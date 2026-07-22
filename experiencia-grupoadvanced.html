@@ -260,23 +260,135 @@
         <h2 class="role-section">Painel Interno e Operações</h2>
 
         <div class="project-body">
-          <p>Câmbio, cartão pré-pago, câmbio turismo e remessa têm regras de negócio próprias, mas precisavam conviver num único painel do cliente, sem cada operação parecer um produto diferente.</p>
+          <p><strong>Por que esse problema importa:</strong> o painel de operações em si não mudou nessa frente, o desafio foi criar algo que não existia. Uma exigência do Banco Central determinava que o próprio cliente confirmasse seus dados antes do cadastro virar oficial, então desenhei um fluxo de pré-cadastro: o executivo capta informações básicas numa visita ou reunião, cria um registro inicial no painel e gera um link para o cliente continuar ou confirmar o que foi preenchido. Como era uma necessidade nova e específica do negócio, sem um produto parecido no mercado pra comparar, fui direto pra interface, e fui reunindo as decisões de UX ao longo do processo, não num discovery formal antes de desenhar.</p>
         </div>
 
         <p class="project-subhead">Decisões de UI e UX</p>
         <div class="module-list">
           <div class="module-item">
-            <h3>Um padrão de interface para operações distintas</h3>
-            <p>Câmbio, cartão pré-pago e câmbio turismo usam os mesmos componentes de card, status e ação. Assim o cliente reconhece o padrão mesmo trocando de tipo de operação.</p>
+            <h3>Cadastro em duas etapas, por exigência regulatória</h3>
+            <p>O pré-cadastro feito pelo executivo não podia virar cadastro oficial sozinho. Desenhei o fluxo para deixar claro, nas duas pontas, que a confirmação do próprio cliente era a etapa que fechava o processo.</p>
           </div>
           <div class="module-item">
-            <h3>Design system como parte do trabalho, não um extra</h3>
-            <p>Com várias frentes rodando em paralelo, manter os componentes documentados e atualizados evitava que cada tela nova reinventasse um padrão que já tinha sido resolvido antes.</p>
+            <h3>Duas formas de iniciar, pensando no contexto real de venda</h3>
+            <p>Compartilhar o link direto, para o cliente preencher tudo, ou preencher os dados básicos antes e deixar só a revisão para ele. A primeira opção serve pra uma venda mais remota, a segunda pra quando o executivo já levantou os dados numa reunião presencial.</p>
+          </div>
+          <div class="module-item">
+            <h3>Status visível na carteira inteira, não só no cadastro aberto</h3>
+            <p>Reaproveitei o padrão de lista já usado no painel para dar ao executivo uma visão rápida de onde cada prospect estava (não iniciado, em processo ou concluído), sem precisar abrir cliente por cliente.</p>
           </div>
         </div>
 
-        <div class="project-gallery">
-          <img src="assets/img/galeria-cambio-testes.jpg" alt="Testes de usabilidade e manutenção do design system" />
+        <p class="project-subhead">Telas</p>
+        <div class="screens-grid cols-3">
+          <figure>
+            <div class="frame"><img src="assets/img/painel-carteira-clientes.jpg" alt="Painel Carteira de Clientes, listando prospects com status de onboarding (não iniciado, em processo, concluído)" /></div>
+            <figcaption>Carteira de clientes</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/painel-modal-cadastro.jpg" alt="Modal Novo Cadastro perguntando quem vai preencher as informações: compartilhar link ou o executivo preencher para o cliente revisar" /></div>
+            <figcaption>Início do cadastro</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/painel-form-prospect.jpg" alt="Formulário de dados básicos do prospect, com CPF, nome completo, e-mail e telefone" /></div>
+            <figcaption>Dados do prospect</figcaption>
+          </figure>
+        </div>
+
+        <p class="project-subhead">Teste de usabilidade com o time comercial</p>
+        <div class="project-body">
+          <p>Depois que o fluxo foi ao ar, conduzi um teste de usabilidade com executivos do time comercial, que usam o painel no dia a dia, cobrindo as três partes do fluxo: criação do prospect, o cadastro feito pelo executivo e a revisão do lado do cliente.</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="number">3</div>
+            <div class="label">Executivos comerciais entrevistados</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">11</div>
+            <div class="label">Pontos do fluxo analisados</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">7</div>
+            <div class="label">Pontos assertivos confirmados (63,6%)</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">4</div>
+            <div class="label">Oportunidades de melhoria mapeadas (36,4%)</div>
+          </div>
+        </div>
+
+        <div class="project-gallery" style="margin-top:var(--space-lg);">
+          <img src="assets/img/painel-teste-priorizacao.jpg" alt="Board de priorização dos achados do teste de usabilidade do painel, com pontos analisados e impacto de cada oportunidade de melhoria" />
+        </div>
+
+        <p class="project-subhead" style="margin-top:var(--space-lg);">Insight → decisão</p>
+        <div class="finding-carousel">
+          <div class="finding-track" role="list">
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 01</span>
+              <h3>Confusão entre "enviar para preencher" e "enviar para revisar"</h3>
+              <p>Todos os participantes tiveram dúvida entre as duas opções do modal de início de cadastro.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> revisão da hierarquia visual e da copy dos dois caminhos.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 02</span>
+              <h3>Falta de confirmação após enviar o cadastro</h3>
+              <p>Um participante relatou insegurança sobre se o cliente tinha sido efetivamente salvo na carteira depois de enviar.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> confirmação de sucesso mais visível no painel, além da tela de feedback.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 03</span>
+              <h3>Total de prospects pouco visível na tabela</h3>
+              <p>Uma participante rolou a tabela inteira até o final procurando o total de prospects, que já existia no topo.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> dar mais destaque a essa informação na tabela.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 04</span>
+              <h3>Status "Inativo" sem entendimento claro</h3>
+              <p>Nenhum participante compreendeu de imediato o que esse status significava, gerando interpretações diferentes entre eles.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> revisão da nomenclatura de status.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 05</span>
+              <h3>Diferença entre cliente "Simplificado" e "Completo" pouco clara</h3>
+              <p>Participantes questionaram como identificar, na lista, os prospects com cadastro simplificado dos com cadastro completo.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> sinalizar visualmente os clientes com operação esperada acima de US$ 50 mil, considerados cadastro completo.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 06</span>
+              <h3>Copy do botão da tela de feedback gerava incerteza</h3>
+              <p>Participantes fechavam a tela de feedback rapidamente e, quando questionados sobre o conteúdo, respondiam com dúvida.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> revisão da copy do botão.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Insight 07</span>
+              <h3>Header fixo para compartilhar o link não foi usado</h3>
+              <p>Mesmo com o atalho disponível desde o início, todos os participantes preferiram seguir até a última etapa do formulário para então enviar o link.</p>
+              <p class="finding-decision"><strong>Decisão:</strong> manter o comportamento como estava, sem forçar um atalho que os usuários não pediram.</p>
+            </article>
+          </div>
+          <div class="finding-controls">
+            <button type="button" class="finding-prev" aria-label="Insight anterior">←</button>
+            <div class="finding-dots" aria-label="Navegar entre insights">
+              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para insight 1"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 2"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 3"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 4"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 5"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 6"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 7"></button>
+            </div>
+            <button type="button" class="finding-next" aria-label="Próximo insight">→</button>
+          </div>
+        </div>
+
+        <p class="project-subhead">O que eu levo desse projeto</p>
+        <div class="project-body">
+          <p>Desenhar esse fluxo me ensinou a validar hipótese rápido em vez de esperar um discovery longo: sem um produto de mercado parecido pra comparar, as decisões de UX foram surgindo e sendo ajustadas conforme o processo avançava, não definidas de antemão.</p>
+          <p>O teste de usabilidade com quem realmente usa o painel no dia a dia confirmou pontos de confusão que provavelmente passariam despercebidos sem testar com o time comercial diretamente, como a dúvida entre "enviar para preencher" e "enviar para revisar", o achado de maior impacto do teste.</p>
+          <p>Também participei de reuniões de alinhamento com a liderança comercial ao longo do projeto, validando decisões de fluxo e prioridade diretamente com quem enxerga o produto do lado do negócio, não só do lado do usuário final.</p>
         </div>
 
         </div>
