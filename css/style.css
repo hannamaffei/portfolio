@@ -793,21 +793,6 @@ a.project-media:hover {
   color: var(--ink-soft);
 }
 
-.topic-tag {
-  display: inline-block;
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--ink-soft);
-  margin: var(--space-lg) 0 var(--space-xs);
-}
-
-.topic-tag + .project-body { margin-top: 0; }
-.project-body + .topic-tag { margin-top: var(--space-lg); }
-.role-section + .topic-tag { margin-top: var(--space-sm); }
-
 .problem-solution-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -815,13 +800,9 @@ a.project-media:hover {
   margin-top: var(--space-xl);
 }
 
-.problem-solution-grid .module-item > .topic-tag {
-  margin: 0 0 var(--space-xs);
-}
-
 .problem-solution-grid .module-item p { margin: 0; }
 
-.problem-solution-grid .module-item .project-list {
+.module-item .project-list {
   columns: 1;
   margin-top: var(--space-xs);
 }
