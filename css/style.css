@@ -987,7 +987,13 @@ a.project-media:hover {
    (.project-hero-media, fora da tab-panel) mantém o box-shadow original. */
 #onboarding .screens-grid .frame,
 #onboarding .screens-row img,
-#onboarding .compare-slider-frame {
+#onboarding .compare-slider-frame,
+#painel .screens-grid .frame,
+#painel .screens-row img,
+#painel .compare-slider-frame,
+#investimentos .screens-grid .frame,
+#investimentos .screens-row img,
+#investimentos .compare-slider-frame {
   box-shadow: none;
 }
 
