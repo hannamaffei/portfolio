@@ -600,6 +600,27 @@ a.project-media:hover {
 
 .gallery-label:first-child { margin-top: 0; }
 
+.grid-compare {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.grid-compare figure { margin: 0; }
+.grid-compare img { height: 260px; width: auto; max-width: 100%; display: block; }
+.grid-compare figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-compare img { height: 180px; }
+}
+
 /* ===== Páginas de papel (múltiplos sub-projetos numa página, com troca de conteúdo via tabs) ===== */
 .subproject-nav {
   display: flex;
