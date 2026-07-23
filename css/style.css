@@ -504,7 +504,6 @@ a.project-media:hover {
 .project-hero-media.bleed-right {
   width: 135%;
   max-width: none;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
 }
 
 .project-hero-media img { width: 100%; display: block; }
@@ -905,6 +904,8 @@ a.project-media:hover {
 }
 
 .screens-grid figure { margin: 0; }
+
+.screens-grid figure > img { width: 100%; display: block; }
 
 .screens-grid .frame {
   aspect-ratio: 4 / 3;
