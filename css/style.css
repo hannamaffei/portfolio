@@ -462,12 +462,6 @@ a.project-media:hover {
   margin: 0 0 16px;
 }
 
-.hero-meta {
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin: 0 0 var(--space-sm);
-}
-
 .project-hero-media {
   border-radius: 16px;
   overflow: hidden;
