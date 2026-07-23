@@ -808,6 +808,20 @@ a.project-media:hover {
 .project-body + .topic-tag { margin-top: var(--space-lg); }
 .role-section + .topic-tag { margin-top: var(--space-sm); }
 
+.problem-solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-sm);
+}
+
+.problem-solution-grid .project-body { margin-top: 0; }
+.problem-solution-grid .topic-tag { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .problem-solution-grid { grid-template-columns: 1fr; }
+}
+
 .token-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
