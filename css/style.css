@@ -461,6 +461,12 @@ a.project-media:hover {
   margin: 0 0 16px;
 }
 
+.hero-meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 var(--space-sm);
+}
+
 .project-hero-media {
   border-radius: 16px;
   overflow: hidden;
@@ -492,6 +498,11 @@ a.project-media:hover {
   width: auto;
   max-width: 320px;
   border-radius: 12px;
+}
+
+.project-hero-media.bleed-right {
+  width: 135%;
+  max-width: none;
 }
 
 .project-hero-media img { width: 100%; display: block; }
@@ -534,6 +545,7 @@ a.project-media:hover {
 
 @media (max-width: 860px) {
   .project-hero-grid { grid-template-columns: 1fr; }
+  .project-hero-media.bleed-right { width: 100%; }
 }
 
 .project-body {
@@ -557,6 +569,17 @@ a.project-media:hover {
 .project-hero-grid + .project-subhead { margin-top: 0; }
 .screens-grid + .project-subhead,
 .finding-carousel + .project-subhead { margin-top: var(--space-xl); }
+
+.gallery-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.gallery-label:first-child { margin-top: 0; }
 
 /* ===== Páginas de papel (múltiplos sub-projetos numa página, com troca de conteúdo via tabs) ===== */
 .subproject-nav {
@@ -760,6 +783,9 @@ a.project-media:hover {
   color: var(--ink-soft);
   margin-top: 2px;
 }
+
+.palette-bleed { margin-top: var(--space-sm); }
+.palette-bleed img { width: 100%; display: block; }
 
 .stat-grid {
   display: grid;
