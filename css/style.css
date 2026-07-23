@@ -793,6 +793,21 @@ a.project-media:hover {
   color: var(--ink-soft);
 }
 
+.topic-tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin: var(--space-lg) 0 var(--space-xs);
+}
+
+.topic-tag + .project-body { margin-top: 0; }
+.project-body + .topic-tag { margin-top: var(--space-lg); }
+.role-section + .topic-tag { margin-top: var(--space-sm); }
+
 .token-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
