@@ -571,9 +571,6 @@ a.project-media:hover {
 .finding-carousel + .project-subhead { margin-top: var(--space-xl); }
 
 .design-system-panel {
-  background: #f2f5f9;
-  border-radius: 16px;
-  padding: var(--space-lg);
   margin: var(--space-xl) 0;
 }
 
