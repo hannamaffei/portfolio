@@ -572,11 +572,21 @@ a.project-media:hover {
 .screens-grid + .project-subhead,
 .finding-carousel + .project-subhead { margin-top: var(--space-xl); }
 
+.role-section + .project-body { margin-top: var(--space-sm); }
+
+/* Respiro padrão entre as seções principais de um case (Decisões de UI e UX,
+   Discovery, Design System, Telas, Antes e depois, Teste de usabilidade,
+   O que eu levo) — --space-2xl (140px), aplicado via classe pra não depender
+   do elemento que vem antes. Sub-tópicos dentro de uma seção (ex: Cores e
+   Grid System dentro de Design System) usam espaçamento normal de .project-subhead,
+   propositalmente mais próximo. */
+.project-subhead.section-break { margin-top: var(--space-2xl); }
+
 .design-system-panel {
   margin: var(--space-2xl) 0;
 }
 
-.design-system-panel .frame { box-shadow: none; }
+.design-system-panel .project-subhead { margin-top: var(--space-lg); }
 
 .design-system-panel > .project-subhead:first-child { margin-top: 0; }
 
@@ -880,8 +890,6 @@ a.project-media:hover {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
 }
 
-.screens-row.no-shadow img { box-shadow: none; }
-
 .screens-row figcaption {
   margin-top: 12px;
   font-size: 13px;
@@ -953,6 +961,14 @@ a.project-media:hover {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
   cursor: ew-resize;
   touch-action: none;
+}
+
+/* Aba Onboarding: nenhuma imagem de conteúdo tem sombra, só a capa do header
+   (.project-hero-media, fora da tab-panel) mantém o box-shadow original. */
+#onboarding .screens-grid .frame,
+#onboarding .screens-row img,
+#onboarding .compare-slider-frame {
+  box-shadow: none;
 }
 
 .compare-slider-img { width: 100%; display: block; user-select: none; -webkit-user-drag: none; }
