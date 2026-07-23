@@ -17,6 +17,7 @@
   --space-md: 24px;  /* elemento de controle (ex: tabs) e o conteúdo que ele controla */
   --space-lg: 48px;  /* transição visível entre blocos relacionados */
   --space-xl: 88px;  /* separação forte, mudança de seção/assunto */
+  --space-2xl: 140px; /* divisão bem espaçada entre blocos grandes de conteúdo */
 }
 
 * { box-sizing: border-box; }
@@ -503,6 +504,7 @@ a.project-media:hover {
 .project-hero-media.bleed-right {
   width: 135%;
   max-width: none;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
 }
 
 .project-hero-media img { width: 100%; display: block; }
@@ -571,8 +573,10 @@ a.project-media:hover {
 .finding-carousel + .project-subhead { margin-top: var(--space-xl); }
 
 .design-system-panel {
-  margin: var(--space-xl) 0;
+  margin: var(--space-2xl) 0;
 }
+
+.design-system-panel .frame { box-shadow: none; }
 
 .design-system-panel > .project-subhead:first-child { margin-top: 0; }
 
@@ -875,6 +879,8 @@ a.project-media:hover {
   border: 1px solid var(--line);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
 }
+
+.screens-row.no-shadow img { box-shadow: none; }
 
 .screens-row figcaption {
   margin-top: 12px;
