@@ -812,11 +812,19 @@ a.project-media:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xl);
 }
 
-.problem-solution-grid .project-body { margin-top: 0; }
-.problem-solution-grid .topic-tag { margin-top: 0; }
+.problem-solution-grid .module-item > .topic-tag {
+  margin: 0 0 var(--space-xs);
+}
+
+.problem-solution-grid .module-item p { margin: 0; }
+
+.problem-solution-grid .module-item .project-list {
+  columns: 1;
+  margin-top: var(--space-xs);
+}
 
 @media (max-width: 700px) {
   .problem-solution-grid { grid-template-columns: 1fr; }
