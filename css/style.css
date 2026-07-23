@@ -796,19 +796,28 @@ a.project-media:hover {
 .problem-solution-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   gap: var(--space-lg);
   margin-top: var(--space-xl);
 }
 
+.problem-solution-grid .module-item { height: 100%; }
 .problem-solution-grid .module-item p { margin: 0; }
-
-.module-item .project-list {
-  columns: 1;
-  margin-top: var(--space-xs);
-}
 
 @media (max-width: 700px) {
   .problem-solution-grid { grid-template-columns: 1fr; }
+}
+
+.decision-topic h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.decision-topic .project-list {
+  columns: 1;
+  margin-top: var(--space-xs);
 }
 
 .token-grid {
