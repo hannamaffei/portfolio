@@ -60,8 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var dots = Array.prototype.slice.call(carousel.querySelectorAll(".finding-dots .dot"));
     var prevBtn = carousel.querySelector(".finding-prev");
     var nextBtn = carousel.querySelector(".finding-next");
+    var currentIndex = 0;
 
     function setActive(index) {
+      currentIndex = index;
       dots.forEach(function (dot, i) {
         dot.classList.toggle("active", i === index);
         dot.setAttribute("aria-pressed", i === index ? "true" : "false");
@@ -71,29 +73,30 @@ document.addEventListener("DOMContentLoaded", function () {
     function scrollToCard(index) {
       index = Math.max(0, Math.min(cards.length - 1, index));
       if (!cards[index]) return;
+      setActive(index);
       track.scrollTo({ left: cards[index].offsetLeft - track.offsetLeft, behavior: "smooth" });
-    }
-
-    function activeIndex() {
-      var i = dots.findIndex(function (dot) { return dot.classList.contains("active"); });
-      return i > -1 ? i : 0;
     }
 
     dots.forEach(function (dot, i) {
       dot.addEventListener("click", function () { scrollToCard(i); });
     });
 
-    if (prevBtn) prevBtn.addEventListener("click", function () { scrollToCard(activeIndex() - 1); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { scrollToCard(activeIndex() + 1); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { scrollToCard(currentIndex - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { scrollToCard(currentIndex + 1); });
+
+    setActive(0);
 
     if ("IntersectionObserver" in window) {
+      var ratios = cards.map(function () { return 0; });
       var observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
-            if (entry.isIntersecting) setActive(cards.indexOf(entry.target));
+            ratios[cards.indexOf(entry.target)] = entry.intersectionRatio;
           });
+          var maxRatio = Math.max.apply(null, ratios);
+          if (maxRatio > 0) setActive(ratios.indexOf(maxRatio));
         },
-        { root: track, threshold: 0.6 }
+        { root: track, threshold: [0, 0.25, 0.5, 0.75, 1] }
       );
       cards.forEach(function (card) { observer.observe(card); });
     }
