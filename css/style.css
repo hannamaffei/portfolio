@@ -567,12 +567,24 @@ a.project-media:hover {
 
 .role-section + .project-body { margin-top: var(--space-sm); }
 
-/* Respiro padrão entre as seções principais de um case (Decisões de UI e UX,
-   Discovery, Design System, Telas, Antes e depois, Teste de usabilidade,
-   O que eu levo) — --space-2xl (140px), aplicado via classe pra não depender
-   do elemento que vem antes. Sub-tópicos dentro de uma seção (ex: Cores e
-   Grid System dentro de Design System) usam espaçamento normal de .project-subhead,
-   propositalmente mais próximo. */
+/* ===== Receita de espaçamento de um case (papel dentro de experiencia-*.html) =====
+   Confirmada por medição real (getBoundingClientRect) em todas as abas do
+   Grupo Advanced — usar esses mesmos números ao montar uma aba/case nova:
+   - Título do papel (h2.role-section) → primeiro parágrafo de contexto: 16px (--space-sm)
+     Todo .role-section PRECISA de uma frase curta de abertura logo depois do título
+     (mesmo sem número/duração real) — sem ela o próximo bloco cola direto no título
+     com 88px, quebrando o ritmo em relação às outras abas.
+   - Parágrafo de contexto → cards de Problema/Solução (.problem-solution-grid): 88px (--space-xl)
+   - Cards de Problema/Solução → próxima seção principal: 140px (--space-2xl, .section-break)
+   - Subtítulo de seção (.project-subhead) → texto ou primeira imagem: 16px (--space-sm)
+   - Lista de tarefas (.project-list) → números (.stat-grid): 48px (--space-lg)
+   - Números (.stat-grid) → próximo bloco (galeria extra ou "Insight → decisão"): 48px (--space-lg)
+   - Entre seções PRINCIPAIS de um case (Decisões de UI e UX, Discovery/Componentes,
+     Design System, Telas, Antes e depois, Teste de usabilidade, O que eu levo):
+     140px (--space-2xl), via classe .section-break — não depende do elemento anterior.
+   Sub-tópicos dentro de uma seção (ex: Cores e Grid System dentro de Design System)
+   usam o espaçamento normal de .project-subhead (48px), propositalmente mais próximo
+   que --space-2xl, pra não parecerem seções principais novas. */
 .project-subhead.section-break { margin-top: var(--space-2xl); }
 
 .design-system-panel {
