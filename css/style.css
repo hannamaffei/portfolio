@@ -1036,6 +1036,27 @@ a.project-media:hover {
   box-shadow: none;
 }
 
+#investimentos .screens-grid.no-frame img {
+  border-radius: 12px;
+}
+
+#investimentos .screens-grid.cols-3 figcaption {
+  text-align: left;
+}
+
+#investimentos .screens-grid.cols-3 figcaption strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+#investimentos .screens-grid.cols-3 figcaption p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
 .compare-slider-img { width: 100%; display: block; user-select: none; -webkit-user-drag: none; }
 
 .compare-slider-after-wrap {
