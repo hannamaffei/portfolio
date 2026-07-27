@@ -61,50 +61,79 @@
           <p><strong>Módulos do sistema:</strong> o produto era dividido em frentes distintas, cada uma com fluxo e interface desenhados por completo.</p>
         </div>
 
-        <div class="module-list">
-          <div class="module-item">
-            <h3>Gestão de usuários</h3>
+        <div class="subproject-nav" role="tablist" aria-label="Módulos do sistema">
+          <button type="button" class="active" role="tab" aria-selected="true" aria-controls="gestao-usuarios" id="tab-gestao-usuarios">Gestão de usuários</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="controle-acesso" id="tab-controle-acesso" tabindex="-1">Controle de Acesso</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="epi" id="tab-epi" tabindex="-1">EPI</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="seguranca" id="tab-seguranca" tabindex="-1">Segurança</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="integracao" id="tab-integracao" tabindex="-1">Integração</button>
+        </div>
+
+        <div class="tab-panel active" id="gestao-usuarios" role="tabpanel" aria-labelledby="tab-gestao-usuarios">
+          <h2 class="role-section">Gestão de usuários</h2>
+          <div class="project-body">
             <p>Fluxo de convite e cadastro operado pelo backoffice, com vínculo automático a empresas, definição de credenciais, níveis de acesso e informações como EPIs.</p>
           </div>
-          <div class="module-item">
-            <h3>Controle de Acesso</h3>
+        </div>
+        <div class="tab-panel" id="controle-acesso" role="tabpanel" aria-labelledby="tab-controle-acesso">
+          <h2 class="role-section">Controle de Acesso</h2>
+          <div class="project-body">
             <p>Centralizava os registros de entrada e saída de profissionais, dando visibilidade ao fluxo de pessoas no ambiente.</p>
           </div>
-          <div class="module-item">
-            <h3>EPI</h3>
+        </div>
+        <div class="tab-panel" id="epi" role="tabpanel" aria-labelledby="tab-epi">
+          <h2 class="role-section">EPI</h2>
+          <div class="project-body">
             <p>Controle de equipamentos de proteção por profissional, com registro de entregas, validades, histórico e assinatura digital na retirada.</p>
           </div>
-          <div class="module-item">
-            <h3>Segurança</h3>
+        </div>
+        <div class="tab-panel" id="seguranca" role="tabpanel" aria-labelledby="tab-seguranca">
+          <h2 class="role-section">Segurança</h2>
+          <div class="project-body">
             <p>Análise e aprovação de documentos dos profissionais, permitindo validação ou reprovação diretamente no sistema.</p>
           </div>
-          <div class="module-item">
-            <h3>Integração</h3>
+        </div>
+        <div class="tab-panel" id="integracao" role="tabpanel" aria-labelledby="tab-integracao">
+          <h2 class="role-section">Integração</h2>
+          <div class="project-body">
             <p>Registro e rastreabilidade de eventos operacionais, permitindo que contratadas criassem eventos e registrassem presença ou ocorrência.</p>
           </div>
         </div>
 
-        <p class="project-subhead">Decisões de UI e UX</p>
+        <p class="project-subhead section-break">Decisões de UI e UX</p>
         <div class="module-list">
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Módulos separados, navegação única</h3>
-            <p>Gestão de usuários, controle de acesso, EPI, segurança e integração são processos diferentes, mas os usuários internos navegam entre eles o dia todo. Manter os mesmos padrões de lista, filtro e ação em todos os módulos reduzia o tempo de aprendizado de quem usava mais de um.</p>
+            <ul class="project-list">
+              <li>Mesmos padrões de lista, filtro e ação em todos os módulos</li>
+              <li>Reduz o tempo de aprendizado de quem usa mais de um módulo</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Regras de negócio antes da tela</h3>
-            <p>Cada módulo tinha regras próprias de quem podia ver, aprovar ou editar o quê. Mapear isso com as lideranças operacionais antes de desenhar evitou retrabalho de interface depois.</p>
+            <ul class="project-list">
+              <li>Regras de quem pode ver, aprovar ou editar mapeadas com as lideranças operacionais</li>
+              <li>Levantamento feito antes de desenhar, evitando retrabalho de interface</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Rastreabilidade como requisito de design</h3>
-            <p>Em processos como controle de acesso e EPI, saber quem fez o quê e quando não é um detalhe, é o motivo do sistema existir. Isso influenciou desde o histórico visível até a assinatura digital na retirada de equipamentos.</p>
+            <ul class="project-list">
+              <li>Saber quem fez o quê e quando é o motivo do sistema existir, não um detalhe</li>
+              <li>Influenciou do histórico visível à assinatura digital na retirada de EPIs</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Validação com quem usa, não só com quem pediu</h3>
-            <p>Testes de usabilidade com os próprios usuários internos ajudaram a ajustar fluxos que faziam sentido pra quem pediu o sistema, mas não pra quem usava todo dia.</p>
+            <ul class="project-list">
+              <li>Testes de usabilidade com os usuários internos que operam o sistema todo dia</li>
+              <li>Ajustou fluxos que faziam sentido pra quem pediu, mas não pra quem usava</li>
+            </ul>
           </div>
         </div>
 
-        <div class="project-gallery" style="margin-top:64px;">
+        <p class="project-subhead section-break">Telas</p>
+        <div class="project-gallery">
           <img src="assets/img/galeria-datalife.jpg" alt="Telas do módulo de gestão de usuários do Data Life" />
         </div>
       </section>
