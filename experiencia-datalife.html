@@ -41,11 +41,10 @@
         <div class="project-hero-grid">
           <div class="project-info">
             <span class="project-client">Data Life</span>
-            <h1>UX/UI Designer</h1>
+            <h1>UX/UI Designer Jr.</h1>
             <div class="project-body">
               <p>O Sistema Interno Operacional do Data Life apoiava a gestão de processos no setor de geração de energia, centralizando informações de ativos, pessoas, acessos e segurança do trabalho em diferentes módulos para usuários internos.</p>
-              <p>Atuei na estruturação da experiência a partir do entendimento dos processos reais, envolvendo mapeamento de fluxos, definição de regras de negócio, desenho de interfaces e prototipação para validação com stakeholders.</p>
-              <p class="confidential-note">*Por questões de confidencialidade, entre em <a href="contato.html">contato</a> para saber detalhes do projeto.</p>
+              <p>Atuei como freelancer júnior, dando suporte à reestruturação. Meu trabalho era traduzir os fluxos e regras definidas para cada módulo em wireflows e interfaces de alta fidelidade dentro do Design System já consolidado do produto, e apresentar essas telas para os stakeholders.</p>
             </div>
           </div>
           <div class="project-hero-media">
@@ -54,11 +53,7 @@
         </div>
 
         <div class="project-body">
-          <p>Um sistema interno mal desenhado não perde clientes, mas perde tempo de quem trabalha nele todos os dias. Cada módulo do Data Life vinha de um processo manual ou disperso entre planilhas, e o objetivo era juntar tudo sem empilhar complexidade numa única tela.</p>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Módulos do sistema:</strong> o produto era dividido em frentes distintas, cada uma com fluxo e interface desenhados por completo.</p>
+          <p>O produto era dividido em frentes distintas, cada uma com fluxo e interface desenhados por completo.</p>
         </div>
 
         <div class="subproject-nav" role="tablist" aria-label="Módulos do sistema">
@@ -72,70 +67,171 @@
         <div class="tab-panel active" id="gestao-usuarios" role="tabpanel" aria-labelledby="tab-gestao-usuarios">
           <h2 class="role-section">Gestão de usuários</h2>
           <div class="project-body">
-            <p>Fluxo de convite e cadastro operado pelo backoffice, com vínculo automático a empresas, definição de credenciais, níveis de acesso e informações como EPIs.</p>
+            <p>Fluxo de convite e cadastro operado pelo backoffice, com vínculo automático a empresas, definição de credenciais, níveis de acesso e informações como EPIs. O maior desafio era um mesmo usuário poder estar vinculado a mais de uma empresa cliente e mais de uma contratada ao mesmo tempo, e isso precisava ficar visível na lista e no cadastro sem virar confusão.</p>
+            <p>O fluxo, em ordem: o backoffice adiciona o usuário e vincula a credencial à contratada, o convite é aceito, o usuário cria a própria conta com senha, e passa a aparecer na lista com status e filtros.</p>
+          </div>
+
+          <div class="screens-grid">
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-usuarios-adicionar.png" alt="Modal Adicionar usuário no backoffice, com nome, sobrenome e credencial vinculada a uma contratada" /></div>
+              <figcaption>Adicionar usuário e vincular credencial</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-usuarios-convite-aceito.png" alt="Tela de convite aceito, informando que é necessário concluir o cadastro de usuário" /></div>
+              <figcaption>Convite aceito, início do cadastro</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-usuarios-criar-senha.png" alt="Formulário de criação de conta com nome, sobrenome e senha, mostrando os requisitos de senha" /></div>
+              <figcaption>Criação de senha e dados do usuário</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-usuarios-lista.png" alt="Lista de usuários no backoffice com abas de status, filtros por cliente e contratada, e exportação em XLS" /></div>
+              <figcaption>Lista de usuários com status e filtros</figcaption>
+            </figure>
           </div>
         </div>
         <div class="tab-panel" id="controle-acesso" role="tabpanel" aria-labelledby="tab-controle-acesso">
           <h2 class="role-section">Controle de Acesso</h2>
           <div class="project-body">
-            <p>Centralizava os registros de entrada e saída de profissionais, dando visibilidade ao fluxo de pessoas no ambiente.</p>
+            <p>Centralizava os registros de entrada e saída de profissionais, dando visibilidade ao fluxo de pessoas no ambiente. O mesmo padrão de controle (cartão vinculado, histórico e QR-Code) também se aplicava a veículos e equipamentos, e nem todo registro era automático: quando o crachá era esquecido, o acesso virava um registro manual, com justificativa.</p>
+            <p>O fluxo, em ordem: a lista mostra as entradas e saídas registradas, um registro pode ser incluído manualmente quando necessário, e cada profissional (ou veículo/equipamento) tem uma tela detalhada com histórico completo, cartões vinculados e QR-Code para leitura rápida.</p>
+          </div>
+
+          <p class="gallery-label">Profissionais</p>
+          <div class="screens-grid">
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-lista.png" alt="Lista de profissionais com registros de entrada e saída, filtros por período, empresa, planta, guarita e supervisor" /></div>
+              <figcaption>Lista de entradas e saídas, com filtros</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-incluir-registro.png" alt="Modal Incluir Registro, com opção Entrada ou Saída, profissional, data, horário, guarita, supervisor, planta, motivo e observações" /></div>
+              <figcaption>Inclusão manual de registro</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-salvo.png" alt="Lista de profissionais com confirmação Salvo com sucesso após incluir um registro" /></div>
+              <figcaption>Confirmação de registro salvo</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-historico.png" alt="Tela detalhada de um profissional, aba Histórico, com registros de entrada e saída incluindo os manuais, com observação Esqueceu o crachá" /></div>
+              <figcaption>Histórico detalhado por profissional</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-cartoes.png" alt="Tela detalhada de um profissional, aba Cartões, listando cartões vinculados com situação Ativo ou Destivado" /></div>
+              <figcaption>Cartões vinculados ao profissional</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-vincular-cartao.png" alt="Modal Vincular cartão, com campo para digitar o número do cartão" /></div>
+              <figcaption>Vincular novo cartão</figcaption>
+            </figure>
+          </div>
+
+          <p class="gallery-label gallery-break">Veículos e equipamentos</p>
+          <div class="screens-grid">
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-veiculos-qrcode.png" alt="Modal de QR-Code de um equipamento (Turbina VentoMax 3000), com código para leitura rápida" /></div>
+              <figcaption>QR-Code do equipamento</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-acesso-veiculos-excluir-cartao.png" alt="Modal de confirmação para excluir um cartão vinculado a um equipamento" /></div>
+              <figcaption>Confirmação para excluir cartão</figcaption>
+            </figure>
           </div>
         </div>
         <div class="tab-panel" id="epi" role="tabpanel" aria-labelledby="tab-epi">
           <h2 class="role-section">EPI</h2>
           <div class="project-body">
-            <p>Controle de equipamentos de proteção por profissional, com registro de entregas, validades, histórico e assinatura digital na retirada.</p>
+            <p>Controle de equipamentos de proteção por profissional, com registro de entregas, validades, histórico e assinatura digital na retirada. O maior desafio era deixar visível quem precisava de atenção sem abrir cada ficha: a lista já destaca em vermelho, com um ícone de alerta, os profissionais com algum equipamento expirado ou pendente.</p>
+            <p>O fluxo, em ordem: a lista sinaliza quem precisa de atenção, cada equipamento entregue tem prazo de validade e vira ativo ou expirado, a entrega só é concluída com assinatura digital, e a ficha completa reúne equipamentos, entregas, devoluções e o histórico de tudo que já aconteceu.</p>
+          </div>
+
+          <div class="screens-grid">
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-epi-lista.png" alt="Lista de fichas de EPI, com profissionais sinalizados em vermelho quando têm equipamento expirado ou pendente" /></div>
+              <figcaption>Lista de fichas, com alerta de pendência</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-epi-equipamentos.png" alt="Aba Equipamentos da ficha de EPI, com quantidade, prazo e status Ativo ou Expirado de cada item" /></div>
+              <figcaption>Equipamentos ativos e expirados</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-epi-entregas.png" alt="Aba Entregas da ficha de EPI, com total de itens e status de assinatura Assinado ou Pendente" /></div>
+              <figcaption>Entregas e status de assinatura</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-epi-assinatura.png" alt="Modal de assinatura digital, vazio e preenchido, usado para confirmar a retirada do equipamento" /></div>
+              <figcaption>Assinatura digital na retirada</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-epi-devolucoes.png" alt="Aba Devoluções da ficha de EPI, com equipamento, data de devolução e data de entrega" /></div>
+              <figcaption>Devoluções registradas</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-epi-historico.png" alt="Aba Histórico da ficha de EPI, reunindo entregas, devoluções e exclusões em uma linha do tempo" /></div>
+              <figcaption>Histórico completo por equipamento</figcaption>
+            </figure>
           </div>
         </div>
         <div class="tab-panel" id="seguranca" role="tabpanel" aria-labelledby="tab-seguranca">
           <h2 class="role-section">Segurança</h2>
           <div class="project-body">
-            <p>Análise e aprovação de documentos dos profissionais, permitindo validação ou reprovação diretamente no sistema.</p>
+            <p>Análise e aprovação de documentos dos profissionais, permitindo validação ou reprovação diretamente no sistema. O desafio era que o status de cada profissional (Habilitado, Reprovado, Em análise, Aguardando envio) era o resultado de vários documentos individuais, cada um com seu próprio prazo de vencimento, e alguns documentos podiam ser dispensados com uma carta de não aplicabilidade em vez do arquivo real.</p>
+            <p>O fluxo, em ordem: a lista mostra o status geral e quantos documentos já foram enviados, cada documento pode ser enviado com data de vencimento ou marcado como não aplicável, e a ficha do profissional reúne os documentos e um histórico de notas trocadas entre o time sobre o caso.</p>
+          </div>
+
+          <div class="screens-grid">
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-seguranca-lista.png" alt="Lista de profissionais do módulo de Segurança, com abas de status (Habilitados, Reprovados, Em análise, Aguardando envio) e progresso de documentos enviados" /></div>
+              <figcaption>Lista com status geral e progresso de envio</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-seguranca-enviar-arquivo.png" alt="Modal Enviar arquivo, com opções de definir vencimento ou marcar como não aplicável, e área de upload" /></div>
+              <figcaption>Envio de documento, com vencimento ou não aplicabilidade</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-seguranca-documentos.png" alt="Ficha do profissional, aba Documentos, com dados de admissão, alocações e a lista de documentos com status individual" /></div>
+              <figcaption>Ficha do profissional com documentos individuais</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-seguranca-notas.png" alt="Ficha do profissional, aba Notas, com um editor de mensagem e histórico de comentários do time sobre o caso" /></div>
+              <figcaption>Notas trocadas entre o time</figcaption>
+            </figure>
           </div>
         </div>
         <div class="tab-panel" id="integracao" role="tabpanel" aria-labelledby="tab-integracao">
           <h2 class="role-section">Integração</h2>
           <div class="project-body">
-            <p>Registro e rastreabilidade de eventos operacionais, permitindo que contratadas criassem eventos e registrassem presença ou ocorrência.</p>
+            <p>Registro e rastreabilidade de eventos operacionais, permitindo que contratadas criassem eventos e registrassem presença ou ocorrência. O desafio era o ciclo de vida do agendamento: enquanto está Aberto, dá pra editar os profissionais convidados e enviar documentos; depois de Concluído ou Cancelado, os dados viram só registro. O envio de documento também precisava validar o tamanho do arquivo, com opção de excluir ou substituir quando ultrapassava o limite.</p>
+            <p>O fluxo, em ordem: um novo agendamento define data, local e os profissionais convidados, o agendamento fica Aberto até ser concluído ou cancelado, documentos podem ser enviados nesse período, e a lista final mostra incluídos, presentes e o status de cada integração.</p>
+          </div>
+
+          <div class="screens-grid">
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-integracao-lista.png" alt="Lista de eventos de integração, com número de incluídos, presentes e status Concluído ou Cancelado" /></div>
+              <figcaption>Lista de eventos de integração</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-integracao-novo-agendamento.png" alt="Formulário Novo agendamento, com data, local, descrição, profissionais selecionados e documento de integração" /></div>
+              <figcaption>Novo agendamento de integração</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-integracao-detalhe.png" alt="Detalhe de um agendamento Aberto, com profissionais selecionados e ações para concluir ou cancelar a agenda" /></div>
+              <figcaption>Agendamento aberto, com profissionais e ações</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-integracao-enviar-arquivo.png" alt="Modal Enviar arquivo dentro de um agendamento de integração" /></div>
+              <figcaption>Envio de documento da integração</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-integracao-erro-arquivo.png" alt="Modal Enviar arquivo com aviso de tamanho de arquivo não suportado, com opções de excluir ou substituir" /></div>
+              <figcaption>Validação de tamanho de arquivo</figcaption>
+            </figure>
+            <figure>
+              <div class="frame"><img src="assets/img/datalife-integracao-lista-aberto.png" alt="Lista de integrações com um evento em status Aberto, que ganha a ação extra Gerar relatório" /></div>
+              <figcaption>Ação extra para evento em aberto</figcaption>
+            </figure>
           </div>
         </div>
 
-        <p class="project-subhead section-break">Decisões de UI e UX</p>
-        <div class="module-list">
-          <div class="decision-topic">
-            <h3>Módulos separados, navegação única</h3>
-            <ul class="project-list">
-              <li>Mesmos padrões de lista, filtro e ação em todos os módulos</li>
-              <li>Reduz o tempo de aprendizado de quem usa mais de um módulo</li>
-            </ul>
-          </div>
-          <div class="decision-topic">
-            <h3>Regras de negócio antes da tela</h3>
-            <ul class="project-list">
-              <li>Regras de quem pode ver, aprovar ou editar mapeadas com as lideranças operacionais</li>
-              <li>Levantamento feito antes de desenhar, evitando retrabalho de interface</li>
-            </ul>
-          </div>
-          <div class="decision-topic">
-            <h3>Rastreabilidade como requisito de design</h3>
-            <ul class="project-list">
-              <li>Saber quem fez o quê e quando é o motivo do sistema existir, não um detalhe</li>
-              <li>Influenciou do histórico visível à assinatura digital na retirada de EPIs</li>
-            </ul>
-          </div>
-          <div class="decision-topic">
-            <h3>Validação com quem usa, não só com quem pediu</h3>
-            <ul class="project-list">
-              <li>Testes de usabilidade com os usuários internos que operam o sistema todo dia</li>
-              <li>Ajustou fluxos que faziam sentido pra quem pediu, mas não pra quem usava</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="project-subhead section-break">Telas</p>
-        <div class="project-gallery">
-          <img src="assets/img/galeria-datalife.jpg" alt="Telas do módulo de gestão de usuários do Data Life" />
-        </div>
       </section>
 
       <div class="project-nav">

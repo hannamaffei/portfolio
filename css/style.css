@@ -584,8 +584,16 @@ a.project-media:hover {
      140px (--space-2xl), via classe .section-break — não depende do elemento anterior.
    Sub-tópicos dentro de uma seção (ex: Cores e Grid System dentro de Design System)
    usam o espaçamento normal de .project-subhead (48px), propositalmente mais próximo
-   que --space-2xl, pra não parecerem seções principais novas. */
+   que --space-2xl, pra não parecerem seções principais novas.
+   - Quando uma aba não tem cards de Problema/Solução e a galeria de telas vem direto
+     depois do parágrafo de contexto (ex: abas de módulo do Data Life), a mesma regra
+     de "parágrafo de contexto → bloco de evidência: 88px" vale pra galeria/label. */
 .project-subhead.section-break { margin-top: var(--space-2xl); }
+
+.project-body + .screens-grid,
+.project-body + .gallery-label {
+  margin-top: var(--space-xl);
+}
 
 .design-system-panel {
   margin: var(--space-2xl) 0;
@@ -605,6 +613,11 @@ a.project-media:hover {
 }
 
 .gallery-label:first-child { margin-top: 0; }
+
+/* Quando um gallery-label separa dois grupos de evidência igualmente importantes
+   (não um sub-item tipo Desktop/Mobile do mesmo grupo), usar o mesmo respiro de
+   88px da receita de espaçamento em vez do padrão de 24px. */
+.gallery-label.gallery-break { margin-top: var(--space-xl); }
 
 .grid-compare {
   display: flex;
