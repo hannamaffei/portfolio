@@ -835,7 +835,7 @@ a.project-media:hover {
 
 .feature-spotlight {
   display: grid;
-  grid-template-columns: 1fr minmax(220px, 280px) 1fr;
+  grid-template-columns: 1fr minmax(260px, 340px) 1fr;
   grid-template-areas:
     "c1 media c2"
     "c3 media .";
