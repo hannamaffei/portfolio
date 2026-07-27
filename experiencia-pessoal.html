@@ -66,53 +66,34 @@
         <h2 class="role-section">Mars Delivery</h2>
 
         <div class="project-body">
-          <p>O primeiro app de delivery para colonizadores de Marte. Um estudo de front-end assistido por IA, desenvolvido com Claude Code em Next.js, TypeScript e Tailwind CSS, aplicando conceitos de UX/UI design em um cenário marciano fictício.</p>
-        </div>
-        <div class="tag-row">
-          <span class="tag-pill">Next.js 16</span>
-          <span class="tag-pill">Tailwind CSS</span>
-          <span class="tag-pill">Figma</span>
-          <span class="tag-pill">WCAG AA</span>
-          <span class="tag-pill">Dark Theme</span>
-        </div>
-
-        <div class="project-body">
-          <p><strong>Sobre o projeto:</strong> um estudo funcional de front-end assistido por IA, do design ao código. O processo foi iterativo e guiado por decisões humanas em cada etapa.</p>
-        </div>
-        <div class="module-list">
-          <div class="module-item">
-            <h3>Claude Code</h3>
-            <p>Frontend Next.js 16 codado com IA generativa. 12 rotas, TypeScript, Tailwind v4 e Shadcn.</p>
-          </div>
-          <div class="module-item">
-            <h3>Design + UX</h3>
-            <p>Assistido por Claude e pelo Figma MCP Plugin, com abordagem mobile-first.</p>
-          </div>
-          <div class="module-item">
-            <h3>Prototipação</h3>
-            <p>18 interfaces funcionais, 100% navegáveis em Next.js 16.</p>
-          </div>
-          <div class="module-item">
-            <h3>Case study</h3>
-            <p>Design system e interfaces exportadas para o Figma via MCP, documentado com Claude Code.</p>
-          </div>
+          <p>O primeiro app de delivery para colonizadores de Marte. Um estudo de front-end assistido por IA, desenvolvido com Claude Code em Next.js 16, TypeScript, Tailwind v4 e Shadcn, aplicando conceitos de UX/UI design em um cenário marciano fictício.</p>
+          <p>Design e UX assistidos por Claude e pelo Figma MCP Plugin, com abordagem mobile-first: 12 rotas e 18 interfaces funcionais, com o design system exportado para o Figma e documentado com Claude Code.</p>
         </div>
 
         <div class="project-body">
           <p><strong>Marte tem fome. E não tem iFood.</strong> Apps de delivery são projetados para ruas, CEPs e motoboys. Em Marte, nenhuma dessas convenções existe, e cada decisão de UX precisou ser construída do zero.</p>
         </div>
         <div class="module-list">
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>O endereço não é uma rua</h3>
-            <p>As colônias usam Domo e Setor. Não há CEP nem nome de rua, o sistema de localização teve que ser completamente repensado.</p>
+            <ul class="project-list">
+              <li>As colônias usam Domo e Setor, sem CEP nem nome de rua</li>
+              <li>Sistema de localização repensado por completo</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Nem todo entregador alcança todo lugar</h3>
-            <p>Não existe uma opção única. A escolha do entregador depende do restaurante e do momento meteorológico do Domo ou Setor em que o colonizador está.</p>
+            <ul class="project-list">
+              <li>Não existe uma opção única de entrega</li>
+              <li>A escolha depende do restaurante e do momento meteorológico do Domo ou Setor</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>O checkout não conhece o cardápio</h3>
-            <p>Sugerir uma bebida só faz sentido se o restaurante servir bebidas. O app lê o que cada restaurante oferece antes de propor qualquer adição.</p>
+            <ul class="project-list">
+              <li>Sugestão de bebida só aparece se o restaurante servir bebidas</li>
+              <li>O app lê o cardápio de cada restaurante antes de propor qualquer adição</li>
+            </ul>
           </div>
         </div>
         <div class="project-body">
@@ -120,50 +101,87 @@
         </div>
 
         <div class="project-body">
-          <p><strong>Um universo do zero:</strong> a moeda, o tempo, o endereço e os entregadores foram todos inventados com lógica própria. Cada decisão criativa teve consequência direta na UX.</p>
+          <p><strong>Um universo do zero:</strong> a moeda, o tempo, o endereço e os entregadores foram todos inventados com lógica própria. Cada decisão criativa foi, na prática, o desafio de uma convenção terrestre que não existe em Marte, resolvido com uma solução pensada para o contexto marciano.</p>
         </div>
-        <div class="module-list">
-          <div class="module-item">
-            <h3>Moeda · "cr."</h3>
-            <p>Créditos marcianos, sem símbolo de real, sem centavos e sem bandeira de cartão: uma moeda pensada para um contexto marciano.</p>
+        <div class="finding-carousel">
+          <div class="finding-track" role="list">
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Desafio 01</span>
+              <h3>Moeda · "cr."</h3>
+              <p>Real, dólar ou qualquer moeda terrestre não fazia sentido para colonizadores marcianos.</p>
+              <p class="finding-decision"><strong>Solução:</strong> créditos marcianos, sem símbolo de real, sem centavos e sem bandeira de cartão.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Desafio 02</span>
+              <h3>Tempo · "SOL 847"</h3>
+              <p>A data terrestre, como "terça, 5 de maio", não existe fora da Terra.</p>
+              <p class="finding-decision"><strong>Solução:</strong> SOL, o nome real de um dia marciano usado pela NASA desde as primeiras missões, substitui a data por completo.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Desafio 03</span>
+              <h3>Endereço · "Domo B, Setor 7, Cápsula 14"</h3>
+              <p>Sem rua, sem CEP, sem bairro: nenhuma convenção terrestre de endereço se aplica.</p>
+              <p class="finding-decision"><strong>Solução:</strong> localização por Domo, Setor e Cápsula, criada do zero para as condições dos colonizadores.</p>
+            </article>
+            <article class="finding-card" role="listitem">
+              <span class="finding-index">Desafio 04</span>
+              <h3>Entregadores</h3>
+              <p>Nenhum entregador único alcança qualquer lugar em qualquer condição.</p>
+              <p class="finding-decision"><strong>Solução:</strong> cinco tipos com restrições reais, como Rover para tempestade de areia e Teletransporte Quântico para entrega expressa.</p>
+            </article>
           </div>
-          <div class="module-item">
-            <h3>Tempo · "SOL 847"</h3>
-            <p>SOL é o nome real de um dia marciano, usado pela NASA desde as primeiras missões. No app, substitui completamente a data terrestre.</p>
+          <div class="finding-controls">
+            <button type="button" class="finding-prev" aria-label="Desafio anterior">←</button>
+            <div class="finding-dots" aria-label="Navegar entre desafios">
+              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para desafio 1"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 2"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 3"></button>
+              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 4"></button>
+            </div>
+            <button type="button" class="finding-next" aria-label="Próximo desafio">→</button>
           </div>
-          <div class="module-item">
-            <h3>Endereço · "Domo B, Setor 7, Cápsula 14"</h3>
-            <p>Sem rua, sem CEP, sem bairro: o sistema de localização precisou ser criado do zero para atender às condições dos colonizadores.</p>
-          </div>
-          <div class="module-item">
-            <h3>Entregadores</h3>
-            <p>Cinco tipos com restrições reais, como Rover para tempestade de areia e Teletransporte Quântico, fizeram com que fosse necessário pensar sobre o entregador tanto quanto sobre o prato.</p>
-          </div>
-        </div>
-        <div class="project-body">
-          <p><strong>Tom de voz:</strong> "Rovers em modo de segurança no Setor 7. Atrasos de até 45 min." A linguagem do app não existe fora de Marte: cada aviso e cada confirmação soam como parte daquele mundo.</p>
         </div>
 
         <div class="project-body">
           <p><strong>Interfaces:</strong> 18 telas projetadas: home, restaurantes, pedido, sacola, acompanhamento, entrega e histórico.</p>
         </div>
-        <div class="project-gallery">
-          <img src="assets/img/mars-interfaces-1.jpg" alt="Telas de Home e Restaurantes do Mars Delivery" />
-        </div>
-        <div class="project-gallery" style="margin-top:24px;">
-          <img src="assets/img/mars-interfaces-2.jpg" alt="Telas de Pedido, Sacola e Acompanhamento do Mars Delivery" />
-        </div>
-        <div class="project-gallery" style="margin-top:24px;">
-          <img src="assets/img/mars-interfaces-3.jpg" alt="Telas de Entrega e Histórico do Mars Delivery" />
+        <div class="screens-grid">
+          <figure>
+            <div class="frame"><img src="assets/img/mars-tela-home.png" alt="Home do app com busca, categorias de comida e restaurantes perto do domo" /></div>
+            <figcaption>Home</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mars-tela-restaurante.png" alt="Página do restaurante Estação Nora, com cardápio, avaliação e opções de entrega" /></div>
+            <figcaption>Restaurante e cardápio</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mars-tela-entrega-tipo.png" alt="Seleção do tipo de entrega: Teletransporte Quântico, Rover Autônomo, Griblok Nativo ou Androide Série-7" /></div>
+            <figcaption>Tipo de entrega</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mars-tela-acompanhamento.png" alt="Acompanhamento do pedido a caminho, com mapa entre restaurante e domo e dados do entregador" /></div>
+            <figcaption>Acompanhamento</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mars-tela-avaliacao.png" alt="Tela de pedido entregue, com avaliação por estrelas e tags do que se destacou na entrega" /></div>
+            <figcaption>Avaliação da entrega</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mars-tela-historico.png" alt="Lista de meus pedidos, com um pedido em andamento e o histórico de pedidos anteriores" /></div>
+            <figcaption>Histórico de pedidos</figcaption>
+          </figure>
         </div>
 
         <div class="project-body">
           <p><strong>Feature em destaque, UpsellSheet:</strong> quando o usuário acessa a sacola sem bebida ou sobremesa, um bottom sheet desliza sugerindo uma adição, com um contador visual que drena como barra de progresso em 8 segundos.</p>
         </div>
-        <div class="module-list">
+        <div class="feature-spotlight">
           <div class="module-item">
             <h3>Contagem visual</h3>
             <p>O usuário entende que o tempo passa sem precisar ler nada. O botão drena visualmente em 8 segundos, sem números, só a cor desaparecendo.</p>
+          </div>
+          <div class="spotlight-media">
+            <img src="assets/img/mars-tela-upsellsheet.png" alt="Bottom sheet UpsellSheet aberto sobre a página do restaurante, sugerindo água mineral marciana ou shake de recuperação antes de prosseguir sem adicionar" />
           </div>
           <div class="module-item">
             <h3>Contextual</h3>
@@ -208,8 +226,14 @@
         </div>
 
         <div class="project-body">
-          <p><strong>Acessibilidade e resultados:</strong> testado com Playwright e axe-core em navegação por teclado, contraste, ARIA e labels, com 27 testes e 0 falhas.</p>
+          <p><strong>Acessibilidade e resultados:</strong> testado com Playwright e axe-core, com 27 testes automatizados e 0 falhas.</p>
         </div>
+        <ul class="project-list">
+          <li>Cobertura de navegação por teclado</li>
+          <li>Verificação de contraste de cor</li>
+          <li>Checagem de atributos ARIA</li>
+          <li>Labels em todos os componentes interativos</li>
+        </ul>
         <div class="stat-grid">
           <div class="stat-item">
             <div class="number">12</div>
