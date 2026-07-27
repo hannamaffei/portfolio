@@ -1035,6 +1035,12 @@ a.project-media:hover {
 
 .screens-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 
+.screens-grid.no-frame img {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
 @media (max-width: 640px) {
   .screens-grid,
   .screens-grid.cols-3 { grid-template-columns: 1fr; }
