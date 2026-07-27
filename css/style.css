@@ -804,6 +804,7 @@ a.project-media:hover {
 }
 
 .finding-card.challenge-card .finding-index { margin-bottom: 0; }
+.finding-card.challenge-card > h3 { margin: 0; }
 
 .challenge-term-row {
   display: flex;
