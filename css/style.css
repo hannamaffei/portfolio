@@ -793,6 +793,66 @@ a.project-media:hover {
   background: var(--accent);
 }
 
+/* ===== Variante: card de desafio (categoria → termo → problema → solução) ===== */
+.finding-card.challenge-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: 28px 30px 30px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.finding-card.challenge-card .finding-index { margin-bottom: 0; }
+
+.challenge-term-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.challenge-term-row h3 { margin: 0; }
+
+.challenge-tag {
+  font-family: 'SF Mono', Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: #f4f4f4;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.challenge-divider {
+  height: 1px;
+  background: var(--line);
+}
+
+.challenge-solution {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--accent-soft);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+
+.challenge-solution-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.challenge-solution p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+}
+
 .role-section-client {
   display: block;
   font-size: 13px;
