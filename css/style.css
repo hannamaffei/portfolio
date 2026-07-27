@@ -906,6 +906,60 @@ a.project-media:hover {
 .palette-bleed { margin-top: var(--space-sm); }
 .palette-bleed img { width: 100%; display: block; }
 
+.type-scale {
+  margin-top: var(--space-sm);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.type-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.type-row:last-child { border-bottom: none; }
+
+.type-spec {
+  font-size: 12px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.radius-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  max-width: 640px;
+}
+
+.radius-swatch { text-align: center; }
+
+.radius-box {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f4f4f4;
+  border: 1px solid var(--line);
+}
+
+.radius-swatch .label {
+  padding-top: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.radius-swatch .hex {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
