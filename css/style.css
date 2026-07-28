@@ -1050,6 +1050,18 @@ a.project-media:hover {
   margin-top: var(--space-xs);
 }
 
+.stat-note {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: var(--space-sm);
+  max-width: 640px;
+}
+
+.stat-note code {
+  font-family: 'SF Mono', Menlo, monospace;
+  color: var(--ink);
+}
+
 .project-list {
   margin: 12px 0 0;
   padding: 0;
