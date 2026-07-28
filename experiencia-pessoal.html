@@ -69,27 +69,16 @@
           <p>O primeiro app de delivery para colonizadores de Marte: um estudo de front-end assistido por IA, com Claude Code, Next.js 16 e Figma MCP Plugin. 12 rotas, 18 interfaces funcionais e design system documentado no Figma.</p>
         </div>
 
-        <div class="project-body">
-          <p><strong>Marte tem fome. E não tem iFood.</strong> Ruas, CEPs e motoboys não existem lá: cada decisão de UX precisou ser reinventada.</p>
-        </div>
+        <p class="project-subhead">Premissas de design</p>
         <div class="module-list">
           <div class="decision-topic">
             <h3>O endereço não é uma rua</h3>
-            <ul class="project-list">
-              <li>Colônias usam Domo e Setor, sem CEP</li>
-            </ul>
           </div>
           <div class="decision-topic">
             <h3>Nem todo entregador alcança todo lugar</h3>
-            <ul class="project-list">
-              <li>A escolha depende do restaurante e do clima do Domo ou Setor</li>
-            </ul>
           </div>
           <div class="decision-topic">
             <h3>O checkout não conhece o cardápio</h3>
-            <ul class="project-list">
-              <li>O app lê o cardápio de cada restaurante antes de sugerir algo</li>
-            </ul>
           </div>
         </div>
 
@@ -162,37 +151,10 @@
           </div>
         </div>
 
-        <div class="project-body">
-          <p><strong>Interfaces:</strong> 18 telas projetadas: home, restaurantes, pedido, sacola, acompanhamento, entrega e histórico.</p>
-        </div>
-        <div class="screens-grid no-frame cols-3">
-          <figure>
-            <img src="assets/img/mars-tela-home.png" alt="Home do app com busca, categorias de comida e restaurantes perto do domo" />
-            <figcaption>Home</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/mars-tela-restaurante.png" alt="Página do restaurante Estação Nora, com cardápio, avaliação e opções de entrega" />
-            <figcaption>Restaurante e cardápio</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/mars-tela-entrega-tipo.png" alt="Seleção do tipo de entrega: Teletransporte Quântico, Rover Autônomo, Griblok Nativo ou Androide Série-7" />
-            <figcaption>Tipo de entrega</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/mars-tela-acompanhamento.png" alt="Acompanhamento do pedido a caminho, com mapa entre restaurante e domo e dados do entregador" />
-            <figcaption>Acompanhamento</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/mars-tela-avaliacao.png" alt="Tela de pedido entregue, com avaliação por estrelas e tags do que se destacou na entrega" />
-            <figcaption>Avaliação da entrega</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/img/mars-tela-historico.png" alt="Lista de meus pedidos, com um pedido em andamento e o histórico de pedidos anteriores" />
-            <figcaption>Histórico de pedidos</figcaption>
-          </figure>
-        </div>
-
         <p class="project-subhead">Design system: tokens visuais</p>
+        <div class="project-body">
+          <p>Os tokens de cor, tipografia e borda foram definidos com Claude Code direto no código e sincronizados automaticamente pro Figma via Figma MCP Plugin, sem redesenhar nada manualmente.</p>
+        </div>
         <div class="token-grid">
           <div class="token-swatch">
             <div class="color" style="background:#F4A200;"></div>
@@ -293,6 +255,17 @@
           </div>
         </div>
 
+        <p class="project-subhead">Usabilidade avaliada com IA</p>
+        <div class="project-body">
+          <p>Antes de fechar as telas, rodei uma avaliação heurística com Claude Code: cada tela foi revisada com base nas heurísticas de Nielsen, apontando pontos de atrito antes de virar código.</p>
+        </div>
+        <ul class="project-list">
+          <li>Visibilidade do status do sistema</li>
+          <li>Prevenção de erros</li>
+          <li>Reconhecimento em vez de memorização</li>
+          <li>Consistência e padrões</li>
+        </ul>
+
         <p class="project-subhead">Princípios que guiaram as decisões: Leis de UX</p>
         <div class="finding-carousel">
           <div class="finding-track" role="list">
@@ -347,6 +320,34 @@
             <h3>Continuidade</h3>
             <p>Checkout linear (sacola, entrega, pagamento, confirmação) com steps visuais reforçando o progresso.</p>
           </div>
+        </div>
+
+        <p class="project-subhead">Telas</p>
+        <div class="screens-grid no-frame cols-3">
+          <figure>
+            <img src="assets/img/mars-tela-home.png" alt="Home do app com busca, categorias de comida e restaurantes perto do domo" />
+            <figcaption>Home</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-tela-restaurante.png" alt="Página do restaurante Estação Nora, com cardápio, avaliação e opções de entrega" />
+            <figcaption>Restaurante e cardápio</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-tela-entrega-tipo.png" alt="Seleção do tipo de entrega: Teletransporte Quântico, Rover Autônomo, Griblok Nativo ou Androide Série-7" />
+            <figcaption>Tipo de entrega</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-tela-acompanhamento.png" alt="Acompanhamento do pedido a caminho, com mapa entre restaurante e domo e dados do entregador" />
+            <figcaption>Acompanhamento</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-tela-avaliacao.png" alt="Tela de pedido entregue, com avaliação por estrelas e tags do que se destacou na entrega" />
+            <figcaption>Avaliação da entrega</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-tela-historico.png" alt="Lista de meus pedidos, com um pedido em andamento e o histórico de pedidos anteriores" />
+            <figcaption>Histórico de pedidos</figcaption>
+          </figure>
         </div>
 
         </div>
