@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=12" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
 </head>
 <body>
 
@@ -275,7 +275,9 @@
             <div class="label">Componente sinalizado sem Story (storm-alert)</div>
           </div>
         </div>
-        <p class="stat-note">Cor hardcoded é quando o valor da cor (ex: <code>#F4A200</code>) é escrito direto no componente, em vez de vir do token do design system: esse foi o tipo de erro que a auditoria encontrou.</p>
+        <div class="project-body">
+          <p>Ter a IA rodando esse tipo de auditoria no design system, e não só nas telas prontas, importa porque cobre todo o projeto (interfaces, componentes e código) numa escala que revisão manual não alcança: em vez de olhar tela por tela, ela aponta o arquivo e a linha exata onde uma cor foi escrita direto, como em promo-banner.tsx, sem passar pelo token do design system.</p>
+        </div>
 
         <p class="project-subhead section-break">Princípios que guiaram as decisões: Leis de UX</p>
         <div class="finding-carousel">
