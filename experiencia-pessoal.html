@@ -386,6 +386,14 @@
           <p>Um app pra ajudar pessoas a não esquecerem de tomar remédios no horário certo, com histórico completo de doses tomadas e perdidas.</p>
         </div>
 
+        <div class="tag-row">
+          <span class="tag-pill">React</span>
+          <span class="tag-pill">Vite</span>
+          <span class="tag-pill">Tailwind CSS</span>
+          <span class="tag-pill">Shadcn/ui</span>
+          <span class="tag-pill">Storybook</span>
+        </div>
+
         <div class="problem-solution-grid">
           <div class="module-item">
             <h3>Problema</h3>
@@ -397,44 +405,48 @@
           </div>
         </div>
 
-        <div class="tag-row">
-          <span class="tag-pill">React</span>
-          <span class="tag-pill">Vite</span>
-          <span class="tag-pill">Tailwind CSS</span>
-          <span class="tag-pill">Shadcn/ui</span>
-          <span class="tag-pill">Storybook</span>
-        </div>
-
-        <div class="project-hero-media" style="margin-top:32px; max-width:280px; margin-left:auto; margin-right:auto;">
-          <img src="assets/img/dosecerta-hoje.jpg" alt="Tela Hoje do DoseCerta, com o resumo de doses tomadas, pendentes e atrasadas" />
-        </div>
-
         <p class="project-subhead section-break">Decisões de UI e UX</p>
         <div class="module-list">
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Três abas, três tarefas diferentes</h3>
-            <p>Hoje mostra só o que precisa de ação agora, Remédios é onde a pessoa gerencia o que toma, e Histórico é pra olhar pra trás. Separar por tarefa em vez de por tipo de dado deixa a tela inicial simples mesmo com vários remédios cadastrados.</p>
+            <ul class="project-list">
+              <li>Hoje mostra só o que precisa de ação agora</li>
+              <li>Remédios e Histórico separados por tarefa, não por tipo de dado</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Status nunca depende só de cor</h3>
-            <p>Cada dose tem um selo com texto (Tomado, Pendente, Atrasado) além da cor. Pensei em quem tem dificuldade pra distinguir cores, ou só está com pressa e não quer decifrar um código visual.</p>
+            <ul class="project-list">
+              <li>Selo com texto (Tomado, Pendente, Atrasado) além da cor</li>
+              <li>Pensado pra quem tem dificuldade de distinguir cores</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Regras que evitam erro, não só que organizam</h3>
-            <p>Remédios de uso livre, como analgésicos, têm intervalo mínimo entre doses e limite diário configuráveis. A ideia foi impedir que o próprio app sugerisse uma dose perigosa, não só lembrar de tomar.</p>
+            <ul class="project-list">
+              <li>Intervalo mínimo e limite diário configuráveis pra remédios de uso livre</li>
+              <li>Impede que o próprio app sugira uma dose perigosa</li>
+            </ul>
           </div>
-          <div class="module-item">
+          <div class="decision-topic">
             <h3>Notificação que já é conhecida</h3>
-            <p>O lembrete de dose imita o visual de uma notificação de tela bloqueada, com opção de adiar ou confirmar direto ali. Ninguém precisa aprender um padrão novo pra usar.</p>
+            <ul class="project-list">
+              <li>Lembrete imita notificação de tela bloqueada</li>
+              <li>Opção de adiar ou confirmar direto ali, sem abrir o app</li>
+            </ul>
           </div>
         </div>
 
         <p class="project-subhead section-break">Telas</p>
         <div class="project-body">
-          <p>Remédios cadastrados com alerta de estoque baixo, histórico de doses com busca, filtro por período e exportação em CSV, e o cadastro de um novo remédio.</p>
+          <p>A tela Hoje, com o resumo de doses do dia, remédios cadastrados com alerta de estoque baixo, histórico de doses com busca, filtro por período e exportação em CSV, e o cadastro de um novo remédio.</p>
         </div>
 
-        <div class="screens-row">
+        <div class="screens-grid no-frame">
+          <figure>
+            <img src="assets/img/dosecerta-hoje.jpg" alt="Tela Hoje do DoseCerta, com o resumo de doses tomadas, pendentes e atrasadas" />
+            <figcaption>Hoje</figcaption>
+          </figure>
           <figure>
             <img src="assets/img/dosecerta-remedios.jpg" alt="Tela de listagem de remédios cadastrados, com indicador de estoque baixo" />
             <figcaption>Remédios cadastrados</figcaption>

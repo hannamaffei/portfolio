@@ -1208,6 +1208,17 @@ a.project-media:hover {
   border: none;
 }
 
+/* DoseCerta: prints de celular no grid 2x2 de "Telas" ficam do mesmo tamanho
+   usado no resto do site pra print de celular (280px), centralizados na
+   célula do grid, em vez de esticar pra largura toda da coluna. */
+#dosecerta .screens-grid.no-frame {
+  justify-items: center;
+}
+#dosecerta .screens-grid.no-frame figure {
+  max-width: 280px;
+  width: 100%;
+}
+
 #investimentos .screens-grid.cols-3 figcaption {
   text-align: left;
 }
