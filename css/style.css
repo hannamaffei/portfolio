@@ -565,7 +565,9 @@ a.project-media:hover {
 .stat-callout-pill {
   display: inline-flex;
   align-self: flex-start;
-  padding: 4px 16px 8px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
   border-radius: 16px;
   background: var(--accent-soft);
 }
