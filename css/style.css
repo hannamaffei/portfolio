@@ -548,13 +548,62 @@ a.project-media:hover {
 .project-body p { color: var(--ink-soft); }
 .project-body p + p { margin-top: 20px; }
 
-.project-body p.source-note {
-  font-size: 13px;
+.project-subhead + .stat-callout-grid { margin-top: var(--space-sm); }
+
+.stat-callout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
 }
-.project-body p + p.source-note { margin-top: 6px; }
-.project-body p.source-note a {
-  color: var(--ink-soft);
+
+.stat-callout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.stat-callout-pill {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 20px 8px 0;
+  border-radius: 16px;
+  background: var(--accent-soft);
+}
+
+.stat-callout-number {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.stat-callout p {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 440px;
+  color: var(--ink);
+}
+
+.stat-callout-divider {
+  margin-top: var(--space-xl);
+  height: 1px;
+  background: var(--line);
+}
+
+.source-note {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+.source-note a {
+  color: #9a9a9a;
   text-decoration: underline;
+}
+.source-note a:hover { color: #b8863f; }
+
+@media (max-width: 700px) {
+  .stat-callout-grid { grid-template-columns: 1fr; }
 }
 
 .project-subhead {
