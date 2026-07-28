@@ -548,6 +548,15 @@ a.project-media:hover {
 .project-body p { color: var(--ink-soft); }
 .project-body p + p { margin-top: 20px; }
 
+.project-body p.source-note {
+  font-size: 13px;
+}
+.project-body p + p.source-note { margin-top: 6px; }
+.project-body p.source-note a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+}
+
 .project-subhead {
   font-size: 19px;
   font-weight: 600;
