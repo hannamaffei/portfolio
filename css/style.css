@@ -931,13 +931,6 @@ a.project-media:hover {
   margin: 0 0 8px;
 }
 
-.module-list.stacked-topics {
-  grid-template-columns: 1fr;
-  gap: var(--space-sm);
-}
-
-.module-list.stacked-topics .decision-topic h3 { margin: 0; }
-
 .decision-topic .project-list {
   columns: 1;
   margin-top: var(--space-xs);
