@@ -552,8 +552,8 @@ a.project-media:hover {
 
 .stat-callout-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 .stat-callout {
@@ -565,13 +565,13 @@ a.project-media:hover {
 .stat-callout-pill {
   display: inline-flex;
   align-self: flex-start;
-  padding: 4px 20px 8px 0;
+  padding: 4px 16px 8px 0;
   border-radius: 16px;
   background: var(--accent-soft);
 }
 
 .stat-callout-number {
-  font-size: 72px;
+  font-size: 56px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -579,10 +579,9 @@ a.project-media:hover {
 }
 
 .stat-callout p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.55;
   margin: 0;
-  max-width: 440px;
   color: var(--ink);
 }
 
