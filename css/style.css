@@ -566,6 +566,11 @@ a.project-media:hover {
 .finding-carousel + .project-subhead,
 .project-list + .project-subhead { margin-top: var(--space-xl); }
 
+/* Mars Delivery não tem .problem-solution-grid: "Premissas de design" é o
+   bloco de evidência que vem direto depois do parágrafo de contexto, então
+   usa a mesma regra de 88px (--space-xl) documentada acima pra esse caso. */
+#mars-delivery > .role-section + .project-body + .project-subhead { margin-top: var(--space-xl); }
+
 .role-section + .project-body { margin-top: var(--space-sm); }
 
 /* ===== Receita de espaçamento de um case (papel dentro de experiencia-*.html) =====
