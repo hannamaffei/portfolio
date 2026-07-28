@@ -563,7 +563,8 @@ a.project-media:hover {
 
 .project-hero-grid + .project-subhead { margin-top: 0; }
 .screens-grid + .project-subhead,
-.finding-carousel + .project-subhead { margin-top: var(--space-xl); }
+.finding-carousel + .project-subhead,
+.project-list + .project-subhead { margin-top: var(--space-xl); }
 
 .role-section + .project-body { margin-top: var(--space-sm); }
 
