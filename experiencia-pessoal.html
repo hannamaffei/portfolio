@@ -257,16 +257,24 @@
           </div>
         </div>
 
-        <p class="project-subhead section-break">Usabilidade avaliada com IA</p>
+        <p class="project-subhead section-break">Design system auditado com IA</p>
         <div class="project-body">
-          <p>Antes de fechar as telas, rodei uma avaliação heurística com Claude Code: cada tela foi revisada com base nas heurísticas de Nielsen, apontando pontos de atrito antes de virar código.</p>
+          <p>Rodei uma auditoria automatizada do design system com Claude Code, cobrindo cobertura de Stories no Storybook e uso de cores hardcoded fora dos tokens, com relatório de achados por arquivo e linha.</p>
         </div>
-        <ul class="project-list">
-          <li>Visibilidade do status do sistema</li>
-          <li>Prevenção de erros</li>
-          <li>Reconhecimento em vez de memorização</li>
-          <li>Consistência e padrões</li>
-        </ul>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="number">93%</div>
+            <div class="label">Cobertura de Stories no Storybook (13 de 14 componentes)</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">9</div>
+            <div class="label">Ocorrências de cor hardcoded encontradas em promo-banner.tsx</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">1</div>
+            <div class="label">Componente sinalizado sem Story (storm-alert)</div>
+          </div>
+        </div>
 
         <p class="project-subhead section-break">Princípios que guiaram as decisões: Leis de UX</p>
         <div class="finding-carousel">
