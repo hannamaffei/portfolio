@@ -1211,15 +1211,21 @@ a.project-media:hover {
 
 /* Mars Delivery e DoseCerta: prints de celular no mesmo tamanho das telas
    Mobile do Onboarding (Grupo Advanced), 245px de largura, pra manter a
-   mesma dimensão de print de celular em qualquer lugar do site. */
-#mars-delivery .screens-grid.no-frame,
+   mesma dimensão de print de celular em qualquer lugar do site. Colunas
+   do grid usam a largura exata da imagem (em vez de 1fr, que estica a
+   coluna até a largura toda e deixa uma distância grande entre as telas),
+   com justify-content:center pra centralizar o conjunto no espaço sobrando. */
+#mars-delivery .screens-grid.no-frame.cols-3 {
+  grid-template-columns: repeat(3, 245px);
+  justify-content: center;
+}
 #dosecerta .screens-grid.no-frame {
-  justify-items: center;
+  grid-template-columns: repeat(2, 245px);
+  justify-content: center;
 }
 #mars-delivery .screens-grid.no-frame figure,
 #dosecerta .screens-grid.no-frame figure {
-  max-width: 245px;
-  width: 100%;
+  width: 245px;
 }
 
 #investimentos .screens-grid.cols-3 figcaption {
