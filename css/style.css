@@ -1209,14 +1209,16 @@ a.project-media:hover {
   border: none;
 }
 
-/* DoseCerta: sem moldura (como o Mars Delivery), mas limitado ao mesmo
-   tamanho de print de celular já usado no resto do site (280px), porque
-   o grid de 2 colunas sozinho deixaria a imagem esticada até 514px. */
+/* Mars Delivery e DoseCerta: prints de celular no mesmo tamanho das telas
+   Mobile do Onboarding (Grupo Advanced), 245px de largura, pra manter a
+   mesma dimensão de print de celular em qualquer lugar do site. */
+#mars-delivery .screens-grid.no-frame,
 #dosecerta .screens-grid.no-frame {
   justify-items: center;
 }
+#mars-delivery .screens-grid.no-frame figure,
 #dosecerta .screens-grid.no-frame figure {
-  max-width: 280px;
+  max-width: 245px;
   width: 100%;
 }
 
