@@ -1204,8 +1204,20 @@ a.project-media:hover {
   border-radius: 12px;
 }
 
-#mars-delivery .screens-grid.no-frame img {
+#mars-delivery .screens-grid.no-frame img,
+#dosecerta .screens-grid.no-frame img {
   border: none;
+}
+
+/* DoseCerta: sem moldura (como o Mars Delivery), mas limitado ao mesmo
+   tamanho de print de celular já usado no resto do site (280px), porque
+   o grid de 2 colunas sozinho deixaria a imagem esticada até 514px. */
+#dosecerta .screens-grid.no-frame {
+  justify-items: center;
+}
+#dosecerta .screens-grid.no-frame figure {
+  max-width: 280px;
+  width: 100%;
 }
 
 #investimentos .screens-grid.cols-3 figcaption {
