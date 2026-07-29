@@ -499,10 +499,24 @@ a.project-media:hover {
 .project-hero-media .hero-cover { display: none; }
 .project-hero-media .hero-cover.active { display: block; }
 
+/* Projetos Pessoais: a capa troca de conteúdo conforme a aba (Mars Delivery
+   ou DoseCerta), mas as duas precisam ocupar sempre a mesma altura, senão as
+   abas pulam de lugar ao trocar. Trava a proporção do container pela imagem
+   do Mars Delivery e redimensiona o conteúdo da capa pra caber dentro dela,
+   sem cortar nada (só encolhe, não recorta). */
+.project-hero-media:has(.hero-cover) {
+  aspect-ratio: 8 / 5;
+}
+
+.project-hero-media:has(.hero-cover) img.hero-cover.active {
+  height: 100%;
+  object-fit: contain;
+}
+
 .hero-cover.stack {
   position: relative;
   width: 100%;
-  min-height: 380px;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -517,17 +531,19 @@ a.project-media:hover {
 
 .stack .stack-side {
   position: absolute;
-  width: 44%;
-  top: 6%;
+  width: auto;
+  height: 74%;
+  top: 10%;
   z-index: 1;
 }
 
-.stack .stack-left { left: 0; }
-.stack .stack-right { right: 0; }
+.stack .stack-left { left: 6%; }
+.stack .stack-right { right: 6%; }
 
 .stack .stack-front {
   position: relative;
-  width: 50%;
+  width: auto;
+  height: 86%;
   z-index: 2;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
 }
@@ -1141,6 +1157,39 @@ a.project-media:hover {
 }
 
 .project-gallery img { width: 100%; display: block; }
+
+.process-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.process-gallery figure { margin: 0; }
+
+.process-gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.process-gallery figcaption { margin-top: 12px; }
+
+.process-gallery figcaption h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.process-gallery figcaption p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+}
 
 .screens-row {
   display: flex;

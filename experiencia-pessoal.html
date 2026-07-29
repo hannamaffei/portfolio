@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=14" />
+  <link rel="stylesheet" href="css/style.css?v=17" />
 </head>
 <body>
 
@@ -134,18 +134,6 @@
                 <p>Cinco tipos com restrições reais, como Rover para tempestade de areia e Teletransporte Quântico para entrega expressa.</p>
               </div>
             </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Desafio 05</span>
-              <div class="challenge-term-row">
-                <h3>Cardápio</h3>
-              </div>
-              <div class="challenge-divider"></div>
-              <p>Um checkout padrão trata todo restaurante igual, sem saber se aquele lugar vende prato pronto, ingredientes pra montar ou só bebida.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Solução</span>
-                <p>O checkout lê o cardápio de cada restaurante antes de montar as opções, adaptando o fluxo ao que aquele lugar realmente vende.</p>
-              </div>
-            </article>
           </div>
           <div class="finding-controls">
             <button type="button" class="finding-prev" aria-label="Desafio anterior">←</button>
@@ -154,7 +142,6 @@
               <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 2"></button>
               <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 3"></button>
               <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 4"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para desafio 5"></button>
             </div>
             <button type="button" class="finding-next" aria-label="Próximo desafio">→</button>
           </div>
@@ -235,9 +222,37 @@
           </div>
         </div>
 
+        <p class="project-subhead section-break">Minha direção com a IA</p>
+        <div class="project-body">
+          <p>Alguns prints reais das conversas com o Claude Code durante a construção. Mostram as decisões que vieram de mim, não da IA, como o ajuste fino de espaçamento, a escolha da fonte e os cenários do dia a dia de quem mora em Marte.</p>
+        </div>
+        <div class="process-gallery">
+          <figure>
+            <img src="assets/img/mars-processo-espacamento.png" alt="Print do Claude Code mostrando o pedido para trocar o espaçamento gap-5 por gap-3 no componente PromoBanner" />
+            <figcaption>
+              <h3>Ajuste fino de espaçamento</h3>
+              <p>Pedi pra trocar o espaço entre o título e o texto do banner de 20px para 12px, ajuste de olho direto no código.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-processo-fonte.png" alt="Print do Claude Code explicando a diferença entre as fontes IBM Plex Sans e Space Grotesk, com o pedido para voltar para a Space Grotesk" />
+            <figcaption>
+              <h3>Voltando pra fonte certa</h3>
+              <p>A IA tinha trocado a fonte sem eu notar diferença visual nenhuma. Pedi pra voltar pra Space Grotesk, a fonte que eu já tinha escolhido pro projeto.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/mars-processo-tempestade.png" alt="Print do Claude Code recebendo o pedido para pensar como um usuário morando em Marte e imaginar situações reais do dia a dia de quem pede delivery por lá" />
+            <figcaption>
+              <h3>Pensando como quem mora em Marte</h3>
+              <p>Pedi pra IA pensar como alguém que mora em Marte e imaginar situações reais do dia a dia de quem pede comida por lá, o que deu origem ao aviso de tempestade e às restrições de entrega por tipo de entregador.</p>
+            </figcaption>
+          </figure>
+        </div>
+
         <p class="project-subhead section-break">Acessibilidade testada com IA</p>
         <div class="project-body">
-          <p>Toda a suíte de testes de acessibilidade foi escrita e rodada com Claude Code, com 27 testes automatizados em Playwright e axe-core, cobrindo teclado, contraste e ARIA em cada tela, com 0 falhas.</p>
+          <p>Toda a suíte de testes de acessibilidade foi escrita e rodada com Claude Code, com 19 testes automatizados em Playwright e axe-core, cobrindo teclado, contraste e ARIA em cada tela, com 0 falhas.</p>
         </div>
         <ul class="project-list">
           <li>Cobertura de navegação por teclado</li>
