@@ -661,14 +661,15 @@ a.project-media:hover {
    Sub-tópicos dentro de uma seção (ex: Cores e Grid System dentro de Design System)
    usam o espaçamento normal de .project-subhead (48px), propositalmente mais próximo
    que --space-2xl, pra não parecerem seções principais novas.
-   - Quando uma aba não tem cards de Problema/Solução e a galeria de telas vem direto
-     depois do parágrafo de contexto (ex: abas de módulo do Data Life), a mesma regra
-     de "parágrafo de contexto → bloco de evidência: 88px" vale pra galeria/label. */
+   - Legenda de seção (.project-body) → imagens que ilustram essa legenda
+     (.screens-grid ou .gallery-label logo abaixo): 16px (--space-sm), igual
+     Cores/Grid System — as imagens precisam ficar coladas na legenda que
+     descreve, não na próxima seção. */
 .project-subhead.section-break { margin-top: var(--space-2xl); }
 
 .project-body + .screens-grid,
 .project-body + .gallery-label {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-sm);
 }
 
 .design-system-panel {
