@@ -213,7 +213,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 17px;
   color: var(--ink-soft);
   max-width: none;
-  margin: 0 0 32px;
+  margin: 0 0 var(--space-lg);
 }
 
 section { padding: 96px 0; position: relative; }
@@ -280,23 +280,48 @@ section { padding: 96px 0; position: relative; }
   flex-shrink: 0;
 }
 
-/* Processo — diagrama do Duplo Diamante acima dos 4 passos */
-.dd-diagram {
-  margin: var(--space-lg) 0 var(--space-sm);
+.process-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
 }
 
-.dd-diagram svg {
-  display: block;
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  margin: 0 auto;
+.process-track::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: calc(25% - (var(--space-sm) * 3 / 4) - 15px);
+  height: 2px;
+  background: var(--line);
+}
+
+.process-num {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg) var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.process-grid + .finding-carousel {
+  margin-top: var(--space-lg);
 }
 
 .process-item h3 {
@@ -1523,6 +1548,8 @@ a.project-media:hover {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .process-track { display: none; }
 
   .project-card.reverse .project-media,
   .project-card.reverse .project-info {
