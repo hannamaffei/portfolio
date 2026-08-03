@@ -1,0 +1,440 @@
+/* ===== Portfólio Pocket (PDF, formato slide 16:9) =====
+   Cada .pdf-page é um "slide" widescreen (297mm × 167mm). Em tela, aparecem
+   empilhados com sombra pra facilitar a revisão. Ao exportar como PDF,
+   cada um vira uma página exata, sem margem extra do navegador. */
+
+@media print {
+  @page { size: 297mm 167mm; margin: 0; }
+}
+
+body.pocket-body {
+  font-family: "Montserrat", sans-serif;
+  background: #e9e9e9;
+}
+
+@media screen {
+  body.pocket-body { padding: 40px 0; }
+}
+
+.pdf-page {
+  width: 297mm;
+  height: 167mm;
+  margin: 0 auto 40px;
+  padding: 0;
+  color: var(--ink);
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  page-break-after: always;
+  break-after: page;
+  overflow: hidden;
+}
+
+.pdf-page:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+  margin-bottom: 0;
+}
+
+@media print {
+  .pdf-page { margin: 0; box-shadow: none; }
+}
+
+@media screen {
+  .pdf-page { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16); }
+}
+
+/* --- Barra lateral (rail) --- */
+.pdf-rail {
+  flex-shrink: 0;
+  width: 15mm;
+  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8mm 0;
+  box-sizing: border-box;
+}
+
+.pdf-rail-num {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pdf-rail-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.pdf-rail-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* --- Conteúdo do slide --- */
+.pdf-content {
+  flex: 1;
+  min-width: 0;
+  padding: 14mm 18mm;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--bg);
+  background-image: radial-gradient(rgba(49, 35, 8, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.pdf-cover .pdf-content { justify-content: center; }
+
+.pdf-center .pdf-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pdf-center .pdf-contact-list { justify-content: center; }
+
+.pdf-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+/* --- Layout genérico de slide dividido (texto | visual) --- */
+.pdf-split {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex: 1;
+  min-height: 0;
+}
+
+.pdf-split-text { flex: 0 0 40%; }
+.pdf-split-visual { flex: 1; align-self: stretch; min-height: 0; }
+
+/* --- Capa --- */
+.pdf-cover .pdf-split { gap: 64px; }
+
+.pdf-cover-label {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: var(--accent);
+  border-radius: 100px;
+  padding: 5px 12px;
+  margin-bottom: 20px;
+}
+
+.pdf-cover-name {
+  font-size: 46px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.pdf-cover-role {
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+
+.pdf-cover-tagline {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.pdf-cover-photo-wrap {
+  height: 100%;
+}
+
+.pdf-cover-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Sobre mim --- */
+.pdf-about-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pdf-about-list li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding-left: 16px;
+  position: relative;
+}
+
+.pdf-about-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.pdf-pull-quote {
+  position: relative;
+  background: rgba(255, 220, 151, 0.22);
+  border-radius: 20px;
+  padding: 40px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pdf-pull-quote-mark {
+  position: absolute;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 140px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.pdf-pull-quote-mark-open { top: -34px; left: -24px; }
+.pdf-pull-quote-mark-close { bottom: -114px; right: -24px; }
+
+.pdf-pull-quote p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 85%;
+}
+
+/* --- Como eu trabalho --- */
+.pdf-process-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pdf-process-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.pdf-process-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.pdf-process-num {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-process-item p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pdf-ai-note {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--accent-soft);
+  border-radius: 10px;
+  padding: 14px 18px;
+  line-height: 1.6;
+  margin-top: 24px;
+}
+
+/* --- Experiências --- */
+.pdf-project-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.pdf-project-role {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.pdf-meta {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6b6b6b;
+}
+
+.pdf-project-list {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdf-project-list li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding-left: 16px;
+  position: relative;
+}
+
+.pdf-project-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.pdf-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin: 0 0 14px;
+}
+
+.pdf-stat .number { font-size: 22px; font-weight: 600; }
+.pdf-stat .label { font-size: 11.5px; color: var(--ink-soft); }
+
+.pdf-case-link {
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+
+.pdf-project-media {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #121515;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.pdf-project-media.no-frame { background: var(--bg); }
+
+.pdf-project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.pdf-project-media.no-frame img { object-fit: contain; }
+
+/* Empilhado de 3 telas (DoseCerta), reaproveitando o padrão .hero-cover.stack do site */
+.pdf-stack-media { position: relative; justify-content: center; }
+
+.pdf-project-media.pdf-stack-media img.pdf-stack-img {
+  width: auto;
+  height: 74%;
+  object-fit: contain;
+  position: absolute;
+  top: 10%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+.pdf-stack-left { left: 8%; }
+.pdf-stack-right { right: 8%; }
+
+.pdf-project-media.pdf-stack-media img.pdf-stack-front {
+  position: relative;
+  height: 86%;
+  top: auto;
+  z-index: 2;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
+}
+
+/* --- Contato --- */
+.pdf-contact-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 24px;
+}
+
+.pdf-contact-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--accent);
+  border-radius: 100px;
+  padding: 10px 18px;
+}
+
+.pdf-contact-note {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.pdf-inline-link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
