@@ -1182,6 +1182,109 @@ a.project-media:hover {
 
 .project-gallery img { width: 100%; display: block; }
 
+/* Diagrama de posicionamento (case Investimentos): recriado em HTML/CSS pra
+   não depender de um screenshot de ferramenta externa. Os dois espectros e
+   os marcadores usam % pra se manterem alinhados com a linha SVG mesmo
+   quando o card muda de largura. */
+.positioning-diagram {
+  margin-top: var(--space-sm);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, #f7f7f5 0%, #eceae6 100%);
+  padding: var(--space-lg) var(--space-lg) var(--space-md);
+}
+
+.positioning-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+}
+
+.positioning-connector {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.positioning-connector line {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.positioning-endpoint {
+  position: absolute;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.positioning-endpoint-left { left: 0; }
+.positioning-endpoint-right { right: 0; }
+
+.positioning-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 22px;
+  background-image: repeating-linear-gradient(to right, rgba(0, 0, 0, 0.55) 0 2px, transparent 2px 20px);
+}
+
+.positioning-marker {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.positioning-marker-above { transform: translate(-50%, calc(-100% - 10px)); }
+.positioning-marker-below { flex-direction: column-reverse; transform: translate(-50%, calc(22px + 10px)); }
+
+.positioning-tri {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 15px solid currentColor;
+}
+
+.positioning-marker-below .positioning-tri { transform: rotate(180deg); }
+
+.positioning-brand {
+  font-size: 12px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.positioning-c6 { color: #d4d4d4; }
+.positioning-wise { color: #9c9c9c; }
+.positioning-adv { color: var(--ink); }
+.positioning-adv .positioning-brand { font-weight: 700; }
+
+.positioning-legend {
+  display: none;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  margin: var(--space-md) 0 0;
+  font-size: 13px;
+}
+
+.positioning-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.positioning-legend .positioning-tri { position: static; transform: none; border-bottom-width: 10px; border-left-width: 6px; border-right-width: 6px; }
+
+@media (max-width: 640px) {
+  .positioning-diagram { padding: var(--space-md) var(--space-sm) var(--space-sm); }
+  .positioning-canvas { aspect-ratio: 1.4 / 1; }
+  .positioning-endpoint { font-size: 12px; }
+  .positioning-endpoint-row2 { top: auto !important; bottom: 0; }
+  .positioning-brand { display: none; }
+  .positioning-legend { display: flex; }
+}
+
 .process-gallery {
   display: flex;
   flex-direction: column;
@@ -1334,6 +1437,7 @@ a.project-media:hover {
 
 #investimentos .screens-grid.no-frame img {
   border-radius: 12px;
+  border: none;
 }
 
 #mars-delivery .screens-grid.no-frame img {
