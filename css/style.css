@@ -1587,6 +1587,55 @@ a.project-media:hover {
   margin: 0;
 }
 
+.proposal-row {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+  margin-top: var(--space-xl);
+}
+
+.proposal-media img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.proposal-content h3 {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 var(--space-sm);
+}
+
+.proposal-content > p {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.proposal-tradeoffs {
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.proposal-tradeoffs .module-item h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.proposal-tradeoffs .module-item p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .proposal-row { grid-template-columns: 1fr; }
+  .proposal-media { max-width: 280px; }
+}
+
 @media (max-width: 640px) {
   .module-list { grid-template-columns: 1fr; }
 }
