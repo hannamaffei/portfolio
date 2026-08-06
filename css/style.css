@@ -1715,6 +1715,79 @@ a.project-media:hover {
   .proposal-media { max-width: 280px; }
 }
 
+/* ===== Carrossel de propostas: pilha arrastável, com as telas de trás
+   desfocadas e reduzidas atrás da tela ativa ===== */
+.proposal-carousel {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  margin-top: var(--space-lg);
+}
+
+.proposal-stack {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 390 / 841;
+  margin: 0 auto;
+  cursor: grab;
+  touch-action: none;
+}
+
+.proposal-stack:active,
+.proposal-stack.dragging { cursor: grabbing; }
+
+.proposal-stack:focus-visible { outline: 2px solid var(--accent); outline-offset: 8px; }
+
+.proposal-hint {
+  margin-top: var(--space-sm);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.proposal-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.4s ease, opacity 0.4s ease;
+  will-change: transform, filter, opacity;
+}
+
+.proposal-card.active {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.proposal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.proposal-panel { display: none; }
+.proposal-panel.active { display: block; }
+
+.proposal-controls { justify-content: flex-start; margin-top: var(--space-lg); }
+
+.finding-prev:disabled,
+.finding-next:disabled { opacity: 0.35; cursor: not-allowed; }
+
+@media (max-width: 700px) {
+  .proposal-carousel { grid-template-columns: 1fr; justify-items: center; }
+  .proposal-controls { justify-content: center; }
+}
+
 @media (max-width: 640px) {
   .module-list { grid-template-columns: 1fr; }
 }

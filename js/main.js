@@ -138,4 +138,107 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.key === "End") { setPosition(100); e.preventDefault(); }
     });
   });
+
+  document.querySelectorAll(".proposal-carousel").forEach(function (carousel) {
+    var stack = carousel.querySelector(".proposal-stack");
+    var cards = Array.prototype.slice.call(stack.querySelectorAll(".proposal-card"));
+    var panels = Array.prototype.slice.call(carousel.querySelectorAll(".proposal-panel"));
+    var dots = Array.prototype.slice.call(carousel.querySelectorAll(".proposal-dots .dot"));
+    var prevBtn = carousel.querySelector(".proposal-prev");
+    var nextBtn = carousel.querySelector(".proposal-next");
+    var count = cards.length;
+    var current = 0;
+    var dragging = false;
+    var startX = 0;
+    var deltaX = 0;
+
+    function styleForOffset(offset) {
+      var abs = Math.min(Math.abs(offset), 2);
+      var t = Math.min(abs, 1);
+      var sign = offset < 0 ? -1 : offset > 0 ? 1 : 0;
+      var x = sign * t * 64;
+      var y = t * 12;
+      var scale = 1 - t * 0.1;
+      var blur = t * 0.5;
+      var opacity = 1 - t * 0.3;
+      if (abs > 1) {
+        var extra = abs - 1;
+        opacity -= extra * 0.65;
+        x += sign * extra * 26;
+        scale -= extra * 0.05;
+      }
+      return { x: x, y: y, scale: scale, blur: blur, opacity: Math.max(0, opacity), z: 100 - Math.round(abs * 10) };
+    }
+
+    function render(effective, animate) {
+      cards.forEach(function (card) {
+        var index = parseInt(card.getAttribute("data-index"), 10);
+        var s = styleForOffset(index - effective);
+        card.style.transition = animate ? "" : "none";
+        card.style.transform = "translate3d(" + s.x + "px," + s.y + "px,0) scale(" + s.scale + ")";
+        card.style.filter = s.blur > 0.05 ? "blur(" + s.blur.toFixed(1) + "px)" : "none";
+        card.style.opacity = s.opacity;
+        card.style.zIndex = s.z;
+        card.style.pointerEvents = index === Math.round(effective) ? "auto" : "none";
+      });
+    }
+
+    function setActive(index) {
+      index = Math.max(0, Math.min(count - 1, index));
+      current = index;
+      panels.forEach(function (panel) {
+        panel.classList.toggle("active", parseInt(panel.getAttribute("data-index"), 10) === index);
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === index);
+        dot.setAttribute("aria-pressed", i === index ? "true" : "false");
+      });
+      if (prevBtn) prevBtn.disabled = index === 0;
+      if (nextBtn) nextBtn.disabled = index === count - 1;
+      render(index, true);
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () { setActive(i); });
+    });
+    if (prevBtn) prevBtn.addEventListener("click", function () { setActive(current - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { setActive(current + 1); });
+
+    stack.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { setActive(current + 1); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { setActive(current - 1); e.preventDefault(); }
+    });
+
+    stack.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      stack.setPointerCapture(e.pointerId);
+      startX = e.clientX;
+      deltaX = 0;
+      stack.classList.add("dragging");
+    });
+
+    stack.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      deltaX = e.clientX - startX;
+      var width = stack.getBoundingClientRect().width || 240;
+      var progress = Math.max(-1, Math.min(1, deltaX / width));
+      var effective = Math.max(0, Math.min(count - 1, current - progress));
+      render(effective, false);
+    });
+
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      stack.classList.remove("dragging");
+      var width = stack.getBoundingClientRect().width || 240;
+      var progress = Math.max(-1, Math.min(1, deltaX / width));
+      var next = Math.round(Math.max(0, Math.min(count - 1, current - progress)));
+      setActive(next);
+    }
+
+    stack.addEventListener("pointerup", endDrag);
+    stack.addEventListener("pointercancel", endDrag);
+
+    setActive(0);
+  });
 });

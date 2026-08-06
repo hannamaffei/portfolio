@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=26" />
+  <link rel="stylesheet" href="css/style.css?v=29" />
 </head>
 <body>
 
@@ -670,62 +670,76 @@
         <div class="project-body">
           <p>Apresentei três direções visuais para o time: uma em azul-marinho, uma em branco e uma em grafite. A última foi a aprovada, por equilibrar melhor o posicionamento sóbrio e arrojado validado com o marketing.</p>
         </div>
-        <div class="proposal-row">
-          <div class="proposal-media">
-            <img src="assets/img/investimentos-versao-navy.jpg" alt="Tela inicial do dashboard na proposta visual em azul-marinho" />
-          </div>
-          <div class="proposal-content">
-            <h3>Proposta 01 (Azul-marinho)</h3>
-            <p>Esta proposta explora uma leitura mais arrojada, com contraste forte entre o fundo escuro e o azul vibrante nos elementos de destaque. Comunica energia e modernidade, mas o ticket médio do público foi levado em consideração na avaliação dessa proposta, o que pesou contra o tom mais sóbrio esperado.</p>
-            <div class="proposal-tradeoffs">
-              <div class="module-item">
-                <h4>Prós</h4>
-                <p>Intuitiva pra quem já usa outras soluções do mercado, como C6 Bank e BTG Pactual. Mantém o azul como âncora da identidade principal, reforçando o reconhecimento da marca.</p>
+        <div class="proposal-carousel">
+          <div class="proposal-stack-col">
+            <div class="proposal-stack" tabindex="0" role="group" aria-roledescription="carrossel" aria-label="Propostas visuais exploradas. Arraste para o lado ou use as setas para navegar">
+              <div class="proposal-card active" data-index="0">
+                <img src="assets/img/investimentos-versao-navy.jpg" alt="Tela inicial do dashboard na proposta visual em azul-marinho" draggable="false" />
               </div>
-              <div class="module-item">
-                <h4>Contras</h4>
-                <p>Pode ser percebida como parecida com outras soluções do mercado, o que limita a diferenciação da Advanced.</p>
+              <div class="proposal-card" data-index="1">
+                <img src="assets/img/investimentos-versao-branca.jpg" alt="Proposta visual em fundo branco para o dashboard do aplicativo" draggable="false" />
+              </div>
+              <div class="proposal-card" data-index="2">
+                <img src="assets/img/investimentos-versao-grafite.jpg" alt="Tela inicial do dashboard na proposta visual em grafite, aprovada" draggable="false" />
               </div>
             </div>
+            <p class="proposal-hint">Arraste para o lado para comparar</p>
           </div>
-        </div>
 
-        <div class="proposal-row">
-          <div class="proposal-media">
-            <img src="assets/img/investimentos-versao-branca.jpg" alt="Proposta visual em fundo branco para o dashboard do aplicativo" />
-          </div>
-          <div class="proposal-content">
-            <h3>Proposta 02 (Branca)</h3>
-            <p>Esta proposta busca reforçar a identidade visual já consolidada nos produtos digitais da empresa, combinando leveza, clareza e consistência. Transmite confiabilidade ao usuário, mantendo alinhamento com o Design System e garantindo uma experiência coesa em todo o ecossistema.</p>
-            <div class="proposal-tradeoffs">
-              <div class="module-item">
-                <h4>Prós</h4>
-                <p>Mantém alinhamento com os outros produtos digitais da empresa e com o Design System em produção, aproximando a experiência do que os usuários da Advanced já conhecem.</p>
-              </div>
-              <div class="module-item">
-                <h4>Contras</h4>
-                <p>Reduz o posicionamento de exclusividade por causa das cores claras, e fica menos sóbria e arrojada que as outras direções.</p>
+          <div class="proposal-carousel-content">
+            <div class="proposal-panel active" data-index="0">
+              <h3>Proposta 01 (Azul-marinho)</h3>
+              <p>Esta proposta explora uma leitura mais arrojada, com contraste forte entre o fundo escuro e o azul vibrante nos elementos de destaque. Comunica energia e modernidade, mas o ticket médio do público foi levado em consideração na avaliação dessa proposta, o que pesou contra o tom mais sóbrio esperado.</p>
+              <div class="proposal-tradeoffs">
+                <div class="module-item">
+                  <h4>Prós</h4>
+                  <p>Intuitiva pra quem já usa outras soluções do mercado, como C6 Bank e BTG Pactual. Mantém o azul como âncora da identidade principal, reforçando o reconhecimento da marca.</p>
+                </div>
+                <div class="module-item">
+                  <h4>Contras</h4>
+                  <p>Pode ser percebida como parecida com outras soluções do mercado, o que limita a diferenciação da Advanced.</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="proposal-row">
-          <div class="proposal-media">
-            <img src="assets/img/investimentos-versao-grafite.jpg" alt="Tela inicial do dashboard na proposta visual em grafite, aprovada" />
-          </div>
-          <div class="proposal-content">
-            <h3>Proposta 03 (Grafite, aprovada)</h3>
-            <p>Esta proposta adota um conceito ousado, inspirado na textura visual de "papel". Utiliza cores opacas, evitando preto e branco absolutos, e combina tipografias serifadas e sans-serif para criar contraste entre o clássico e o moderno. O resultado é uma interface que equilibra tradição e inovação, com uma experiência visual sofisticada.</p>
-            <div class="proposal-tradeoffs">
-              <div class="module-item">
-                <h4>Prós</h4>
-                <p>Equilibra tradição e modernidade, alinhada ao público-alvo. Fortalece uma identidade visual própria, com espaço pra se diferenciar da marca principal.</p>
+            <div class="proposal-panel" data-index="1">
+              <h3>Proposta 02 (Branca)</h3>
+              <p>Esta proposta busca reforçar a identidade visual já consolidada nos produtos digitais da empresa, combinando leveza, clareza e consistência. Transmite confiabilidade ao usuário, mantendo alinhamento com o Design System e garantindo uma experiência coesa em todo o ecossistema.</p>
+              <div class="proposal-tradeoffs">
+                <div class="module-item">
+                  <h4>Prós</h4>
+                  <p>Mantém alinhamento com os outros produtos digitais da empresa e com o Design System em produção, aproximando a experiência do que os usuários da Advanced já conhecem.</p>
+                </div>
+                <div class="module-item">
+                  <h4>Contras</h4>
+                  <p>Reduz o posicionamento de exclusividade por causa das cores claras, e fica menos sóbria e arrojada que as outras direções.</p>
+                </div>
               </div>
-              <div class="module-item">
-                <h4>Contras</h4>
-                <p>Por ser bem diferente da linguagem visual atual, pode causar estranhamento inicial ou parecer distante da identidade principal da Advanced.</p>
+            </div>
+
+            <div class="proposal-panel" data-index="2">
+              <h3>Proposta 03 (Grafite, aprovada)</h3>
+              <p>Esta proposta adota um conceito ousado, inspirado na textura visual de "papel". Utiliza cores opacas, evitando preto e branco absolutos, e combina tipografias serifadas e sans-serif para criar contraste entre o clássico e o moderno. O resultado é uma interface que equilibra tradição e inovação, com uma experiência visual sofisticada.</p>
+              <div class="proposal-tradeoffs">
+                <div class="module-item">
+                  <h4>Prós</h4>
+                  <p>Equilibra tradição e modernidade, alinhada ao público-alvo. Fortalece uma identidade visual própria, com espaço pra se diferenciar da marca principal.</p>
+                </div>
+                <div class="module-item">
+                  <h4>Contras</h4>
+                  <p>Por ser bem diferente da linguagem visual atual, pode causar estranhamento inicial ou parecer distante da identidade principal da Advanced.</p>
+                </div>
               </div>
+            </div>
+
+            <div class="finding-controls proposal-controls">
+              <button type="button" class="finding-prev proposal-prev" aria-label="Proposta anterior">←</button>
+              <div class="finding-dots proposal-dots" aria-label="Navegar entre propostas">
+                <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para Proposta 01 (Azul-marinho)"></button>
+                <button type="button" class="dot" aria-pressed="false" aria-label="Ir para Proposta 02 (Branca)"></button>
+                <button type="button" class="dot" aria-pressed="false" aria-label="Ir para Proposta 03 (Grafite, aprovada)"></button>
+              </div>
+              <button type="button" class="finding-next proposal-next" aria-label="Próxima proposta">→</button>
             </div>
           </div>
         </div>
@@ -827,6 +841,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=11"></script>
 </body>
 </html>
