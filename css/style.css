@@ -992,6 +992,11 @@ a.project-media:hover {
 .problem-solution-grid .module-item { height: 100%; }
 .problem-solution-grid .module-item p { margin: 0; }
 
+/* Variante pra quando o Problema/Solução aparece no meio de um case, não na
+   abertura dele — usa o respiro de bloco relacionado (48px) em vez do
+   respiro de abertura de case (88px). */
+.problem-solution-grid.tight { margin-top: var(--space-lg); }
+
 @media (max-width: 700px) {
   .problem-solution-grid { grid-template-columns: 1fr; }
 }

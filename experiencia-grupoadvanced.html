@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=29" />
+  <link rel="stylesheet" href="css/style.css?v=30" />
 </head>
 <body>
 
@@ -90,7 +90,6 @@
             <h3>MFA (verificação em duas etapas) como parte do fluxo, não uma barreira</h3>
             <ul class="project-list">
               <li>Autenticação em duas etapas, obrigatória no produto</li>
-              <li>Menos telas até o cliente estar autenticado</li>
             </ul>
           </div>
           <div class="decision-topic">
@@ -105,6 +104,13 @@
             <ul class="project-list">
               <li>Menu lateral substitui o stepper linear</li>
               <li>Pausar e retomar em qualquer ordem</li>
+            </ul>
+          </div>
+          <div class="decision-topic">
+            <h3>Menos campos, com apoio de Bureau de Dados</h3>
+            <ul class="project-list">
+              <li>Cada campo revisado com o time de Onboarding, considerando a real necessidade dele no cadastro</li>
+              <li>Parte da informação passou a vir do Bureau de Dados, sem precisar pedir isso ao cliente</li>
             </ul>
           </div>
         </div>
@@ -339,11 +345,56 @@
           </div>
         </div>
 
+        <p class="project-subhead section-break">MFA (verificação em duas etapas)</p>
+        <div class="project-body">
+          <p>Essa frente veio depois, numa discussão com o time de TI e segurança da informação, e andou em paralelo com o desenvolvimento do onboarding, reaproveitando boa parte do design system já consolidado.</p>
+        </div>
+
+        <div class="problem-solution-grid tight">
+          <div class="module-item">
+            <h3>Problema</h3>
+            <p>O login com CPF e senha não tinha uma camada extra de segurança, deixando a conta exposta em caso de senha vazada ou roubada.</p>
+          </div>
+          <div class="module-item">
+            <h3>Solução</h3>
+            <p>Um código de verificação enviado por SMS, e-mail ou WhatsApp a cada login, com o canal padrão configurável pelo próprio cliente.</p>
+          </div>
+        </div>
+
+        <p class="gallery-label section-break">Wireflow</p>
+        <div class="project-gallery">
+          <img src="assets/img/mfa-wireflow.png" alt="Wireflow do fluxo de login e autenticação em duas etapas, cobrindo Pessoa Física e Pessoa Jurídica" />
+        </div>
+
+        <p class="gallery-label gallery-break">Telas</p>
+        <div class="screens-grid cols-3">
+          <figure>
+            <div class="frame"><img src="assets/img/mfa-painel-configuracao.png" alt="Modal de configuração de conta com as opções de método de autenticação: SMS, e-mail ou WhatsApp" /></div>
+            <figcaption>Configuração do método de autenticação</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mfa-login-desktop.png" alt="Tela de login com seleção entre Pessoa Física e Pessoa Jurídica" /></div>
+            <figcaption>Login</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/img/mfa-codigo-sms.png" alt="Tela de verificação com código enviado por SMS" /></div>
+            <figcaption>Verificação por SMS</figcaption>
+          </figure>
+        </div>
+
+        <p class="gallery-label">Mobile</p>
+        <div class="screens-row">
+          <figure>
+            <img src="assets/img/mfa-login-mobile.png" alt="Tela de login em mobile" />
+            <figcaption>Login (mobile)</figcaption>
+          </figure>
+        </div>
+
         <p class="project-subhead section-break">O que eu levo desse projeto</p>
         <div class="project-body">
-          <p>O redesign do onboarding me ensinou a equilibrar duas prioridades que nem sempre andam juntas: as regras de compliance de um produto financeiro e a experiência de quem só quer terminar o cadastro. Cada decisão, de separar Pessoa Física de Pessoa Jurídica a dividir o campo de telefone em DDI e DDD, veio de um problema real observado no teste de usabilidade, não de suposição.</p>
-          <p>O antes e depois mostra a distância entre o que existia e o que ficou, mas o número que mais importa pra mim é outro: 13 pontos de melhoria priorizados com dados reais de cliente, não achismo de time.</p>
-          <p>Retomar o cadastro depois de sair era uma reclamação recorrente, principalmente de quem preenchia sem ter todos os dados em mãos. O teste confirmou isso como um dos pontos mais críticos, e resolver esse caminho de retomada foi uma das decisões que mais fez diferença no dia a dia do time.</p>
+          <p>O redesign do onboarding me ensinou a equilibrar duas prioridades que nem sempre andam juntas, entre as regras de compliance de um produto financeiro e a experiência de quem só quer terminar o cadastro. Cada decisão, de separar Pessoa Física de Pessoa Jurídica a dividir o campo de telefone em DDI e DDD, veio de um problema real observado no teste de usabilidade, não de suposição.</p>
+          <p>Isso mudou como eu enxergo o antes e depois hoje. Não é só uma peça de convencimento visual, é a prova de que a decisão resolveu o problema que a motivou, não só que ficou com aparência melhor.</p>
+          <p>O caso da retomada de cadastro é o que eu mais levo daqui. Descobrir que o problema não estava na tela, mas na falta de transparência sobre o que acontecia depois que o cliente saía, mudou o tipo de pergunta que eu faço num teste de usabilidade daqui pra frente.</p>
         </div>
 
         </div>
@@ -493,7 +544,7 @@
               <span class="finding-index">Insight 05</span>
               <h3>Diferença entre cliente "Simplificado" e "Completo" pouco clara</h3>
               <div class="challenge-divider"></div>
-              <p>Participantes questionaram como identificar, na lista, os prospects com cadastro simplificado dos com cadastro completo.</p>
+              <p>Participantes questionaram como diferenciar, na lista, os prospects com cadastro simplificado dos com cadastro completo.</p>
               <div class="challenge-solution">
                 <span class="challenge-solution-label">Decisão</span>
                 <p>Sinalizar visualmente os clientes com operação esperada acima de US$ 50 mil, considerados cadastro completo.</p>
@@ -560,9 +611,9 @@
 
         <p class="project-subhead section-break">O que eu levo desse projeto</p>
         <div class="project-body">
-          <p>Desenhar esse fluxo me ensinou a validar hipótese rápido em vez de esperar um discovery longo: sem um produto de mercado parecido pra comparar, as decisões de UX foram surgindo e sendo ajustadas conforme o processo avançava, não definidas de antemão.</p>
-          <p>O teste de usabilidade com quem realmente usa o painel no dia a dia confirmou pontos de confusão que provavelmente passariam despercebidos sem testar com o time comercial diretamente, como a dúvida entre "enviar para preencher" e "enviar para revisar", o achado de maior impacto do teste.</p>
-          <p>Também participei de reuniões de alinhamento com a liderança comercial ao longo do projeto, validando decisões de fluxo e prioridade diretamente com quem enxerga o produto do lado do negócio, não só do lado do usuário final.</p>
+          <p>Desenhar esse fluxo me ensinou a validar hipótese rápido em vez de esperar um discovery longo. Sem um produto de mercado parecido pra comparar, as decisões de UX foram surgindo e sendo ajustadas conforme o processo avançava, não definidas de antemão.</p>
+          <p>Testar com quem usa a ferramenta todo dia, não só com o cliente final, me mostrou que boa parte da fricção interna passa despercebida quando só se valida com o usuário externo. A dúvida entre "enviar para preencher" e "enviar para revisar" só apareceu porque testei com quem de fato usa o painel.</p>
+          <p>Validar decisões de fluxo e prioridade direto com a liderança comercial, e não só com o time de produto, me ensinou a defender uma escolha de UX em termos que fazem sentido pro negócio, não só pra experiência do usuário.</p>
         </div>
 
         </div>
@@ -574,12 +625,12 @@
         </h2>
 
         <div class="project-body">
-          <p>Esse foi um projeto real pro Grupo Advanced: desenvolvi pra explorar como a marca poderia se posicionar no segmento de investimentos digitais, cobrindo a jornada completa do usuário, do acesso à aplicação e ao acompanhamento de rendimentos. O objetivo de longo prazo era transformar esse aplicativo num Super App, reunindo outras frentes do Grupo Advanced, como câmbio, seguros e trading, numa única experiência.</p>
+          <p>Esse foi um projeto real pro Grupo Advanced: desenvolvi pra explorar como a marca poderia se posicionar no segmento de investimentos digitais. A jornada cobre desde o acesso à aplicação até o acompanhamento de rendimentos. O objetivo de longo prazo era transformar esse aplicativo num Super App, reunindo outras frentes do Grupo Advanced, como câmbio, seguros e trading, numa única experiência.</p>
         </div>
 
         <p class="project-subhead section-break">Pesquisa de posicionamento</p>
         <div class="project-body">
-          <p>Mapeei onde XP, C6 Bank e Wise se posicionavam em dois espectros (tradicional↔arrojado e sóbrio↔efusivo) e usei essa análise pra definir a posição da Advanced: arrojada na proposta visual, mas sóbria no tom, considerando o público de ticket médio mais alto.</p>
+          <p>Mapeei onde XP, C6 Bank e Wise se posicionavam em dois espectros (tradicional x arrojado e sóbrio x efusivo) e usei essa análise pra definir a posição da Advanced: arrojada na proposta visual, mas sóbria no tom, considerando o público de ticket médio mais alto.</p>
         </div>
         <div class="positioning-diagram" role="img" aria-label="Diagrama de posicionamento comparando Advanced (ADV.2) com C6 Bank e Wise em dois espectros: tradicional x arrojado, e sóbrio x efusivo. Advanced aparece como a marca mais arrojada e também a mais sóbria das três.">
           <div class="positioning-canvas">
@@ -788,17 +839,17 @@
 
         <p class="gallery-label gallery-break">Daltonismo</p>
         <div class="project-body">
-          <p>Simulei as telas em protanopia e deuteranopia, os tipos mais comuns de daltonismo, pra confirmar que nenhuma informação dependia só da cor pra ser entendida. Esse tipo de simulação entra na checagem de contraste porque garante que os componentes continuam legíveis e diferenciáveis mesmo quando a pessoa não percebe certas cores, sem que a interface dependa só da cor pra passar uma informação.</p>
+          <p>Simulei as telas em protanopia e deuteranopia, os tipos mais comuns de daltonismo, pra confirmar que nenhuma informação dependia só da cor pra ser entendida. Esse tipo de simulação entra na checagem de contraste porque garante que os componentes continuam legíveis e diferenciáveis mesmo quando a pessoa não percebe certas cores.</p>
         </div>
 
         <div class="daltonismo-grid">
           <figure class="proposal-media proposal-media--crop">
             <img src="assets/img/investimentos-daltonismo-protanopia.png" alt="Simulação da tela inicial do dashboard em protanopia" />
-            <figcaption><strong>Protanopia</strong>A pessoa tem dificuldade em perceber o vermelho, podendo confundi-lo com tons de marrom, cinza ou verde.</figcaption>
+            <figcaption><strong>Protanopia</strong> A pessoa tem dificuldade em perceber o vermelho, podendo confundi-lo com tons de marrom, cinza ou verde.</figcaption>
           </figure>
           <figure class="proposal-media proposal-media--crop">
             <img src="assets/img/investimentos-daltonismo-deuteranopia.png" alt="Simulação da tela inicial do dashboard em deuteranopia" />
-            <figcaption><strong>Deuteranopia</strong>A dificuldade é na percepção do verde, que pode ser confundido com tons de marrom.</figcaption>
+            <figcaption><strong>Deuteranopia</strong> A dificuldade é na percepção do verde, que pode ser confundido com tons de marrom.</figcaption>
           </figure>
         </div>
         <div class="project-body">
@@ -819,9 +870,9 @@
 
         <p class="project-subhead section-break">O que eu levo desse projeto</p>
         <div class="project-body">
-          <p>Esse projeto me ensinou a desenhar identidade visual como decisão estratégica, não só estética. Cada uma das três direções carregava uma leitura de marca diferente, e defender a escolha final exigiu embasar a proposta num framework de posicionamento, não só em gosto pessoal.</p>
+          <p>Esse projeto me ensinou a desenhar identidade visual como decisão estratégica, não só estética. Cada uma das três direções carregava uma leitura de marca diferente, e defender a escolha final exigiu embasar a proposta num framework de posicionamento de marca e em heurísticas e princípios de UX/UI.</p>
           <p>Trabalhar com o marketing por causa do manual da marca também mudou como eu penso decisão de cor daqui pra frente. Uma paleta que funciona bem numa tela isolada pode não representar a marca do jeito que a empresa quer ser vista, e essa troca entre áreas foi o que confirmou o grafite como a direção certa.</p>
-          <p>Prototipar os fluxos principais inteiramente com a IA do Figma Make encurtou bastante a distância entre a direção aprovada e um protótipo navegável, o que ajudou a apresentar e validar a proposta com mais confiança.</p>
+          <p>Prototipar os fluxos principais com a IA do Figma Make também mudou minha relação com prototipagem. Hoje penso menos em "quanto tempo essa tela leva pra ficar pronta" e mais em "quantas rodadas de validação eu consigo caber no mesmo prazo".</p>
         </div>
         </div>
       </section>
