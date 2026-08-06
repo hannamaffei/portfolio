@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=17" />
+  <link rel="stylesheet" href="css/style.css?v=26" />
 </head>
 <body>
 
@@ -769,11 +769,26 @@
               <h3>Contraste</h3>
               <p>Rodei o plugin Contrast do Figma nos principais componentes da Proposta 02, a versão branca. As 5 combinações testadas passaram no critério AA do WCAG 2.0, a maioria com folga, entre 7.24:1 e 17.41:1 de contraste. Só o azul de interação, usado no botão principal e nos ícones, ficou abaixo do AAA pra texto normal (5.05:1), mas segue dentro da minha meta de acessibilidade, que é AA.</p>
             </div>
-            <div class="module-item">
-              <h3>Daltonismo</h3>
-              <p>Simulei as telas em protanopia e deuteranopia, os tipos mais comuns de daltonismo, pra confirmar que nenhuma informação dependia só da cor pra ser entendida.</p>
-            </div>
           </div>
+        </div>
+
+        <p class="gallery-label gallery-break">Daltonismo</p>
+        <div class="project-body">
+          <p>Simulei as telas em protanopia e deuteranopia, os tipos mais comuns de daltonismo, pra confirmar que nenhuma informação dependia só da cor pra ser entendida. Esse tipo de simulação entra na checagem de contraste porque garante que os componentes continuam legíveis e diferenciáveis mesmo quando a pessoa não percebe certas cores, sem que a interface dependa só da cor pra passar uma informação.</p>
+        </div>
+
+        <div class="daltonismo-grid">
+          <figure class="proposal-media proposal-media--crop">
+            <img src="assets/img/investimentos-daltonismo-protanopia.png" alt="Simulação da tela inicial do dashboard em protanopia" />
+            <figcaption><strong>Protanopia</strong>A pessoa tem dificuldade em perceber o vermelho, podendo confundi-lo com tons de marrom, cinza ou verde.</figcaption>
+          </figure>
+          <figure class="proposal-media proposal-media--crop">
+            <img src="assets/img/investimentos-daltonismo-deuteranopia.png" alt="Simulação da tela inicial do dashboard em deuteranopia" />
+            <figcaption><strong>Deuteranopia</strong>A dificuldade é na percepção do verde, que pode ser confundido com tons de marrom.</figcaption>
+          </figure>
+        </div>
+        <div class="project-body">
+          <p>Essas imagens mostram só uma das versões simuladas, como exemplo do processo. A mesma simulação foi feita em todas as propostas visuais apresentadas.</p>
         </div>
 
         <p class="project-subhead section-break">Prototipação com IA no Figma Make</p>
