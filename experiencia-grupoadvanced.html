@@ -54,7 +54,8 @@
 
         <div class="subproject-nav" role="tablist" aria-label="Sub-projetos">
           <button type="button" class="active" role="tab" aria-selected="true" aria-controls="onboarding" id="tab-onboarding">Onboarding (PF e PJ)</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="painel" id="tab-painel" tabindex="-1">Painel Interno e Operações</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="cambio" id="tab-cambio" tabindex="-1">Operações de Câmbio</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="painel" id="tab-painel" tabindex="-1">Painel Interno</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="investimentos" id="tab-investimentos" tabindex="-1">Aplicativo de Investimentos</button>
         </div>
 
@@ -399,9 +400,142 @@
 
         </div>
 
-        <!-- ===== Painel Interno e Operações ===== -->
+        <!-- ===== Operações de Câmbio ===== -->
+        <div class="tab-panel" id="cambio" role="tabpanel" aria-labelledby="tab-cambio">
+        <h2 class="role-section">Operações de Câmbio</h2>
+
+        <div class="project-body">
+          <p>O câmbio na Advanced era tratado fora do digital, direto com o time da corretora por WhatsApp ou ligação, tanto pra operações comerciais quanto pra quem ia viajar. A digitalização virou duas jornadas separadas dentro do painel: Câmbio Comercial e Câmbio Turismo.</p>
+        </div>
+
+        <p class="project-subhead section-break">Duas experiências separadas</p>
+        <div class="project-body">
+          <p>Mapeei as operações disponíveis pra cada perfil de cliente, Pessoa Jurídica, Pessoa Física e quem ainda não tem conta na Advanced, considerando também quem busca câmbio turismo. Esse mapeamento foi o que definiu Câmbio Comercial e Câmbio Turismo como duas experiências separadas dentro do fluxo.</p>
+        </div>
+        <div class="project-gallery medium">
+          <img src="assets/img/cambio-mapeamento-operacoes-usuario.png" alt="Mapeamento de operações disponíveis por perfil de usuário: Câmbio Comercial PJ, Câmbio Comercial PF e Câmbio Turismo" />
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- CÂMBIO COMERCIAL                                           -->
+        <!-- ========================================================= -->
+
+        <p class="project-subhead section-break">Câmbio Comercial</p>
+        <div class="project-body">
+          <p>Pra quem tem conta Pessoa Jurídica ou Pessoa Física na Advanced, o Câmbio Comercial cobre envio de dinheiro pro exterior (conta própria, matriz ou filial, sócio, ou outra pessoa) e pagamento de serviços no exterior, pra pessoa física ou jurídica.</p>
+        </div>
+
+        <div class="problem-solution-grid">
+          <div class="module-item">
+            <h3>Problema</h3>
+            <p>Toda operação de câmbio comercial dependia de contato direto com o time, sem nenhuma etapa disponível no digital. O cliente ficava na mão da disponibilidade de alguém pra simular uma cotação ou iniciar uma operação.</p>
+          </div>
+          <div class="module-item">
+            <h3>Solução</h3>
+            <p>Um fluxo de câmbio dentro do próprio painel, com uma calculadora de cotação embutida e um passo a passo guiado por produto, da escolha da operação até a confirmação do pagamento.</p>
+          </div>
+        </div>
+
+        <p class="project-subhead">Decisões de UI e UX</p>
+        <div class="module-list">
+          <div class="decision-topic">
+            <h3>Calculadora como componente independente</h3>
+            <ul class="project-list">
+              <li>Simula a cotação antes de qualquer login ou cadastro</li>
+              <li>Reaproveitada como embed em outras telas do produto</li>
+            </ul>
+          </div>
+          <div class="decision-topic">
+            <h3>Fluxo guiado por finalidade, não por formulário genérico</h3>
+            <ul class="project-list">
+              <li>Pergunta o que o cliente quer fazer antes de mostrar campos</li>
+              <li>Cada finalidade mostra só os campos que fazem sentido pra ela</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="project-subhead">Discovery e Benchmarking</p>
+        <div class="project-body">
+          <p>Antes de desenhar o fluxo, mapeei como Husky, Inter, Wise, Remessa Online, Oz Câmbio e a própria Frente Corretora resolviam cotação e envio de câmbio, além de revisar como a Advanced fazia isso até então.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/cambio-benchmarking-cotacao.png" alt="Board de benchmarking de fluxos de cotação e câmbio de Husky, Inter, Remessa Online, Frente Corretora, Wise, Oz Câmbio e Advanced" />
+        </div>
+
+        <p class="project-subhead">Como o fluxo foi desenhado</p>
+        <div class="project-body">
+          <p>O fluxo ficou dividido em dois componentes. Uma calculadora de cotação, que pode ser usada de forma independente, inclusive como embed em outras páginas, e o fluxo de operação em si, que vai da escolha do produto até a confirmação do pagamento, passando pelos dados do beneficiário e as informações adicionais exigidas por cada tipo de operação.</p>
+        </div>
+        <div class="project-gallery">
+          <img src="assets/img/cambio-fluxo-operacao-calculadora.png" alt="Wireflow do componente de operação (escolha do produto, valores da remessa, dados do beneficiário, escolha de pagamento, dados adicionais e pagamento) e do componente de calculadora embutida" />
+        </div>
+
+        <!-- telas finais do Câmbio Comercial a adicionar -->
+
+        <!-- ========================================================= -->
+        <!-- CÂMBIO TURISMO                                             -->
+        <!-- ========================================================= -->
+
+        <p class="project-subhead section-break">Câmbio Turismo</p>
+        <div class="project-body">
+          <p>Já o Câmbio Turismo cobre quem vai viajar e precisa comprar dinheiro estrangeiro em espécie ou pedir o Cartão de Viagem, com recarga depois.</p>
+        </div>
+
+        <p class="project-subhead">Discovery e Benchmarking</p>
+        <div class="project-body">
+          <p>Além do benchmarking geral da frente de câmbio, olhei especificamente como apps de câmbio e cartão de viagem resolviam cotação e checkout: Cotação Câmbio, Confidence Câmbio, Cambionet, DayCâmbio, Revolut e Wise.</p>
+        </div>
+        <div class="project-gallery compact">
+          <img src="assets/img/cambio-turismo-benchmarking.png" alt="Board de benchmarking de fluxos de cotação e checkout de Cotação Câmbio, Confidence Câmbio, Cambionet, DayCâmbio, Revolut e Wise" />
+        </div>
+
+        <p class="gallery-label gallery-break">Wireflow</p>
+        <div class="project-gallery compact">
+          <img src="assets/img/cambio-turismo-wireflow.png" alt="Wireflow completo do fluxo de pedido de Cartão de Viagem, sem login, desktop" />
+        </div>
+
+        <p class="project-subhead section-break">Antes e depois</p>
+        <div class="project-body">
+          <p>O pedido do Cartão de Viagem era dividido em dois modais separados, um pra dados de quem recebe o cartão e outro pra dados de quem vai usá-lo, mesmo quando as duas pessoas eram a mesma. A etapa inicial também não mostrava os valores da cotação antes do cliente preencher os campos.</p>
+        </div>
+
+        <div class="compare-slider">
+          <div class="compare-slider-frame">
+            <img class="compare-slider-img" src="assets/img/cambio-turismo-antigo-modal-utilizador.png" alt="Modal antigo 'Quem vai utilizar o cartão de viagem?', separado do modal de quem recebe o cartão" />
+            <div class="compare-slider-after-wrap">
+              <img class="compare-slider-img" src="assets/img/cambio-turismo-tela-dados-cartao.png" alt="Tela nova 'Insira os dados do cartão', com comprador, documento e utilizador num único formulário" />
+            </div>
+            <span class="compare-slider-tag compare-slider-tag-before">Antes</span>
+            <span class="compare-slider-tag compare-slider-tag-after">Depois</span>
+            <div class="compare-slider-handle" role="slider" tabindex="0" aria-label="Arraste para comparar os modais separados de comprador e utilizador com o formulário único" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="compare-slider-handle-grip">↔</span>
+            </div>
+          </div>
+        </div>
+        <p class="compare-caption">Dois modais separados viraram um único formulário</p>
+
+        <div class="compare-slider" style="margin-top:var(--space-lg);">
+          <div class="compare-slider-frame">
+            <img class="compare-slider-img" src="assets/img/cambio-turismo-antigo-calculadora-preenchida.png" alt="Tela antiga com moeda, valor, taxa de câmbio, IOF e VET calculados, sem mais nenhuma informação do pedido" />
+            <div class="compare-slider-after-wrap">
+              <img class="compare-slider-img" src="assets/img/cambio-turismo-tela-revisao.png" alt="Tela nova de revisão do pedido, com câmbio e tarifas, dados do comprador e utilizador, endereço e escolha de pagamento juntos" />
+            </div>
+            <span class="compare-slider-tag compare-slider-tag-before">Antes</span>
+            <span class="compare-slider-tag compare-slider-tag-after">Depois</span>
+            <div class="compare-slider-handle" role="slider" tabindex="0" aria-label="Arraste para comparar a calculadora antiga com a revisão de pedido nova" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+              <span class="compare-slider-handle-grip">↔</span>
+            </div>
+          </div>
+        </div>
+        <p class="compare-caption">Cotação isolada virou parte da revisão completa do pedido</p>
+
+        <!-- telas mobile do Câmbio Turismo a adicionar -->
+
+        </div>
+
+        <!-- ===== Painel Interno ===== -->
         <div class="tab-panel" id="painel" role="tabpanel" aria-labelledby="tab-painel">
-        <h2 class="role-section">Painel Interno e Operações</h2>
+        <h2 class="role-section">Painel Interno</h2>
 
         <div class="project-body">
           <p>Criar o fluxo de pré-cadastro exigido pelo Banco Central foi outra frente dentro do trabalho no Grupo Advanced. Esse fluxo já existia em outra ferramenta interna, e o objetivo era centralizá-lo no painel usado pelo time comercial no dia a dia. Sem saber em que etapa cada cliente estava, o time não tinha controle sobre o momento certo de entrar em contato e ajudar a finalizar o cadastro, que podia levar minutos, horas ou até dias. Essa falta de visibilidade impactava direto a conversão de clientes.</p>

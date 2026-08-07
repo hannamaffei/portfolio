@@ -1189,6 +1189,23 @@ a.project-media:hover {
 
 .project-gallery img { width: 100%; display: block; }
 
+/* Variante compacta: pra diagramas/boards grandes (ex: wireflow) que não
+   precisam ocupar a largura toda da coluna pra serem legíveis. */
+.project-gallery.compact {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Variante média: meio-termo entre a largura total e o .compact, pra
+   diagramas que ficam pequenos demais em 640px mas não precisam da
+   largura cheia da coluna. */
+.project-gallery.medium {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Diagrama de posicionamento (case Investimentos): recriado em HTML/CSS pra
    não depender de um screenshot de ferramenta externa. Os dois espectros e
    os marcadores usam % pra se manterem alinhados com a linha SVG mesmo
@@ -1413,7 +1430,7 @@ a.project-media:hover {
 
 .compare-slider {
   margin-top: var(--space-sm);
-  max-width: 560px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
 }
