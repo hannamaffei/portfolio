@@ -246,37 +246,55 @@ section { padding: 96px 0; position: relative; }
 
 .about-text p + p { margin-top: 20px; }
 
-/* Educação */
-.education-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 640px;
+.about-objective {
+  margin-top: 20px;
+  padding: 24px 28px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 220, 151, 0.15);
+  border-radius: 0 16px 16px 0;
 }
 
-.education-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.education-item h3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
+.about-objective h3 {
+  font-size: 20px;
   font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.about-objective p {
+  font-size: 16px;
+  color: var(--ink-soft);
   margin: 0;
 }
 
-.education-item .status {
-  font-size: 13px;
-  color: var(--ink-soft);
+/* Educação */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg) var(--space-sm);
 }
 
-.education-item .logo-google {
+.education-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.education-card p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.education-card .logo-google {
   flex-shrink: 0;
 }
 
@@ -752,7 +770,7 @@ a.project-media:hover {
   flex-wrap: wrap;
   gap: var(--space-xs) 32px;
   align-items: center;
-  margin: 0 0 var(--space-md);
+  margin: 0 0 var(--space-lg);
   border-bottom: 1px solid var(--line);
 }
 
@@ -790,6 +808,8 @@ a.project-media:hover {
   font-weight: 600;
   color: var(--ink);
   margin: var(--space-xl) 0 var(--space-xs);
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
 }
 
 .tab-panel > .role-section:first-child { margin-top: 0; }
@@ -1870,6 +1890,7 @@ a.project-media:hover {
   .about-grid,
   .project-card,
   .process-grid,
+  .education-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
