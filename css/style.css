@@ -1937,3 +1937,40 @@ a.project-media:hover {
 
   .contact-section .decor-lines { left: -320px; width: 480px; }
 }
+
+/* Tabela de insights do teste de usabilidade: tudo visível de uma vez, sem clique */
+.insight-table {
+  width: 100%;
+  margin-top: var(--space-sm);
+  border-collapse: collapse;
+  text-align: left;
+}
+.insight-table th,
+.insight-table td {
+  width: 50%;
+  padding: var(--space-sm) var(--space-md) var(--space-sm) 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.insight-table th { font-weight: 500; }
+@media (max-width: 860px) {
+  .insight-table thead { display: none; }
+  .insight-table tr {
+    display: block;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .insight-table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border-bottom: 0;
+  }
+  .insight-table td + td { margin-top: var(--space-sm); }
+  .insight-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+  }
+}

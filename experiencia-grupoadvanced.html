@@ -120,14 +120,10 @@
         <div class="project-body">
           <p>Antes de desenhar qualquer tela, mapeei como corretoras e fintechs referências resolviam onboarding, documentei as funcionalidades e regras de negócio e alinhei prioridades em discovery com TI, atendimento, stakeholders de negócio e a área de Onboarding, que tratava da documentação do cliente e repassava pra compliance e jurídico quando necessário.</p>
         </div>
-        <div class="screens-grid cols-3">
+        <div class="screens-grid">
           <figure>
             <div class="frame"><img src="assets/img/discovery-benchmarking-cambio.jpg" alt="Board de benchmarking de dados, cotação de câmbio e Confidence câmbio no FigJam" /></div>
             <figcaption>Benchmarking e mapeamento de referências</figcaption>
-          </figure>
-          <figure>
-            <div class="frame"><img src="assets/img/discovery-funcionalidades-regras.jpg" alt="Board de funcionalidades e regras de negócio levantadas no FigJam" /></div>
-            <figcaption>Funcionalidades e regras de negócio</figcaption>
           </figure>
           <figure>
             <div class="frame"><img src="assets/img/discovery-benchmarking-checkout.jpg" alt="Board de benchmarking de telas de checkout com sucesso" /></div>
@@ -260,9 +256,9 @@
         </div>
         <p class="compare-caption">Sócios e representantes</p>
 
-        <p class="project-subhead section-break">Teste de usabilidade: condução e insights</p>
+        <p class="project-subhead section-break">Teste de usabilidade</p>
         <div class="project-body">
-          <p>Conduzi esse teste de usabilidade: planejei o roteiro de tarefas, moderei as três entrevistas, registrei os insights em tempo real e apresentei os resultados priorizados para o time do projeto.</p>
+          <p>Conduzi um teste de usabilidade moderado com o protótipo em Figma. Os principais pontos observados orientaram as mudanças abaixo, que foram implementadas no produto.</p>
         </div>
         <ul class="project-list">
           <li>Planejamento do roteiro e das tarefas</li>
@@ -271,80 +267,33 @@
           <li>Apresentação e priorização dos insights com o time</li>
         </ul>
 
-        <div class="stat-grid">
-          <div class="stat-item">
-            <div class="number">3</div>
-            <div class="label">Entrevistas conduzidas</div>
-          </div>
-          <div class="stat-item">
-            <div class="number">23</div>
-            <div class="label">Pontos analisados no fluxo</div>
-          </div>
-          <div class="stat-item">
-            <div class="number">13</div>
-            <div class="label">Pontos de melhoria priorizados</div>
-          </div>
-          <div class="stat-item">
-            <div class="number">7</div>
-            <div class="label">Comportamentos mapeados</div>
-          </div>
-        </div>
-
         <p class="project-subhead" style="margin-top:var(--space-lg);">Insight → decisão</p>
-        <div class="finding-carousel">
-          <div class="finding-track" role="list">
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 01</span>
-              <h3>Dois avisos, um só componente</h3>
-              <div class="challenge-divider"></div>
-              <p>O aviso de cotas incompletas usava o mesmo padrão visual do aviso de dados faltando, e passava despercebido pelo cliente.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Diferenciar visualmente os dois estados.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 02</span>
-              <h3>Campo de telefone confundia DDI com DDD</h3>
-              <div class="challenge-divider"></div>
-              <p>Sem separação clara entre os dois códigos, os clientes erravam o preenchimento.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Campo dividido em seletor de DDI + DDD digitável.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 03</span>
-              <h3>Termos marcados sem necessidade</h3>
-              <div class="challenge-divider"></div>
-              <p>Por falta de sinalização sobre o que era obrigatório (FACTA opcional, LGPD e Termo de adesão obrigatórios), os clientes marcavam os três como se fossem iguais.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Revisão da sinalização de obrigatoriedade.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 04</span>
-              <h3>Cadastro parcial sem caminho claro de retomada</h3>
-              <div class="challenge-divider"></div>
-              <p>Os clientes tentavam voltar pelo mesmo link recebido por e-mail, sem saber que os dados ficavam salvos.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Aviso de saída explicando o prazo de retenção dos dados e um caminho de acesso via login.</p>
-              </div>
-            </article>
-          </div>
-          <div class="finding-controls">
-            <button type="button" class="finding-prev" aria-label="Insight anterior">←</button>
-            <div class="finding-dots" aria-label="Navegar entre insights">
-              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para insight 1"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 2"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 3"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 4"></button>
-            </div>
-            <button type="button" class="finding-next" aria-label="Próximo insight">→</button>
-          </div>
-        </div>
+        <table class="insight-table">
+          <thead>
+            <tr>
+              <th scope="col">O que observamos</th>
+              <th scope="col">O que mudou</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="O que observamos">Os clientes tentavam voltar pelo mesmo link recebido por e-mail, sem saber que os dados ficavam salvos.</td>
+              <td data-label="O que mudou">Aviso de saída explicando por quanto tempo os dados ficam salvos e um caminho de acesso via login.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">Sem separação clara entre DDI e DDD, os clientes erravam o preenchimento do telefone.</td>
+              <td data-label="O que mudou">Campo dividido em seletor de DDI e DDD digitável.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">Por falta de sinalização sobre o que era obrigatório, os clientes marcavam todos os termos como se fossem iguais.</td>
+              <td data-label="O que mudou">Revisão da sinalização de obrigatoriedade.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">O aviso de cotas incompletas usava o mesmo padrão visual do aviso de dados faltando, e passava despercebido.</td>
+              <td data-label="O que mudou">Estados visuais diferentes para cada aviso.</td>
+            </tr>
+          </tbody>
+        </table>
 
         <p class="project-subhead section-break">MFA (verificação em duas etapas)</p>
         <div class="project-body">
@@ -393,8 +342,8 @@
 
         <p class="project-subhead section-break">O que eu levo desse projeto</p>
         <div class="project-body">
-          <p>O redesign do onboarding me ensinou a equilibrar duas prioridades que nem sempre andam juntas, entre as regras de compliance de um produto financeiro e a experiência de quem só quer terminar o cadastro. Cada decisão, de separar Pessoa Física de Pessoa Jurídica a dividir o campo de telefone em DDI e DDD, veio de um problema real observado no teste de usabilidade, não de suposição.</p>
-          <p>Isso mudou como eu enxergo o antes e depois hoje. Não é só uma peça de convencimento visual, é a prova de que a decisão resolveu o problema que a motivou, não só que ficou com aparência melhor.</p>
+          <p>O redesign do onboarding me ensinou a equilibrar duas prioridades que nem sempre andam juntas, entre as regras de compliance de um produto financeiro e a experiência de quem só quer terminar o cadastro. As decisões vieram de problemas reais, levantados no discovery e no teste de usabilidade, não de suposição.</p>
+          <p>Isso mudou como eu enxergo o antes e depois hoje. Não é só uma peça de convencimento visual, ele mostra qual problema motivou cada decisão.</p>
           <p>O caso da retomada de cadastro é o que eu mais levo daqui. Descobrir que o problema não estava na tela, mas na falta de transparência sobre o que acontecia depois que o cliente saía, mudou o tipo de pergunta que eu faço num teste de usabilidade daqui pra frente.</p>
         </div>
 
@@ -609,131 +558,59 @@
         </div>
         <p class="project-subhead section-break">Teste de usabilidade com o time comercial</p>
         <div class="project-body">
-          <p>Depois que o fluxo foi ao ar, conduzi um teste de usabilidade com executivos do time comercial, que usam o painel no dia a dia, cobrindo as três partes do fluxo: criação do prospect, o cadastro feito pelo executivo e a revisão do lado do cliente.</p>
+          <p>Conduzi um teste de usabilidade com executivos do time comercial, que usam o painel no dia a dia. O teste cobriu a criação do prospect, o cadastro feito pelo executivo e a revisão do lado do cliente.</p>
         </div>
 
         <ul class="project-list">
           <li>Planejamento do roteiro cobrindo as três partes do fluxo</li>
           <li>Moderação das entrevistas com os executivos</li>
           <li>Síntese dos pontos analisados e priorização por impacto</li>
-          <li>Apresentação dos achados para o time</li>
+          <li>Apresentação dos insights para o time</li>
         </ul>
 
-        <div class="stat-grid">
-          <div class="stat-item">
-            <div class="number">3</div>
-            <div class="label">Executivos comerciais entrevistados</div>
-          </div>
-          <div class="stat-item">
-            <div class="number">11</div>
-            <div class="label">Pontos do fluxo analisados</div>
-          </div>
-          <div class="stat-item">
-            <div class="number">7</div>
-            <div class="label">Pontos assertivos confirmados (63,6%)</div>
-          </div>
-          <div class="stat-item">
-            <div class="number">4</div>
-            <div class="label">Oportunidades de melhoria mapeadas (36,4%)</div>
-          </div>
-        </div>
-
-        <div class="project-gallery" style="margin-top:var(--space-lg);">
-          <img src="assets/img/painel-teste-priorizacao.jpg" alt="Board de priorização dos achados do teste de usabilidade do painel, com pontos analisados e impacto de cada oportunidade de melhoria" />
-        </div>
-
         <p class="project-subhead" style="margin-top:var(--space-lg);">Insight → decisão</p>
-        <div class="finding-carousel">
-          <div class="finding-track" role="list">
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 01</span>
-              <h3>Confusão entre "enviar para preencher" e "enviar para revisar"</h3>
-              <div class="challenge-divider"></div>
-              <p>Todos os participantes tiveram dúvida entre as duas opções do modal de início de cadastro.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Revisão da hierarquia visual e da copy dos dois caminhos.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 02</span>
-              <h3>Falta de confirmação após enviar o cadastro</h3>
-              <div class="challenge-divider"></div>
-              <p>Um participante relatou insegurança sobre se o cliente tinha sido efetivamente salvo na carteira depois de enviar.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Confirmação de sucesso mais visível no painel, além da tela de feedback.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 03</span>
-              <h3>Total de prospects pouco visível na tabela</h3>
-              <div class="challenge-divider"></div>
-              <p>Uma participante rolou a tabela inteira até o final procurando o total de prospects, que já existia no topo.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Dar mais destaque a essa informação na tabela.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 04</span>
-              <h3>Status "Inativo" sem entendimento claro</h3>
-              <div class="challenge-divider"></div>
-              <p>Nenhum participante compreendeu de imediato o que esse status significava, gerando interpretações diferentes entre eles.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Revisão da nomenclatura de status.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 05</span>
-              <h3>Diferença entre cliente "Simplificado" e "Completo" pouco clara</h3>
-              <div class="challenge-divider"></div>
-              <p>Participantes questionaram como diferenciar, na lista, os prospects com cadastro simplificado dos com cadastro completo.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Sinalizar visualmente os clientes com operação esperada acima de US$ 50 mil, considerados cadastro completo.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 06</span>
-              <h3>Copy do botão da tela de feedback gerava incerteza</h3>
-              <div class="challenge-divider"></div>
-              <p>Participantes fechavam a tela de feedback rapidamente e, quando questionados sobre o conteúdo, respondiam com dúvida.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Revisão da copy do botão.</p>
-              </div>
-            </article>
-            <article class="finding-card challenge-card" role="listitem">
-              <span class="finding-index">Insight 07</span>
-              <h3>Header fixo para compartilhar o link não foi usado</h3>
-              <div class="challenge-divider"></div>
-              <p>Mesmo com o atalho disponível desde o início, todos os participantes preferiram seguir até a última etapa do formulário para então enviar o link.</p>
-              <div class="challenge-solution">
-                <span class="challenge-solution-label">Decisão</span>
-                <p>Manter o comportamento como estava, sem forçar um atalho que os usuários não pediram.</p>
-              </div>
-            </article>
-          </div>
-          <div class="finding-controls">
-            <button type="button" class="finding-prev" aria-label="Insight anterior">←</button>
-            <div class="finding-dots" aria-label="Navegar entre insights">
-              <button type="button" class="dot active" aria-pressed="true" aria-label="Ir para insight 1"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 2"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 3"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 4"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 5"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 6"></button>
-              <button type="button" class="dot" aria-pressed="false" aria-label="Ir para insight 7"></button>
-            </div>
-            <button type="button" class="finding-next" aria-label="Próximo insight">→</button>
-          </div>
-        </div>
+        <table class="insight-table">
+          <thead>
+            <tr>
+              <th scope="col">O que observamos</th>
+              <th scope="col">Decisão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="O que observamos">Os participantes ficavam em dúvida entre "enviar para preencher" e "enviar para revisar" no início do cadastro.</td>
+              <td data-label="Decisão">Revisão da hierarquia visual e da copy dos dois caminhos.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">Depois de enviar o cadastro, houve insegurança sobre o cliente ter sido salvo na carteira.</td>
+              <td data-label="Decisão">Confirmação de sucesso mais visível no painel, além da tela de feedback.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">O total de prospects passava despercebido, e houve quem rolasse a tabela inteira procurando essa informação, que já estava no topo.</td>
+              <td data-label="Decisão">Mais destaque para o total de prospects na tabela.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">O status "Inativo" não era compreendido de imediato e gerava interpretações diferentes.</td>
+              <td data-label="Decisão">Revisão da nomenclatura de status.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">Não ficava claro como diferenciar, na lista, os clientes com cadastro simplificado dos clientes com cadastro completo.</td>
+              <td data-label="Decisão">Sinalização visual dos clientes com cadastro completo.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">Os participantes fechavam a tela de feedback rapidamente e depois ficavam em dúvida sobre o conteúdo dela.</td>
+              <td data-label="Decisão">Revisão da copy do botão.</td>
+            </tr>
+            <tr>
+              <td data-label="O que observamos">O atalho no header fixo para compartilhar o link não foi usado, e os participantes preferiram seguir até a última etapa.</td>
+              <td data-label="Decisão">Manter o comportamento como estava, sem forçar um atalho que os usuários não pediram.</td>
+            </tr>
+          </tbody>
+        </table>
 
         <p class="project-subhead section-break">Telas</p>
         <div class="project-body">
-          <p>Como ficou depois de aplicar as decisões de fluxo, os componentes reaproveitados e os ajustes confirmados no teste de usabilidade.</p>
+          <p>As telas do fluxo, com as decisões de UI e UX e os componentes reaproveitados.</p>
         </div>
         <div class="screens-grid">
           <figure>
